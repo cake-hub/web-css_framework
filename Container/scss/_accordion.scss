@@ -1,0 +1,150 @@
+.accordion-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+  word-wrap: break-word;
+  background-color: $white;
+
+  .accordion-item ~ & {
+    margin-top: calculateRem(8px + $accordion-border-width); //Added 2px because of Collapse margin-top: -2px
+  }
+}
+
+.accordion-label {
+  display: flex;
+  align-items: center;
+  height: $accordion-label-height;
+  padding-right: $accordion-padding-x;
+  padding-left: $accordion-padding-x;
+  margin: 0;
+  font-weight: inherit;
+  color: $accordion-label-color;
+  white-space: nowrap;
+  cursor: pointer;
+  background-clip: border-box;
+  border: $accordion-border-width solid $accordion-border-color;
+  @include border-radius($accordion-border-radius);
+
+  @include media-breakpoint-up(lg) {
+    height: $accordion-label-height-at-lg;
+  }
+
+  &:hover {
+    border-color: $accordion-hover-border-color;
+  }
+
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5 {
+    margin-bottom: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+}
+
+.accordion-item-header {
+  flex: 1 1 auto;
+}
+
+.accordion-icon {
+  flex: 0 0 $accordion-icon-dimension;
+  width: $accordion-icon-dimension; // bugfix - oldBrowser: Edge 16 icon has completely wrong size
+  color: $accordion-icon-color;
+  @include transition($accordion-icon-transition);
+}
+
+.accordion-collapse {
+  position: relative;
+  max-height: 0;
+  padding: 0 $accordion-padding-x;
+  margin-top: -($accordion-border-width);   //to hide the border of label on collapsing
+  overflow: hidden;
+  background-color: inherit;
+  border-right: $accordion-border-width solid $accordion-active-border-color;
+  border-left: $accordion-border-width solid $accordion-active-border-color;
+  @include border-bottom-radius($accordion-border-radius);
+  @include transition($accordion-collapse-transition);
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $accordion-border-width * 2;
+    content: "";
+    border-bottom: $accordion-border-width solid $accordion-active-border-color;
+    @include border-bottom-radius($accordion-border-radius);
+  }
+}
+
+// bugfix - oldBrowser: Edge 18 otherwise border is visible
+@supports (-ms-ime-align:auto) {
+  .accordion-collapse {
+    margin-top: -($accordion-border-width) - 1px;   //to hide the border of label on collapsing
+  }
+}
+
+.accordion-check:checked {
+  ~ .accordion-collapse {
+    position: static;
+    height: auto;
+    max-height: 8000px;
+    padding: .5rem $accordion-padding-x 1rem;
+    border-top: 0;
+  }
+
+  + .accordion-label {
+    padding-bottom: 1px;
+    border-bottom: 0;
+    @include border-bottom-radius(0);
+
+    .accordion-icon {
+      transform: rotate(180deg); // placeholder for icon animation
+    }
+  }
+
+  ~ .accordion-label {
+    color: $accordion-label-active-color;
+    border-color: $accordion-active-border-color;
+  }
+}
+
+.accordion-check:focus {
+  ~ .accordion-label {
+    color: $accordion-label-focus-color;
+    border-color: $accordion-focus-border-color;
+  }
+
+  ~ .accordion-label::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + (#{$accordion-border-width}));
+    content: "";
+    @include border-radius($accordion-border-radius);
+    box-shadow: $accordion-label-focus-box-shadow;
+  }
+}
+
+.accordion-check:checked:focus ~ .accordion-label::before {
+  height: 100%;
+}
+
+.accordion-check:disabled {
+  ~ .accordion-label {
+    color: $accordion-disabled-color;
+    cursor: not-allowed;
+    background: $accordion-disabled-bg-color;
+    border-color: $accordion-disabled-border-color;
+
+    .accordion-icon {
+      color: $accordion-disabled-color;
+    }
+  }
+}

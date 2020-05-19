@@ -1,0 +1,97 @@
+.tippy-tooltip.cake-theme {
+  padding: 0;
+  @include border-radius($popover-border-radius);
+  box-shadow: $popover-box-shadow;
+
+  > .tippy-content {
+    @include cake-font-size($popover-font-size);
+    padding: $popover-padding;
+    font-family: inherit;
+    text-align: left;
+  }
+
+  &[data-animatefill] {
+    background-color: transparent;
+  }
+}
+
+
+//Styling of the arrows on all positions
+.tippy-popper {
+  &[x-placement^="top"] > .tippy-tooltip.cake-theme > .tippy-arrow {
+    bottom: -8px;
+  }
+  &[x-placement^="bottom"] > .tippy-tooltip.cake-theme > .tippy-arrow {
+    top: -8px;
+  }
+  &[x-placement^="left"] > .tippy-tooltip.cake-theme > .tippy-arrow {
+    right: -8px;
+  }
+  &[x-placement^="right"] > .tippy-tooltip.cake-theme > .tippy-arrow {
+    left: -8px;
+  }
+}
+
+
+//
+// Alternate ribbons
+//
+
+//Primary, Highlight, Dark, Light
+@each $variant, $color in $theme-colors {
+  .tippy-tooltip.#{$variant}-theme {
+    @extend .cake-theme;
+    background-color: cake-color($variant, "background");
+
+    border: 1px solid cake-color($variant, "lighter");
+
+    > .tippy-content {
+      color: cake-color($variant, "darker");
+    }
+  }
+
+  //Styling of the arrows on all positions
+  .tippy-popper {
+    &[x-placement^=top] > .tippy-tooltip.#{$variant}-theme > .tippy-arrow {
+      border-top-color: cake-color($variant, "background");
+
+      //Set as Border another Triangle with different color
+      @include triangle(bottom, 9px, 9px, cake-color($variant, "lighter")) {
+        z-index: -1;
+        margin-top: -8px;
+        margin-left: -9px;
+      }
+    }
+    &[x-placement^=bottom] > .tippy-tooltip.#{$variant}-theme > .tippy-arrow {
+      border-bottom-color: cake-color($variant, "background");
+
+      //Set as Border another Triangle with different color
+      @include triangle(top, 9px, 9px, cake-color($variant, "lighter")) {
+        z-index: -1;
+        margin-top: -1px;
+        margin-left: -9px;
+      }
+    }
+    &[x-placement^=left] > .tippy-tooltip.#{$variant}-theme > .tippy-arrow {
+      border-left-color: cake-color($variant, "background");
+
+      //Set as Border another Triangle with different color
+      @include triangle(right, 9px, 9px, cake-color($variant, "lighter")) {
+        z-index: -1;
+        margin-top: -9px;
+        margin-left: -8px;
+      }
+    }
+    &[x-placement^=right] > .tippy-tooltip.#{$variant}-theme > .tippy-arrow {
+      border-right-color: cake-color($variant, "background");
+
+      //Set as Border another Triangle with different color
+      @include triangle(left, 9px, 9px, cake-color($variant, "lighter")) {
+        z-index: -1;
+        margin-top: -9px;
+        margin-left: -1px;
+      }
+    }
+
+  }
+}

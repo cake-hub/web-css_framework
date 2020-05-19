@@ -1,0 +1,474 @@
+// Import Header-list and Navigation classes
+@import "navigation";
+
+
+//* ------------------------------------------------------------ */
+//* ----- Header List + Items ---------------------------------- */
+//* ------------------------------------------------------------ */
+
+.header-list {
+  @include list-unstyled;
+  margin-bottom: 0;
+}
+
+.header-list-item {
+  display: inline-block;
+  text-align: center;
+
+  abbr {
+    text-decoration: inherit;
+    cursor: inherit;
+  }
+}
+
+.header-list-item-link {
+  @include reset-link;
+  display: inline-block;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
+
+
+//* ------------------------------------------------------------ */
+//* ----- Header-Main-Navigation-List -------------------------- */
+//* ------------------------------------------------------------ */
+
+.header {
+  z-index: 10;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+
+  @include media-breakpoint-down(sm) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    &:not(.header-mobile-overlay) {
+      pointer-events: none;
+    }
+
+    &::before {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      width: $header-mobile-overlay-width;
+      pointer-events: none;
+      content: "";
+      background-color: $header-bg;
+      box-shadow: $box-shadow;
+      opacity: 0;
+    }
+
+    .header-wrapper {
+      flex-wrap: nowrap; // bugfix - oldBrowser - Samsung Internet 8 fixes bug with wrong breaks inside the header menu bar on mobile samsung devices
+      pointer-events: all;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    &::before {
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    position: relative;
+    background: $header-bg;
+    box-shadow: $box-shadow;
+  }
+
+}
+
+
+
+//* ------------------------------------------------------------ */
+//* ----- Header Pre-Header ------------------------------------ */
+//* ------------------------------------------------------------ */
+
+.header-preheader {
+  @include cake-font-size($header-preheader-font-size);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  @include media-breakpoint-down (sm) {
+    max-height: 100%;
+    padding: 0;
+    overflow-y: auto;
+  }
+}
+
+
+
+//* ------------------------------------------------------------ */
+//* ----- Header Brand ----------------------------------------- */
+//* ------------------------------------------------------------ */
+
+.header-brand {
+  flex: 0 1 auto;
+  padding-top: $header-brand-padding-y;
+  padding-bottom: $header-brand-padding-y;
+}
+
+
+
+//* ------------------------------------------------------------ */
+//* ----- Header Brand Navigation ------------------------------ */
+//* ------------------------------------------------------------ */
+
+.header-brandnav {
+  flex: 1 1 100%;
+  text-align: right;
+
+  @include media-breakpoint-down(sm) {
+    order: 10;
+    padding-top: $header-brandnav-link-padding;
+    padding-bottom: $header-brandnav-link-padding;
+
+    .header-list-item {
+      display: block;
+      padding-right: $header-brandnav-link-padding;
+      padding-left: $header-brandnav-link-padding;
+      text-align: left;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    flex: 1 1 auto;
+  }
+}
+
+.header-brandnav-link {
+  padding-right: $header-brandnav-link-padding;
+  padding-left: $header-brandnav-link-padding;
+}
+
+
+
+//* ------------------------------------------------------------ */
+//* ----- Header Language Navigation --------------------------- */
+//* ------------------------------------------------------------ */
+
+.header-language {
+  flex: 1 1 100%;
+  text-align: right;
+
+  .header-list-item:not(:last-child) {
+    margin-right: $header-language-link-divider-width;
+  }
+
+  @include media-breakpoint-down(sm) {
+    order: 9;
+    border-bottom: $header-language-link-divider-width solid $header-language-link-divider-color;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex: 0 1 auto;
+    padding-left: $header-language-margin-left;
+  }
+}
+
+.header-language-link {
+  position: relative;
+  padding-right: $header-language-link-padding-x;
+  padding-left: $header-language-link-padding-x;
+}
+
+.header-list-item:not(:last-child)  {
+  .header-language-link::after {
+    position: absolute;
+    top: 50%;
+    right: -$header-language-link-divider-width;
+    width: $header-language-link-divider-width;
+    height: $header-language-link-divider-height;
+    content: "";
+    background-color: $header-language-link-divider-color;
+    transform: translateY(-50%);
+  }
+}
+
+.header-language-active-icon {
+  position: absolute;
+  top: calculateRem(8px);
+  right: calculateRem(10px);
+  width: calculateRem(8px);
+  height: calculateRem(8px);
+  background-image: svg-load($scss-icon-path + "bullet-standard.svg", fill=cake-color("primary"));
+  background-position: center;
+  border: 1px solid $white;
+  @include border-radius(50%);
+  transform: translate(-25%);
+}
+
+
+
+//* ------------------------------------------------------------ */
+//* ----- Header Wrapper --------------------------------------- */
+//* ------------------------------------------------------------ */
+
+.header-wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  overflow: hidden;
+  background-color: $header-bg;
+
+  @include media-breakpoint-down (sm) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    padding-right: $header-wrapper-padding-x;
+    padding-left: $header-wrapper-padding-x;
+    box-shadow: $box-shadow;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: $header-wrapper-height-md;
+
+    &::before {
+      position: absolute;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: $header-wrapper-divider-height;
+      content: "";
+      background-color: $header-wrapper-divider-color;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: $header-wrapper-height-lg;
+  }
+}
+
+
+
+//* ------------------------------------------------------------ */
+//* ----- Header Logo + Claim ---------------------------------- */
+//* ------------------------------------------------------------ */
+
+.header-logo-wrapper {
+  display: block;
+  flex: 0 0 auto;
+  width: calculateRem(40px);
+  height: calculateRem(40px);
+
+  @include media-breakpoint-down(sm) {
+    margin-top: $spacer;
+  }
+
+  @include media-breakpoint-up(md) {
+    align-self: center;
+    width: calculateRem(64px);
+    height: calculateRem(64px);
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: calculateRem(72px);
+    height: calculateRem(72px);
+  }
+}
+
+.header-logo {
+  width: 100%;
+  height: 100%;
+}
+
+.header-claim {
+  @include cake-font-size(1rem);
+  flex: 1 1 auto;
+  align-self: center;
+  margin-left: $header-claim-margin-left;
+  font-weight: 600;
+  line-height: $header-claim-line-height;
+  color: $header-claim-color;
+}
+
+
+
+//* ------------------------------------------------------------ */
+//* ----- Header Usernavigation -------------------------------- */
+//* ------------------------------------------------------------ */
+
+.header-usernavigation {
+  flex: 1 1 auto;
+  margin-left: 8px;
+  text-align: right;
+  white-space: nowrap;
+
+  @include media-breakpoint-down (sm) {
+    //Prevent the user-navigation from expanding because of scrollbar, otherwise it would overlap mobile subnavigation
+    height: calculateRem(56px);
+    overflow-y: hidden;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex-shrink: 0;
+  }
+}
+
+.header-usernavigation-icon {
+  position: relative;
+  display: inline-block;
+  width: calculateRem(24px);
+  height: calculateRem(24px);
+
+  @include media-breakpoint-up(lg) {
+    width: calculateRem(32px);
+    height: calculateRem(32px);
+  }
+}
+
+.header-usernavigation-title {
+  margin-top: calculateRem(2px);
+  margin-right: calculateRem(4px);
+  margin-left: calculateRem(4px);
+  line-height: 1.2;
+  white-space: normal;
+}
+
+.header-usernavigation-link {
+  width: $header-usernavigation-link-width;
+  padding-top: $header-usernavigation-link-padding-top;
+  vertical-align: top;
+
+  &:hover,
+  &:focus {
+    color: $header-usernavigation-link-hover-color;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: $header-usernavigation-link-width-md;
+    padding-top: $header-usernavigation-link-padding-top-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: $header-usernavigation-link-width-lg;
+  }
+}
+
+.header-usernavigation-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX($header-usernavigation-badge-offset);
+}
+
+
+
+//* ------------------------------------------------------------ */
+//* ----- Header Links ----------------------------------------- */
+//* ------------------------------------------------------------ */
+
+.header-brandnav-link,
+.header-language-link {
+  padding-top: $header-list-item-link-padding-y;
+  padding-bottom: $header-list-item-link-padding-y;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    background-color: $header-list-item-link-hover-color;
+  }
+}
+
+
+
+//* ------------------------------------------------------------ */
+//* ----- Mobile Flyout Sizes and Transitions ------------------ */
+//* ------------------------------------------------------------ */
+
+@include media-breakpoint-down(sm) {
+  .header-brandnav,
+  .header-language,
+  .header-navigation {
+    pointer-events: none;
+    opacity: 0;
+
+    @include media-breakpoint-only(sm) {
+      flex: 0 1 calc((#{$header-mobile-overlay-width-percentpoints * 1vw}) - (100vw - 100%));
+
+      // bugfix - oldBrowser - IE 11 vw calculation does not work
+      // stylelint-disable-next-line selector-no-vendor-prefix, selector-type-no-unknown
+      _:-ms-fullscreen,
+      :root & {
+        flex: 0 1 $header-mobile-overlay-width-percentpoints * 1%;
+      }
+    }
+  }
+
+  .header-mobile-overlay {
+    bottom: 0;
+    height: 100%;
+    background-color: $header-mobile-overlay-color;
+    @include transition($header-mobile-overlay-transition);
+
+    &::before {
+      pointer-events: auto;
+      opacity: 1;
+    }
+
+    .header-brandnav,
+    .header-language,
+    .header-navigation {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+}
+
+// bugfix - oldBrowser - IE 11 does show the back-button, even if it should not get shown (opacity does not work with position: fixed)
+// stylelint-disable-next-line selector-no-vendor-prefix, selector-type-no-unknown
+_:-ms-fullscreen,
+:root {
+  @include media-breakpoint-down(sm) {
+    .header-brandnav,
+    .header-language,
+    .header-navigation {
+      .header-navigation-back {
+        position: relative;
+      }
+    }
+
+    .header-mobile-overlay {
+      .header-brandnav,
+      .header-language,
+      .header-navigation {
+        .header-navigation-back {
+          position: fixed;
+        }
+      }
+    }
+  }
+}
+
+// bugfix - oldBrowser - Edge 17 does show the back-button, even if it should not get shown (opacity does not work with position: fixed)
+@supports (-ms-ime-align:auto) {
+  @include media-breakpoint-down(sm) {
+    .header-brandnav,
+    .header-language,
+    .header-navigation {
+      .header-navigation-back {
+        position: relative;
+      }
+    }
+
+    .header-mobile-overlay {
+      .header-brandnav,
+      .header-language,
+      .header-navigation {
+        .header-navigation-back {
+          position: fixed;
+        }
+      }
+    }
+  }
+}

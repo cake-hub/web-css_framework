@@ -1,0 +1,24 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+// stylelint-disable value-keyword-case, scss/dollar-variable-default
+
+$primary:                   #0050aa;
+
+// stylelint-disable indentation
+$fonts-to-load:             LidlFontCondPro LidlFontCondPro-Regular,
+                            LidlFontCondPro LidlFontCondPro-Semibold 600,
+                            LidlFontCondPro LidlFontCondPro-Semibold 700, // to match with `bold`
+                            LidlFontCondPro LidlFontCondPro-Bold 800; // to match with `extra bold`
+// stylelint-enable indentation
+$font-weight-bold:          600;
+
+
+$font-family-sans-serif:    LidlFontCondPro, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+//Adjust the icon-paths
+$expression-icon-path:      "assets/icons/expression/";
+$interaction-icon-path:     "assets/icons/interaction/";
+$navigation-icon-path:      "assets/icons/navigation/";
+$scss-icon-path:            "assets/icons/_scssOnly/";

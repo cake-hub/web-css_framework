@@ -1,0 +1,52 @@
+.trustbar {
+  background-color: $trustbar-bg;
+}
+
+.trustbar-list {
+  @include list-unstyled();
+  @include make-row;
+  justify-content: center;
+  margin-bottom: 0;
+  color: $trustbar-color;
+}
+
+.trustbar-item {
+  @include make-col-ready();
+  @include make-col(12);
+  line-height: 0;
+  text-align: center;
+
+  @include media-breakpoint-up(sm) {
+    @include make-col(6);
+  }
+
+  @include media-breakpoint-up(md) {
+    @include make-col(4);
+
+    &:first-child:nth-last-child(4),
+    &:first-child:nth-last-child(4) ~ li {
+      @include media-breakpoint-up(md) {
+        @include make-col(3);
+      }
+    }
+  }
+}
+
+.trustbar-item-link {
+  @include reset-link();
+  @include text-truncate();
+  display: inline-block;
+  max-width: 100%;
+  height: $trustbar-item-height-sm;
+  line-height: $trustbar-item-height-sm;
+  text-align: left;
+
+  @include media-breakpoint-up(lg) {
+    height: $trustbar-item-height-lg;
+    line-height: $trustbar-item-height-lg;
+  }
+}
+
+.trustbar-item-icon {
+  margin-right: $trustbar-icon-margin-right;
+}

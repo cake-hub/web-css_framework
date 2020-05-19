@@ -1,0 +1,70 @@
+@mixin triangle($direction, $sizeH, $sizeV, $bg-color, $border-color: transparent, $border-width: 0, $border-style: solid) {
+  // Set default styling for triangles
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    -moz-transform: scale(.9999); // stylelint-disable-line property-no-vendor-prefix
+  }
+
+  // Create Triangle
+  &::after {
+    content: "";
+    border-style: solid;
+
+    @include triangle-position($direction, $sizeH, $sizeV, $bg-color);
+
+    @content;
+  }
+
+  // Create Triangle as ::before to appear like a border
+  @if $border-color != transparent and $border-width != 0 and $border-style != none {
+    &::before {
+      content: "";
+      border-style: $border-style;
+      transform: translate($border-width, -($border-width * 1.5)); //Move this Triangle to create border-appering
+
+      @include triangle-position($direction, $sizeH + $border-width, $sizeV + $border-width, $border-color);
+
+      @content;
+    }
+  }
+
+}
+
+@mixin triangle-position($direction, $sizeH, $sizeV, $color) {
+  @if $direction == top {
+    border-color: transparent transparent $color transparent;
+    border-width: 0 $sizeV $sizeH $sizeV;
+  }
+  @if $direction == bottom {
+    border-color: $color transparent transparent transparent;
+    border-width: $sizeV $sizeH 0 $sizeV;
+  }
+  @if $direction == left {
+    border-color: transparent $color transparent transparent;
+    border-width: $sizeV $sizeH $sizeV 0;
+  }
+  @if $direction == right {
+    border-color: transparent transparent transparent $color;
+    border-width: $sizeV 0 $sizeV $sizeH;
+  }
+  @if $direction == topright {
+    border-color: transparent $color transparent transparent;
+    border-width: 0 $sizeH $sizeV 0;
+  }
+  @if $direction == bottomright {
+    border-color: transparent transparent $color transparent;
+    border-width: 0 0 $sizeH $sizeV;
+  }
+  @if $direction == bottomleft {
+    border-color: transparent transparent transparent $color;
+    border-width: $sizeH 0 0 $sizeV;
+  }
+  @if $direction == topleft {
+    border-color: $color transparent transparent transparent;
+    border-width: $sizeH $sizeV 0 0;
+  }
+}

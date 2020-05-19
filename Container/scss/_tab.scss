@@ -1,0 +1,126 @@
+.tab {
+  box-shadow: $box-shadow;
+
+  .tab-btn + .tab-btn {
+    margin-left: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    display: flex;
+
+    & > .tab-btn.previous,
+    & > .tab-btn.next {
+      z-index: 2;
+    }
+  }
+}
+
+.tab-btn {
+  @include button-variant($tab-background-color, $tab-border-color, $tab-background-hover-color, $tab-border-hover-color, $tab-background-active-color, $tab-border-active-color);
+  padding: $tab-btn-padding;
+  font-weight: 400;
+
+  color: $tab-color;
+  text-transform: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+
+  &:first-child {
+    border-left: none;
+  }
+
+  &:not(:disabled):not(.disabled) {
+    &:active,
+    &.active {
+      color: $tab-color;
+
+      &:focus {
+        &,
+        & + .tab-btn {
+          border-color: $tab-background-active-color;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+    width: 100%;
+    background-color: $tab-background-active-color;
+    border: 0;
+    @include border-radius(0);
+
+    &.active {
+      display: block;
+      padding-right: $tab-slider-btn-width + $tab-mobile-btn-padding-x;
+      padding-left: $tab-slider-btn-width + $tab-mobile-btn-padding-x;
+      hyphens: auto;
+      word-break: break-all;
+      white-space: pre-wrap;
+      pointer-events: none;
+    }
+
+    &.previous,
+    &.next {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: $tab-slider-btn-width;
+      height: 100%;
+      padding: 0;
+      overflow: hidden;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-color: $tab-background-active-color;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: $tab-icon-size;
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background-color: $tab-background-hover-color;
+        }
+      }
+    }
+
+    &.previous {
+      left: 0;
+
+      &::before {
+        background-image: svg-load($tab-icon-path-previous, fill=$tab-color);
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background-image: svg-load($tab-icon-path-previous, fill=$tab-color-hover);
+        }
+      }
+    }
+
+    &.next {
+      right: 0;
+
+      &::before {
+        background-image: svg-load($tab-icon-path-next, fill=$tab-color);
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background-image: svg-load($tab-icon-path-next, fill=$tab-color-hover);
+        }
+      }
+    }
+  }
+}

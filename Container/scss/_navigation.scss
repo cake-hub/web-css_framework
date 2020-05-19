@@ -1,0 +1,495 @@
+//* ------------------------------------------------------------ */
+//* ----- Header Navigation ------------------------------------ */
+//* ------------------------------------------------------------ */
+
+.header-navigation {
+  flex: 1 1 100%;
+
+  @include media-breakpoint-down(sm) {
+    // https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/
+    display: flex;
+    align-items: stretch;
+    margin-top: $header-navigation-margin-top-mobile; //move below header-bar
+    overflow-x: hidden;
+  }
+
+  .tns-outer:nth-child(2n+1) {
+    @include media-breakpoint-up(md) {
+      border-top: $header-subnavigation-seperator;
+    }
+  }
+}
+
+//* ------------------------------------------------------------ */
+//* ----- Burger-menu with text -------------------------------- */
+//* ------------------------------------------------------------ */
+
+.header-navigation-burgermenu {
+  flex: 0 0 auto;
+  color: $header-navigation-burgermenu-text-color;
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.header-navigation-burgermenu-text {
+  font-size: $header-navigation-burgermenu-font-size;
+  font-weight: $font-weight-bold;
+  line-height: $header-navigation-burgermenu-line-height;
+  text-transform: uppercase;
+}
+
+.hamburger {
+  .hamburger-inner {
+    margin-top: calculateRem(-4px);
+
+    &,
+    &::before,
+    &::after {
+      height: .4rem;
+      background-color: initial;
+      background-image: svg-load($scss-icon-path + "burger-dash.svg", fill=$header-navigation-burgermenu-text-color);
+      background-repeat: no-repeat;
+      background-size: 1.5rem .4rem;
+    }
+  }
+
+  &.is-active {
+    .hamburger-inner {
+      &,
+      &::before,
+      &::after {
+        background-color: initial;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $header-navigation-burgermenu-text-hover-color;
+
+    .hamburger-inner {
+      &,
+      &::before,
+      &::after {
+        background-image: svg-load($scss-icon-path + "burger-dash.svg", fill=$header-navigation-burgermenu-text-hover-color);
+      }
+    }
+  }
+}
+
+// bugfix - oldBrowser - IE 11 does not display the burger-menu icon correctly
+// stylelint-disable-next-line selector-no-vendor-prefix, selector-type-no-unknown
+_:-ms-fullscreen,
+:root {
+  .hamburger {
+    .hamburger-inner {
+      &,
+      &::before,
+      &::after {
+        background-color: transparent;
+      }
+    }
+
+    &.is-active {
+      .hamburger-inner {
+        &,
+        &::before,
+        &::after {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+
+//* ------------------------------------------------------------ */
+//* ----- Back-link + Icon on Mobile --------------------------- */
+//* ------------------------------------------------------------ */
+
+.header-navigation-back {
+  position: fixed;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  height: $header-navigation-link-padding-y;
+  padding: 0;
+  font-weight: $font-weight-bold;
+  color: transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  pointer-events: none;
+  background-color: $header-bg;
+  border-top: $header-navigation-back-border-width solid $header-navigation-back-border-color;
+
+  &:hover {
+    color: transparent;
+    text-decoration: none;
+  }
+
+  //* Generate Triangle on Top */
+  @include triangle(top, calculateRem(7px), calculateRem(7px), $header-bg, $header-navigation-back-border-color, calculateRem($header-navigation-back-border-width)) {
+    top: calculateRem(-7px);
+    right: calculateRem(22px);
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: $header-mobile-overlay-width;
+  }
+
+  @include media-breakpoint-up(md) {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.header-navigation-submenu-visible {
+  .header-navigation-back {
+    height: auto;
+    padding: $header-navigation-back-padding-y $header-navigation-back-padding-x;
+    color: $header-navigation-back-color;
+    pointer-events: initial;
+    visibility: visible;
+    background-color: $header-navigation-back-bg-color;
+    opacity: 1;
+
+    @include triangle(top, calculateRem(7px), calculateRem(7px), $header-navigation-back-bg-color, $header-navigation-back-border-color, calculateRem($header-navigation-back-border-width)) {
+      top: calculateRem(-7px);
+      right: calculateRem(22px);
+    }
+  }
+  .header-navigation-list,
+  .header-subnavigation-list {
+    @include media-breakpoint-down(sm) {
+      margin-top: (($header-navigation-back-padding-y * 2) + ($header-preheader-font-size * $line-height-base)) + calculateRem($header-navigation-back-border-width);
+    }
+  }
+}
+
+.header-navigation-back-icon {
+  margin-top: $header-navigation-back-icon-discrepancy;
+  margin-right: $spacer;
+  margin-bottom: $header-navigation-back-icon-discrepancy;
+}
+
+
+//* ------------------------------------------------------------ */
+//* ----- Header-Navigation-And-Subnavigation-List ------------- */
+//* ------------------------------------------------------------ */
+
+.header-navigation-list,
+.header-subnavigation-list {
+  margin-left: 0;
+
+  @include media-breakpoint-down(sm) {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+.header-navigation-list-item,
+.header-subnavigation-list-item {
+  position: relative;
+  display: block;
+  flex-direction: row;
+
+  @include media-breakpoint-down(sm) {
+    // bugfix - oldBrowser - Edge 17 otherwise the height will have random whitespace before next element (CAKE-3442)
+    @supports (-ms-ime-align:auto) {
+      //Display Flex is needed, because otherwise there is a strange offset on top of each element
+      display: flex;
+      //But with display flex, the list-items shows the list-style, therefore we need to hide it explicitly
+      //https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/104357/
+      //https://github.com/webhintio/webhint.io/issues/210
+      //https://twitter.com/fremycompany/status/950856311083683840
+      list-style: none;
+      list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");//Simply a transparent pixel
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    display: inline-block;
+
+    &:first-child {
+      .header-navigation-link,
+      .header-subnavigation-link {
+        padding-left: 0;
+
+        &::after {
+          left: 0;
+        }
+      }
+    }
+    &:last-child {
+      .header-navigation-link,
+      .header-subnavigation-link {
+        padding-right: 0;
+
+        &::after {
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+.header-navigation-link,
+.header-subnavigation-link {
+  @include reset-link;
+  display: block;
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    padding-right: $header-navigation-link-padding-x * 2 + $header-navigation-link-icon-size;
+    border-bottom: $header-navigation-link-indicator-height solid $header-navigation-link-divider-color;
+
+    &:hover {
+      border-bottom: $header-navigation-link-indicator-height solid $header-navigation-link-hover-color;
+    }
+
+    &.active {
+      border-bottom: $header-navigation-link-indicator-height solid $header-navigation-link-active-color;
+    }
+
+    // bugfix - oldBrowser - Edge 17 otherwise the height will have random whitespace before next element (CAKE-3442)
+    @supports (-ms-ime-align:auto) {
+      flex: 1; //set full width of mobile navigation elements
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    display: inline-block;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      height: 0;
+      content: "";
+    }
+  }
+}
+
+.header-navigation-link-icon,
+.header-subnavigation-link-icon {
+  position: absolute;
+  top: 50%;
+  right: $header-navigation-link-padding-x;
+  display: block;
+  width: $header-navigation-link-icon-size;
+  height: $header-navigation-link-icon-size;
+  transform: translateY(-50%);
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.header-subnavigation-list-head-item {
+  > .header-subnavigation-link {
+    display: flex;
+    @include cake-font-size($header-navigation-link-font-size);
+    width: 100%;
+    padding-top: $header-subnavigation-link-head-item-padding-y;
+    padding-bottom: $header-subnavigation-link-head-item-padding-y;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .header-subnavigation-list-head-item,
+  .tns-horizontal.tns-subpixel > .tns-item.header-subnavigation-list-head-item {
+    display: none;
+  }
+}
+
+.header-subnavigation-head-link {
+  justify-self: start;
+  flex: 1;
+}
+
+.header-subnavigation-badge {
+  justify-self: end;
+  align-self: center;
+}
+
+
+
+//* ------------------------------------------------------------ */
+//* ----- Header-Main-Navigation-List -------------------------- */
+//* ------------------------------------------------------------ */
+
+
+.header-navigation-link {
+  padding: $header-navigation-link-padding-y $header-navigation-link-padding-x;
+  line-height: $header-navigation-link-line-height;
+  @include cake-font-size($header-navigation-link-font-size);
+
+  @include media-breakpoint-up(md) {
+    padding: $header-navigation-link-padding-y-md $header-navigation-link-padding-x;
+
+    &::after {
+      right: $header-navigation-link-padding-x;
+      left: $header-navigation-link-padding-x;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: $header-navigation-link-padding-y $header-navigation-link-padding-x;
+  }
+
+  &:hover,
+  &:focus {
+    color: $header-navigation-link-hover-color;
+    cursor: pointer;
+
+    &::after {
+      height: $header-navigation-link-indicator-height-desktop;
+      background-color: $header-navigation-link-hover-color;
+    }
+  }
+
+  &.active {
+    color: $header-navigation-link-active-color;
+
+    &::after {
+      height: $header-navigation-link-indicator-height-desktop;
+      background-color: $header-navigation-link-active-color;
+    }
+  }
+}
+
+
+
+//* ------------------------------------------------------------ */
+//* ----- Header-Sub-Navigation-List --------------------------- */
+//* ------------------------------------------------------------ */
+
+.header-subnavigation-list {
+  //Only show sub-navigation on MD-LG
+  @include media-breakpoint-up(md) {
+    > .header-subnavigation-list-item.header-subnavigation-list-head-item + .header-subnavigation-list-item:not(.header-subnavigation-list-head-item) {
+      .header-navigation-link,
+      .header-subnavigation-link {
+        padding-left: 0;
+
+        // stylelint-disable-next-line selector-max-class
+        &::after {
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+.header-subnavigation-link {
+  padding: $header-subnavigation-link-padding-y $header-subnavigation-link-padding-x;
+  line-height: $header-subnavigation-link-line-height;
+  @include cake-font-size($header-subnavigation-link-font-size);
+
+  @include media-breakpoint-up(md) {
+    padding: $header-subnavigation-link-padding-y-md $header-subnavigation-link-padding-x-md;
+
+    &::after {
+      right: $header-subnavigation-link-padding-x-md;
+      left: $header-subnavigation-link-padding-x-md;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: $header-subnavigation-link-padding-y-lg $header-subnavigation-link-padding-x-md;
+  }
+
+  &:hover,
+  &:focus {
+    color: $header-navigation-link-hover-color;
+    cursor: pointer;
+
+    &::after {
+      // bugfix - browser - Firefox when zooming in or out on some levels, there is a blitzer (small gap) between the hover/active border of the subnavigation
+      height: $header-subnavigation-link-indicator-height-desktop + calculateRem(1px);
+      background-color: $header-navigation-link-hover-color;
+    }
+
+    .header-subnavigation-badge {
+      background-color: cake-color("primary", "darker");
+    }
+  }
+
+  &.active {
+    color: $header-navigation-link-active-color;
+
+    &::after {
+      // bugfix - browser - Firefox when zooming in or out on some levels, there is a blitzer (small gap) between the hover/active border of the subnavigation
+      height: $header-subnavigation-link-indicator-height-desktop + calculateRem(1px);
+      background-color: $header-navigation-link-active-color;
+    }
+  }
+}
+
+.btn-header-navigation-slider,
+.btn-header-subnavigation-slider {
+  position: absolute;
+  z-index: 1;
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: inline-block;
+  }
+
+  // bugfix - oldBrowser - IE 11 does not hide slider buttons on mobile
+  // stylelint-disable selector-no-vendor-prefix, selector-type-no-unknown, declaration-no-important
+  _:-ms-fullscreen,
+  :root & {
+    display: none !important;
+
+    @include media-breakpoint-up(md) {
+      display: inline-block !important;
+    }
+  }
+
+  // bugfix - oldBrowser - Edge 17 does not hide slider buttons on mobile
+  @supports (-ms-ime-align:auto) {
+    display: none !important;
+
+    @include media-breakpoint-up(md) {
+      display: inline-block !important;
+    }
+  }
+  // stylelint-enable
+}
+
+
+.btn-header-navigation-slider {
+  height: floor((($header-navigation-link-padding-y-md * 2) + ($header-navigation-link-font-size * $header-navigation-link-line-height)) * 16) / 16;
+
+  @include media-breakpoint-up(lg) {
+    height: floor((($header-navigation-link-padding-y * 2) + (($header-navigation-link-font-size + $font-grow) * $header-navigation-link-line-height)) * 16) / 16;
+  }
+}
+.btn-header-subnavigation-slider {
+  height: floor((($header-subnavigation-link-padding-y-md * 2) + ($header-subnavigation-link-font-size * $header-subnavigation-link-line-height)) * 16) / 16;
+  margin-top: calculateRem(1px);
+
+  @include media-breakpoint-up(lg) {
+    height: floor((($header-subnavigation-link-padding-y-lg * 2) + (($header-subnavigation-link-font-size + $font-grow) * $header-subnavigation-link-line-height)) * 16) / 16;
+  }
+}
+.btn-header-navigation-slider-previous {
+  left: calculateRem($grid-gutter-width / 2);
+
+  @include media-breakpoint-up(lg) {
+    left: calc((100% - #{map-get($container-max-widths, lg)}) / 2 + #{$grid-gutter-width / 2});
+  }
+}
+.btn-header-navigation-slider-next {
+  right: calculateRem($grid-gutter-width / 2);
+
+  @include media-breakpoint-up(lg) {
+    right: calc((100% - #{map-get($container-max-widths, lg)}) / 2 + #{$grid-gutter-width / 2});
+  }
+}

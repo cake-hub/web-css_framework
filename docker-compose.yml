@@ -1,0 +1,15 @@
+version: '3'
+services:
+  cake:
+    container_name: cake
+    env_file:
+      - .env
+    image: node:10
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports: ['2021:2021']
+    expose: ['2021']
+    volumes:
+        - ./Container:/var/www/html
+    tty: true

@@ -1,0 +1,101 @@
+// Base class
+//
+// Requires one of the contextual, color modifier classes for `color` and
+// `background-color`.
+
+.badge {
+  display: inline-block;
+  padding-right: $badge-padding-x;
+  padding-left: $badge-padding-x;
+  font-weight: $badge-font-weight;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border: $badge-border;
+  @include badge-padding-y($badge-padding-y, $badge-line-height, $font-size-base);
+  @include cake-font-size($font-size-base);
+  @include border-radius($badge-border-radius);
+
+  @at-root a#{&} {
+    @include plain-hover-focus {
+      text-decoration: none;
+    }
+  }
+
+  // Empty badges collapse automatically
+  &:empty {
+    display: none;
+  }
+}
+
+// Quick fix for badges in buttons
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+// Addon badges
+//
+// Extra small badge
+
+.badge-addon {
+  min-width: $badge-addon-size;
+  padding: $badge-addon-padding-y $badge-addon-padding-x;
+  @include border-radius($badge-addon-border-radius);
+  @include cake-font-size($badge-addon-font-size);
+
+  // bugfix - oldBrowser - IE 11 text is not vertically centered completely
+  // stylelint-disable-next-line selector-no-vendor-prefix, selector-type-no-unknown
+  _:-ms-fullscreen,
+  :root & {
+    padding-top: $badge-addon-padding-y - ($badge-addon-padding-y * .06);
+    padding-bottom: $badge-addon-padding-y + ($badge-addon-padding-y * .06);
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-width: $badge-addon-size-lg;
+    padding: $badge-addon-padding-y-lg $badge-addon-padding-x-lg;
+    // bugfix - oldBrowser - IE 11 text is not vertically centered completely
+    // stylelint-disable-next-line selector-no-vendor-prefix, selector-type-no-unknown
+    _:-ms-fullscreen,
+    :root & {
+      padding-top: $badge-addon-padding-y-lg - ($badge-addon-padding-y-lg * .06);
+      padding-bottom: $badge-addon-padding-y-lg + ($badge-addon-padding-y-lg * .06);
+    }
+  }
+}
+
+// Pill badges
+//
+// Make them extra rounded with a modifier to replace v3's badges.
+
+.badge-pill {
+  padding-right: $badge-pill-padding-x;
+  padding-left: $badge-pill-padding-x;
+  @include border-radius($badge-pill-border-radius);
+}
+
+// Colors
+//
+// Contextual variations (linked badges get darker on :hover).
+
+@each $color, $value in $theme-colors {
+  .badge-#{$color} {
+    @include badge-variant($value);
+  }
+}
+
+// Badge sizes
+//
+// Define the three different badge font-sizes
+
+.badge-large {
+  @include cake-font-size($font-size-lg);
+  @include badge-padding-y($badge-padding-y, $badge-line-height, $font-size-lg);
+}
+
+.badge-small {
+  @include cake-font-size($font-size-sm);
+  @include badge-padding-y($badge-padding-y, $badge-line-height, $font-size-sm);
+}

@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional npm config file
+#Container/.npmrc
+
+# dotenv environment variables file
+.env
+
+# Dist folder
+Container/dist/
+Container/docs/About/Change log.md
+Container/docs/**/examples
+Container/docs/_assets
+Container/themes/**/dist
+
+#tmp files/folders
+Container/tmp/
+
+# OS, IDE
+.idea
+.DS_Store

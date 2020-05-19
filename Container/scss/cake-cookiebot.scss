@@ -1,0 +1,19 @@
+@import "functions";
+@import "variables-color";
+@import "variables";
+@import "mixins";
+@import "typography-font-face";
+
+.cookie-alert-extended {
+  @import "reboot";
+
+  @extend .cake-html-default;
+  @extend .cake-body-default;
+
+  @import "typography-content";
+  @import "button";
+  @import "custom-form";
+  @import "utilities";
+}
+
+@import "cookie-alert-extended";

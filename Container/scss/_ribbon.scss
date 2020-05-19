@@ -1,0 +1,66 @@
+//
+// Base styles
+//
+
+.ribbon {
+  @include list-unstyled();
+  @include clearfix();
+  position: absolute;
+  right: -$ribbon-triangle-size-sm;
+  left: 0;
+  z-index: 1;
+  margin-top: $ribbon-margin-top;
+  margin-bottom: 0;
+  text-align: right;
+
+  @include media-breakpoint-up(lg) {
+    right: -$ribbon-triangle-size-lg;
+  }
+}
+
+.ribbon-item {
+  @include cake-font-size($font-size-sm);
+  position: relative;
+  float: right;
+  max-width: calc(#{$ribbon-max-width} + #{$ribbon-triangle-size-sm});
+  padding: $ribbon-content-padding-sm;
+  margin-bottom: $ribbon-triangle-size-sm;
+  clear: right;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  text-align: right;
+  background-color: $white;
+  @include border-left-radius($ribbon-border-radius);
+  box-shadow: $box-shadow;
+
+  @include media-breakpoint-up(lg) {
+    max-width: calc(#{$ribbon-max-width} + #{$ribbon-triangle-size-lg});
+    padding: $ribbon-content-padding-lg;
+    margin-bottom: $ribbon-triangle-size-lg;
+  }
+
+  @include triangle(topleft, $ribbon-triangle-size-sm, $ribbon-triangle-size-sm, cake-color("gray", "darker")) {
+    right: 0;
+    bottom: -$ribbon-triangle-size-sm;
+    z-index: -1;
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include triangle(topleft, $ribbon-triangle-size-lg, $ribbon-triangle-size-lg, cake-color("gray", "darker")) {
+      bottom: -$ribbon-triangle-size-lg;
+    }
+  }
+}
+
+
+//
+// Alternate ribbons
+//
+
+//Primary, Highlight, Dark, Light
+@each $variant, $color in $theme-colors {
+  .ribbon-item-#{$variant} {
+    color: $white;
+    background-color: cake-color($variant);
+  }
+}

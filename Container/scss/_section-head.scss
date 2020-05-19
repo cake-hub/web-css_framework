@@ -1,0 +1,40 @@
+.section-head {
+  display: block;
+  min-height: calculateRem(24px);
+  overflow: hidden;
+  line-height: normal;
+  text-align: center;
+  @include media-breakpoint-up(lg) {
+    min-height: calculateRem(32px);
+  }
+}
+
+.section-head-title {
+  @include cake-font-size($section-head-font-size);
+  position: relative;
+  display: inline-block;
+  max-width: $section-head-max-width;
+  padding: 0 $section-head-padding;
+  margin: 0;
+  font-weight: $section-head-font-weight;
+  line-height: $section-head-line-height;
+  text-align: center;
+  text-transform: uppercase;
+
+  &::before,
+  &::after {
+    position: absolute;
+    bottom: $section-head-horizontal-rule-bottom-space; //is the base-line of the text!
+    width: 100vw;
+    content: "";
+    border-top: $section-head-border-width solid $section-head-border-color;
+  }
+
+  &::before {
+    right: 100%;
+  }
+
+  &::after {
+    left: 100%;
+  }
+}

@@ -1,0 +1,48 @@
+.teaser-card {
+  box-shadow: $box-shadow;
+}
+
+.teaser-card-light {
+  .teaser-card-img-overlay {
+    color: $teaser-bar-bg;
+    background-color: rgba($teaser-bar-color, $teaser-bar-bg-opacity);
+  }
+}
+
+.teaser-card-link {
+  @include reset-link;
+  min-height: 1px; // bugfix - oldBrowser - IE 11 does have some problems with height of image container when image-height: auto
+
+  &:hover,
+  &:focus {
+    .teaser-card-title {
+      text-decoration: underline;
+    }
+    .card-img {
+      opacity: $teaser-img-hover-opacity;
+    }
+  }
+}
+
+.teaser-card-img-overlay {
+  top: auto; // Revert top:0 from `.card-img-overlay`
+  bottom: $teaser-bar-margin-bottom;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: $teaser-bar-padding;
+  line-height: $teaser-bar-line-height;
+  color: $teaser-bar-color;
+  background-color: rgba($teaser-bar-bg, $teaser-bar-bg-opacity);
+}
+
+.teaser-card-title {
+  @include cake-font-size($teaser-title-font-size);
+  margin-bottom: 0;
+  font-weight: $teaser-title-font-weight;
+}
+
+.teaser-card-subhead {
+  @include cake-font-size($teaser-subhead-font-size);
+  margin-bottom: $teaser-subhead-margin-bottom;
+  font-weight: $teaser-subhead-font-weight;
+}

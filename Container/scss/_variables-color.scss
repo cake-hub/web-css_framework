@@ -1,0 +1,55 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+$white:       #fff !default;
+$gray:        #4e5761 !default;
+$black:       #000 !default;
+
+$primary:     #0050aa !default;
+$success:     #348553 !default;
+$info:        #0050aa !default;
+$warning:     #be591d !default;
+$danger:      #e60a14 !default;
+$mark:        #fff000 !default;
+
+$mark-light:  #fffaad !default;
+$mark-darker: #f7a606 !default;
+
+// Customize the light and dark text colors for use in our cake-colors contrast function.
+$cake-color-mix-dark:   $black !default;
+$cake-color-mix-light:  $white !default;
+
+// Color gradations
+$gradations: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$gradations: map-merge(
+  (
+    "background": 4,
+    "lightest": 8,
+    "lighter": 16,
+    "light": 32,
+    "base": 100,
+    "dark": -16,
+    "darker": -32,
+    "darkest": -64
+  ),
+  $gradations
+);
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "gray":       $gray
+  ),
+  $theme-colors
+);

@@ -1,0 +1,33 @@
+.product-tile-card {
+  height: 100%;
+  box-shadow: $product-tile-shadow;
+}
+
+// stylelint-disable selector-no-qualifying-type
+a.product-tile-card {
+  &:focus,
+  &:hover {
+    .product-tile-card-title {
+      text-decoration: underline;
+    }
+  }
+}
+
+.product-tile-card-title {
+  @include cake-font-size();
+  font-weight: $font-weight-normal;
+
+  @include media-breakpoint-down(xs) {
+    margin-bottom: .25rem;
+  }
+}
+
+.product-tile-card-text {
+  @extend .text-sm;
+}
+
+.product-tile-card-body {
+  @include media-breakpoint-up(sm) {
+    padding: 1rem;
+  }
+}

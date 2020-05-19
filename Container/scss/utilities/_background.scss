@@ -1,0 +1,25 @@
+// stylelint-disable declaration-no-important
+
+@each $color, $value in $theme-colors {
+  @include bg-variant(".bg-#{$color}", $value);
+}
+
+@each $color, $value in $theme-colors {
+  @include bg-gradient-variant(".bg-gradient-#{$color}", $color);
+}
+
+.bg-white {
+  background-color: $white !important;
+}
+
+.bg-mark {
+  background-color: $mark !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.bg-gradient-mark {
+  @include gradient-y-three-colors($mark, $mark, 60%, $mark-darker);
+}

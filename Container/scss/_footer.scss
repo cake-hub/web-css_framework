@@ -1,0 +1,46 @@
+.footer {
+  padding-top: $footer-padding-y;
+  padding-bottom: $footer-padding-y;
+  color: $footer-color;
+  text-align: center;
+  background-color: $footer-bg;
+}
+
+.footer hr {
+  border-top: $footer-seperator-border-width solid $footer-seperator-border-color;
+}
+
+.footer-headline {
+  @extend h5; //apply h5-stylings but let user use any tag for semantic
+}
+
+.footer-list {
+  @include list-unstyled;
+  margin-bottom: 0;
+}
+
+.footer-list-item-link {
+  @include reset-link;
+  padding: .5rem;
+
+  // bugfix - oldBrowser - IE 11 text is not vertically centered completely
+  // stylelint-disable-next-line selector-no-vendor-prefix, selector-type-no-unknown
+  _:-ms-fullscreen,
+  :root & {
+    padding-top: .4rem;
+    padding-bottom: .6rem;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: $footer-list-item-link-hover-bg;
+  }
+}
+
+.footer-headline,
+.footer-list-item,
+.footer-list-item-link {
+  display: inline-block;
+}

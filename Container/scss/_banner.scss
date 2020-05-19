@@ -1,0 +1,97 @@
+.banner-card {
+  display: block;
+  max-width: $banner-max-width;
+  height: $banner-height;
+  margin: 0 auto;
+  background: transparent;
+
+  @include media-breakpoint-up(lg) {
+    height: $banner-height-desktop;
+  }
+}
+
+.banner-container  {
+  transform: translateY(-100%);
+
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 100%;
+  }
+}
+
+.banner-card-light {
+  .banner-card-img-overlay {
+    color: $banner-bar-bg;
+    background-color: rgba($banner-bar-color, $banner-bar-bg-opacity);
+  }
+}
+
+.banner-card-img {
+  height: 100%;
+  object-fit: cover;
+  @include border-radius(0);
+}
+
+.banner-card-img-overlay {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  height: auto;
+  padding: $banner-bar-padding;
+  color: $banner-bar-color;
+  background-color: rgba($banner-bar-bg, $banner-bar-bg-opacity);
+
+  @include media-breakpoint-up(md) {
+    width: $banner-width-cols / 12 * 100%;
+    min-height: 100%;
+  }
+}
+
+.banner-card-title {
+  @include cake-font-size($banner-title-font-size);
+  margin-bottom: 0;
+  font-weight: $banner-title-font-weight;
+}
+
+.banner-card-subhead {
+  @include cake-font-size($banner-subhead-font-size);
+  margin-bottom: $banner-subhead-margin-bottom;
+  font-weight: $banner-subhead-font-weight;
+}
+
+// bugfix - oldBrowser - IE 11 does not support object-fit: cover
+// stylelint-disable-next-line selector-no-vendor-prefix, selector-type-no-unknown
+_:-ms-fullscreen,
+:root {
+  .banner-card {
+    position: relative;
+    overflow: hidden;
+
+    .banner-card-img {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      height: auto;
+      min-height: 100%;
+      transform: translateY(-50%);
+    }
+
+    .banner-container {
+      position: relative;
+      top: 100%;
+      z-index: 2;
+      transform: none;
+      transform: translateY(-100%);
+    }
+
+    .banner-card-img-overlay {
+      height: 100%;
+    }
+  }
+}

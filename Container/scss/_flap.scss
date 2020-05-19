@@ -1,0 +1,57 @@
+.flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  max-width: $flap-max-width;
+  padding-left: $flap-left-space;
+}
+
+.flap-content {
+  max-width: 100%;
+  @include border-bottom-radius($flap-border-radius);
+  box-shadow: $flap-box-shadow;
+}
+
+.flap-nose {
+  height: $flap-nose-bar-height + $flap-nose-semicircle-height;
+
+  &::before {
+    display: block;
+    height: $flap-nose-bar-height;
+    content: "";
+    background-color: $flap-nose-bg;
+  }
+
+  &::after {
+    display: block;
+    width: $flap-nose-semicircle-height * 2;
+    height: $flap-nose-semicircle-height;
+    margin: 0 auto;
+    content: "";
+    background-color: $flap-nose-bg;
+    @include border-bottom-radius($flap-nose-semicircle-height * 2);
+
+    @include media-breakpoint-up(lg) {
+      width: $flap-nose-semicircle-height-lg * 2;
+      height: $flap-nose-semicircle-height-lg;
+      @include border-bottom-radius($flap-nose-semicircle-height-lg * 2);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: $flap-nose-bar-height + $flap-nose-semicircle-height-lg;
+  }
+}
+
+.flap-text {
+  padding: $flap-text-padding;
+  @include cake-font-size($flap-font-size);
+  font-weight: $flap-font-weight;
+  line-height: $flap-line-height;
+  text-align: $flap-text-align;
+
+  @include media-breakpoint-up(lg) {
+    padding: $flap-text-padding-lg;
+  }
+}

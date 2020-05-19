@@ -1,0 +1,24 @@
+@mixin font-face($font-family, $filename, $font-weight: normal, $font-style: normal, $fontsPath: $font-path) {
+  @font-face {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url("#{$fontsPath}#{$filename}.woff2") format("woff2"), url("#{$fontsPath}#{$filename}.woff") format("woff");
+  }
+}
+
+@mixin build-font-faces($fontFaceDeclarations) {
+  @if ($fontFaceDeclarations != null) {
+    @each $fontFaceDeclaration in $fontFaceDeclarations {
+      @if (length($fontFaceDeclaration) == 5) {
+        @include font-face(nth($fontFaceDeclaration, 1), nth($fontFaceDeclaration, 2), nth($fontFaceDeclaration, 3), nth($fontFaceDeclaration, 4), nth($fontFaceDeclaration, 5));
+      } @else if (length($fontFaceDeclaration) == 4) {
+        @include font-face(nth($fontFaceDeclaration, 1), nth($fontFaceDeclaration, 2), nth($fontFaceDeclaration, 3), nth($fontFaceDeclaration, 4));
+      } @else if (length($fontFaceDeclaration) == 3) {
+        @include font-face(nth($fontFaceDeclaration, 1), nth($fontFaceDeclaration, 2), nth($fontFaceDeclaration, 3));
+      } @else {
+        @include font-face(nth($fontFaceDeclaration, 1), nth($fontFaceDeclaration, 2));
+      }
+    }
+  }
+}

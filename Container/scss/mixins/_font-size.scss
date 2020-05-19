@@ -1,0 +1,17 @@
+@mixin cake-font-size($font-size: $font-size-base, $font-grow: $font-grow) {
+  font-size: $font-size;
+
+  //ONLY REM and PX values are supported with `font-grow`
+  //If `font-size` is in Rem value simply use that value
+  @if unit($font-size) == rem {
+    @include media-breakpoint-up(lg) {
+      font-size: $font-size + $font-grow;
+    }
+  }
+  //If `font-size` is in PX value, calculate REM
+  @else if unit($font-size) == px {
+    @include media-breakpoint-up(lg) {
+      font-size: calculateRem($font-size) + $font-grow;
+    }
+  }
+}

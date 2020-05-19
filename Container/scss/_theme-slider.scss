@@ -1,0 +1,144 @@
+.theme-slider {
+  position: relative;
+  padding-right: .1px; //Only for tiny-slider to work in every breakpoint!
+  padding-left: $theme-slider-outer-gutter;
+  overflow: hidden;
+  background-color: $theme-slider-bg;
+  border-top: $theme-slider-outer-gutter solid $theme-slider-bg;
+  border-bottom: $theme-slider-outer-gutter solid $theme-slider-bg;
+  @include border-radius($theme-slider-border-radius);
+  box-shadow: $theme-slider-shadow;
+}
+
+.theme-slider-nojs {
+  padding-right: $theme-slider-outer-gutter;
+
+  .theme-slider-slides {
+    overflow-x: auto;
+  }
+
+  .theme-slider-slide {
+    &:not(:last-child) {
+      margin-right: $theme-slider-outer-gutter;
+    }
+    flex: 0 0 auto;
+    width: 120px;
+
+    @include media-breakpoint-up (sm) {
+      width: 160px;
+    }
+  }
+}
+
+.theme-slider-slides {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.theme-slider-slide {
+  flex: 0 0 auto; // set the width in theme slider Javascript options
+  list-style-type: none;
+}
+
+.theme-slider-slide-active {
+  .theme-slider-card {
+    color: $theme-slider-active-color;
+
+    &:hover,
+    &:focus {
+      color: $theme-slider-active-hover-color;
+    }
+  }
+
+  .theme-slider-card-body {
+    background-color: $theme-slider-active-card-body-bg;
+  }
+}
+
+.theme-slider-card {
+  height: 100%;
+  line-height: $theme-slider-card-line-height;
+  background-color: $theme-slider-card-bg;
+
+  &:focus,
+  &:hover {
+    .theme-slider-card-title {
+      text-decoration: underline;
+    }
+  }
+}
+
+// bugfix - oldBrowser - IE 11 does skew the images to a bigger height
+.theme-slider-card-img-top {
+  min-height: 1px;
+}
+
+.theme-slider-card-subhead {
+  @extend .text-sm;
+  font-weight: $theme-slider-subhead-font-weight;
+}
+
+.theme-slider-card-title + .theme-slider-card-subhead {
+  margin-bottom: $theme-slider-title-margin-bottom;
+}
+
+.theme-slider-card-title {
+  @include cake-font-size($theme-slider-title-font-size);
+  flex: 1 0 auto;
+  margin-top: 0;
+  font-weight: $theme-slider-title-font-weight;
+}
+
+.theme-slider-card-body {
+  @include border-bottom-radius($theme-slider-card-inner-border-radius);
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column-reverse;
+  padding: $theme-slider-card-body-padding;
+  background-color: $theme-slider-card-body-bg;
+}
+
+.theme-slider-btn {
+  @include transition($transition-base);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+
+  // Hide Buttons and Show them via JS (when enabled)
+  display: none;
+  height: 100%;
+  @include border-radius(0);
+  opacity: 0;
+}
+
+.theme-slider-btn-prev {
+  left: 0;
+}
+
+.theme-slider-btn-next {
+  right: 0;
+}
+
+
+.theme-slider:not(.theme-slider-nojs) {
+  // bugfix - oldBrowser - Edge 17 + 18 tiny-slider used float to position the elements, that must be reverted
+  // stylelint-disable selector-max-class, declaration-no-important
+  @supports (-ms-ime-align:auto) {
+    .tns-horizontal.tns-carousel.tns-no-subpixel > .tns-item {
+      margin-right: 0;
+    }
+
+    .tns-horizontal.tns-no-subpixel > .tns-item {
+      float: none;
+    }
+
+    .theme-slider-slide {
+      margin-left: 0 !important;
+    }
+  }
+  // stylelint-enable
+}

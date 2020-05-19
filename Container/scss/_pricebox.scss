@@ -1,0 +1,203 @@
+@import "../scss/variables";
+@import "../scss/mixins/gradients";
+
+.pricebox {
+  display: inline-block;
+  max-width: 100%;
+  line-height: 1;
+  color: $pricebox-font-color;
+  text-align: right;
+  @include cake-font-size($pricebox-font-size);
+}
+
+.pricebox-negative {
+  .pricebox-container {
+    color: $pricebox-font-color-negative;
+    background-color: $danger;
+    border-color: $danger;
+  }
+
+  .pricebox-recommended-retail-price {
+
+    &::after {
+      @include gradient-diagonal-line($pricebox-font-color);
+    }
+
+    @supports (-ms-ime-align:auto) { // bugfix - oldBrowser: Edge 17
+      &::after {
+        // (https://caniuse.com/#search=calc)
+        background-image: linear-gradient(to bottom right, transparent 49%, $pricebox-font-color 50%, $pricebox-font-color 55%, transparent 56%);
+      }
+    }
+  }
+}
+
+.pricebox-wrapper {
+  display: inline-block;
+}
+
+.pricebox-container {
+  display: block;
+  padding: .25rem;
+  font-weight: $pricebox-price-font-weight;
+  background-color: $pricebox-bg;
+  border: $pricebox-border;
+
+  @include media-breakpoint-up(sm) {
+    padding: .5rem;
+  }
+}
+
+.pricebox-discount-wrapper {
+  display: block;
+  text-align: center;
+}
+
+.pricebox-discount,
+.pricebox-recommended-retail-price {
+  display: inline;
+}
+
+.pricebox-recommended-retail-price {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    bottom: 25%;
+    left: 0;
+    display: block;
+    content: "";
+    @include gradient-diagonal-line;
+  }
+
+  @supports (-ms-ime-align:auto) { // bugfix - oldBrowser: Edge 17
+    &::after {
+      // (https://caniuse.com/#search=calc)
+      background-image: linear-gradient(to bottom right, transparent 49%, $danger 50%, $danger 55%, transparent 56%);
+    }
+  }
+
+  // stylelint-disable-next-line selector-no-vendor-prefix, selector-type-no-unknown
+  _:-ms-fullscreen,
+  :root &::after { // bugfix - oldBrowser: IE 11
+    background-image: none;
+  }
+
+  // stylelint-disable-next-line selector-no-vendor-prefix, selector-type-no-unknown
+  _:-ms-fullscreen,
+  :root & { // bugfix - oldBrowser: IE 11
+    text-decoration: line-through;
+  }
+}
+
+.pricebox-price-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.pricebox-prefix {
+  margin-right: $pricebox-prefix-margin-right;
+}
+
+.pricebox-price {
+  // Adjust the difference of font-sizes and their base-line
+  margin-bottom: ($pricebox-price-baseline-factor * ($pricebox-price-font-size - 1rem));
+  font-size: $pricebox-price-font-size;
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: ($pricebox-price-baseline-factor * (($pricebox-price-font-size + .5rem) - 1rem));
+    font-size: ($pricebox-price-font-size + .5rem);
+  }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: ($pricebox-price-baseline-factor * (($pricebox-price-font-size + 1rem) - 1rem));
+    font-size: ($pricebox-price-font-size + 1rem);
+  }
+}
+
+.pricebox-medium {
+  .pricebox-price {
+    // Adjust the difference of font-sizes and their base-line
+    margin-bottom: ($pricebox-price-baseline-factor * ($pricebox-price-medium-font-size - 1rem));
+    font-size: $pricebox-price-medium-font-size;
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: ($pricebox-price-baseline-factor * (($pricebox-price-medium-font-size + .5rem) - 1rem));
+      font-size: ($pricebox-price-medium-font-size + .5rem);
+    }
+    @include media-breakpoint-up(lg) {
+      margin-bottom: ($pricebox-price-baseline-factor * (($pricebox-price-medium-font-size + 1rem) - 1rem));
+      font-size: ($pricebox-price-medium-font-size + 1rem);
+    }
+  }
+}
+
+.pricebox-suffix {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  justify-content: flex-end;
+}
+
+.pricebox-asterisk {
+  flex: 1 1 auto;
+
+  @include media-breakpoint-down(xs) {
+    line-height: .5;
+  }
+}
+
+.pricebox-currency {
+  flex: 0 1 auto;
+  margin-left: $pricebox-currency-margin-left;
+}
+
+.pricebox-basic-quantity {
+  display: block;
+  margin-top: $pricebox-basic-quantity-margin-top;
+  line-height: $pricebox-basic-quantity-line-height;
+}
+
+.pricebox-with-highlight-action,
+.pricebox-with-highlight-offer,
+.pricebox-with-highlight-info {
+  .pricebox-container,
+  .pricebox-basic-quantity {
+    margin-right: calculateRem(4px);
+  }
+
+  @include media-breakpoint-up(sm) {
+    .pricebox-container,
+    .pricebox-basic-quantity {
+      margin-right: .5rem;
+    }
+  }
+}
+
+.pricebox-with-highlight-offer .pricebox-highlight {
+  color: $pricebox-font-color;
+  background-color: $mark;
+}
+
+.pricebox-with-highlight-info .pricebox-highlight {
+  background-color: $info;
+}
+
+.pricebox-highlight {
+  display: block;
+  padding: calculateRem(2px) calculateRem(4px) calculateRem(10px) calculateRem(4px);
+  margin-bottom: calculateRem(-8px);
+  margin-left: calculateRem(4px);
+  font-weight: $pricebox-highlight-font-weight;
+  color: $pricebox-font-color-negative;
+  text-align: center;
+  background-color: $danger;
+
+  @include media-breakpoint-up(sm) {
+    padding: calculateRem(4px) calculateRem(8px) calculateRem(12px) calculateRem(8px);
+    margin-left: .5rem;
+  }
+}

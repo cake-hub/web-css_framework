@@ -1,0 +1,55 @@
+@mixin badge-variant($bg) {
+  color: color-yiq($bg);
+  background-color: $bg;
+
+  @at-root a#{&} {
+    @include hover-focus {
+      color: color-yiq($bg);
+      background-color: darken($bg, 10%);
+    }
+
+    &:focus,
+    &.focus {
+      outline: 0;
+      box-shadow: 0 0 0 $badge-focus-width rgba($bg, .5);
+    }
+  }
+}
+
+@mixin badge-padding-y($padding-y, $line-height, $font-size) {
+  $line-height-padding-part: $line-height - 1; // part over 100%
+
+  $line-height-spacing: (($font-size * $line-height-padding-part) / 2);
+  $line-height-spacing: round($line-height-spacing * 16) / 16;
+
+  $padding-y-adjusted: $padding-y + $line-height-spacing;
+
+  padding-top: $padding-y-adjusted;
+  padding-bottom: $padding-y-adjusted;
+
+  // bugfix - oldBrowser - IE 11 text is not vertically centered completely
+  // stylelint-disable-next-line selector-no-vendor-prefix, selector-type-no-unknown
+  _:-ms-fullscreen,
+  :root & {
+    padding-top: $padding-y-adjusted - ($padding-y-adjusted * .06);
+    padding-bottom: $padding-y-adjusted + ($padding-y-adjusted * .06);
+  }
+
+  @include media-breakpoint-up(lg) {
+    $line-height-spacing: ((($font-size + $font-grow) * $line-height-padding-part) / 2);
+    $line-height-spacing: round($line-height-spacing * 16) / 16;
+
+    $padding-y-adjusted: $padding-y + $line-height-spacing;
+
+    padding-top: $padding-y-adjusted;
+    padding-bottom: $padding-y-adjusted;
+
+    // bugfix - oldBrowser - IE 11 text is not vertically centered completely
+    // stylelint-disable-next-line selector-no-vendor-prefix, selector-type-no-unknown
+    _:-ms-fullscreen,
+    :root & {
+      padding-top: $padding-y-adjusted - ($padding-y-adjusted * .06);
+      padding-bottom: $padding-y-adjusted + ($padding-y-adjusted * .06);
+    }
+  }
+}

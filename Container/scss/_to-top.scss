@@ -1,0 +1,23 @@
+.btn-to-top {
+  @include button-variant($white, $white, $primary, $primary, $primary, $primary);
+  padding-top: $input-btn-padding-x + calculateRem(1px);
+  padding-bottom: $input-btn-padding-x + calculateRem(1px);
+  color: cake-color("gray", "darker");
+  @include border-bottom-radius(0);
+  box-shadow: $box-shadow;
+
+  &:focus,
+  &.focus {
+    box-shadow: $box-shadow, 0 0 0 $btn-focus-width rgba($white, .5);
+  }
+}
+
+.btn-to-top-position {
+  position: fixed;
+  right: $to-top-right;
+  bottom: 0;
+  z-index: $zindex-fixed;
+  @include media-breakpoint-up(lg) {
+    right: calc(((100vw - #{map-get($grid-breakpoints, "lg")}) / 2) + #{$to-top-right});
+  }
+}

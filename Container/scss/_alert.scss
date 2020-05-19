@@ -1,0 +1,72 @@
+//
+// Base styles
+//
+
+.alert {
+  position: relative;
+  padding: $alert-padding-y $alert-padding-x;
+  margin-bottom: $alert-margin-bottom;
+  border: $alert-border-width solid transparent;
+  box-shadow: $box-shadow;
+  @include border-radius($alert-border-radius);
+
+  .alert-link {
+    color: inherit;
+  }
+}
+
+// Headings for larger alerts
+.alert-heading {
+  // Specified to prevent conflicts of changing $headings-color
+  color: inherit;
+}
+
+// Provide class for links that match alerts
+.alert-link {
+  font-weight: $alert-link-font-weight;
+}
+
+
+// Icon on the left side
+.alert-icon {
+  flex: 0 0 auto;
+  margin-right: $alert-icon-margin-right;
+}
+
+// Center first text line to the icon
+.alert-content-with-icon {
+  flex: 1 1 auto;
+  margin-top: $alert-margin-top-content-with-icon;
+}
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissible {
+  // Adjust close link position
+  .close {
+    display: none;  //only show the close-button, when there is JavaScript enabled
+    float: right;
+    padding: $alert-padding-y $alert-padding-x;
+    margin: #{-$alert-padding-y} #{-$alert-padding-x} 0 0;
+    color: inherit;
+  }
+
+  .alert-content-with-icon {
+    .close {
+      margin: #{-$alert-padding-y - $alert-margin-top-content-with-icon} #{-$alert-padding-x} 0 0;
+    }
+  }
+}
+
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    @include alert-variant(cake-color($color, "background"), cake-color($color), cake-color($color, "darker"));
+  }
+}

@@ -1,0 +1,6 @@
+version: '3'
+services:
+  cake:
+    stdin_open: true
+    command: |
+      /bin/sh -c "cd /var/www/html/ && npm install && tail -f /dev/null"
