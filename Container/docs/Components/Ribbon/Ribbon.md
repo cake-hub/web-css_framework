@@ -80,7 +80,7 @@ As an alternative you can also use images inside a ribbon. When using images mak
         "<html>":{
             "src": "examples/RibbonExample.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />

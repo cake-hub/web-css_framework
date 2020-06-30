@@ -10,8 +10,8 @@
  * Source-code from https://www.secrz.de/bitbucket/projects/CAKE/repos/phoenix/
  */
 
-@import "functions";
-@import "variables-color";
-@import "variables";
-@import "mixins";
-@import "reboot";
+@import "../../../scss/functions";
+@import "../../../scss/variables-root";
+@import "../../../scss/variables";
+@import "../../../scss/mixins";
+@import "../../../scss/reboot";

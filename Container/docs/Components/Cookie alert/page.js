@@ -10,27 +10,9 @@ import { minify } from "html-minifier";
 import config from "../../config";
 import { rawMarkup } from "@Develop/helper";
 import CookieAlert from "@Develop/Components/Cookie alert/cookieAlert.html";
-import CookieAlertExtended from "@Develop/Components/Cookie alert/cookieAlert-extended.html";
-import Header from "@Develop/Components/Header/header.html";
 
 const CookieAlertExample = () => (
-    <CookieAlert>
-        <p className="m-0">
-            Please note, however, that if you delete cookies or refuse to accept them, you might not be able to use all of the features we offer,
-            you may not be able to store your preferences, and some of our pages might not display properly. <a href="#">privacy policy</a>.
-        </p>
-    </CookieAlert>
-);
-
-const CookieAlertWithHeader = () => (
-    <React.Fragment>
-        <CookieAlertExample />
-        <Header />
-    </React.Fragment>
-);
-
-const CookieAlertExtendedExample = () => (
-    <CookieAlertExtended/>
+    <CookieAlert/>
 );
 
 const PreviewCookieBotSource = (sourceCode) => (
@@ -43,16 +25,16 @@ const PreviewCookieBotSource = (sourceCode) => (
     </div>
 );
 
-const CookieAlertExtendedJavaScript = () => {
-    const cookieAlertExtendedJavaScriptFilePath = path.join (config.rootPath, '/js/cookieAlert-extended.js');
-    let javascriptFile = fs.readFileSync (cookieAlertExtendedJavaScriptFilePath, { encoding: "utf8" });
+const CookieAlertJavaScript = () => {
+    const cookieAlertJavaScriptFilePath = path.join (config.rootPath, '/js/cookieAlert.js');
+    let javascriptFile = fs.readFileSync (cookieAlertJavaScriptFilePath, { encoding: "utf8" });
     javascriptFile = UglifyJS.minify (javascriptFile).code;
     return PreviewCookieBotSource (javascriptFile);
 };
 
-const CookieAlertExtendedHTML = () => {
+const CookieAlertHTML = () => {
     let html = rawMarkup (
-        <CookieAlertExtended
+        <CookieAlert
             c_language="[#LANGUAGE#]"
             c_textDirection="[#TEXTDIRECTION#]"
             c_title="[#TITLE#]"
@@ -74,9 +56,9 @@ const CookieAlertExtendedHTML = () => {
     return PreviewCookieBotSource (html);
 };
 
-const CookieAlertExtendedCSS = () => {
-    const cookieAlertExtendedCSSFilePath = path.join (config.rootPath, '/themes/Lidl/dist/css/cake-cookiebot.css');
-    const cssContent = fs.readFileSync (cookieAlertExtendedCSSFilePath, { encoding: "utf8" });
+const CookieAlertCSS = () => {
+    const cookieAlertCSSFilePath = path.join (config.rootPath, '/dist/Lidl/css/cake-cookiebot.css');
+    const cssContent = fs.readFileSync (cookieAlertCSSFilePath, { encoding: "utf8" });
 
     const transformCssToBeAllowedByCookieBot = (css) => {
         //Filter not supported css-selectors (Cookiebot)
@@ -89,7 +71,7 @@ const CookieAlertExtendedCSS = () => {
         const regEx = /[\t\f ]*@-moz-document[\t\f ].*\{(?:(?:[\s]|[^{}])*(?:\{(?:[^{}]|[\s])*\})(?:[\s]|[^{}])*)*\}/gm;
         css = css.replace(regEx, "");
         css = purify (
-            rawMarkup ( <CookieAlertExtended />, null, ".html" ),
+            rawMarkup ( <CookieAlert />, null, ".html" ),
             css, {
                 minify: true,
             }
@@ -112,9 +94,7 @@ const CookieAlertExtendedCSS = () => {
 
 export default {
     CookieAlertExample,
-    CookieAlertWithHeader,
-    CookieAlertExtendedExample,
-    CookieAlertExtendedJavaScript,
-    CookieAlertExtendedHTML,
-    CookieAlertExtendedCSS,
+    CookieAlertJavaScript,
+    CookieAlertHTML,
+    CookieAlertCSS,
 };

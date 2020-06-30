@@ -1,4 +1,4 @@
-version: 3.11.1
+version: 4.0.0
 product: Web
 productIcon: earth
 section: Develop
@@ -6,10 +6,10 @@ sectionIcon: code
 build: cd ../ && npm install && npm run build
 develop: cd ../ && npm run dev
 variables:
-  repositoryUrl: https://www.secrz.de/bitbucket/projects/CAKE/repos/showroom/,
-  bundleDownloadUrl: https://www.secrz.de/bitbucket/rest/api/latest/projects/CAKE/repos/phoenix/archive?at=refs%2Ftags%2Fv
-  sourceDownloadUrl: https://www.secrz.de/bitbucket/rest/api/latest/projects/CAKE/repos/phoenix/archive?at=refs%2Ftags%2Fv
-  npmPackageUrl: https://repo.schwarz/artifactory/webapp/#/artifacts/browse/tree/General/cake-npm
-  npmRegistryUrl: https://pkgs.dev.azure.com/schwarzit/_packaging/cake/npm/registry/,
-  contactMailAddress: cake@lidl.com
+  npmPackageName: "@cake-hub/web-css_framework"
+  repositoryUrl: https://github.com/cake-hub/web-css_framework
+  bundleDownloadUrl: https://github.com/cake-hub/web-css_framework/archive/master.zip
+  sourceDownloadUrl: https://github.com/cake-hub/web-css_framework/archive/master.zip
+  npmPackageUrl: https://www.npmjs.com/package/@cake-hub/cake-web-css_framework
+  npmRegistryUrl: https://registry.npmjs.org/
 

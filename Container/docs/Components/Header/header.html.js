@@ -40,7 +40,7 @@ const Header = (  {
             </ul>
             <div className="header-wrapper">
                 <a href="#" className="header-logo-wrapper">
-                    <img src="assets/images/logo.svg" alt="Lidl Logo" className="header-logo" />
+                    <img src="images/logo.svg" alt="Lidl Logo" className="header-logo" />
                 </a>
                 <div className="header-claim d-none d-md-block">
                     Brand-Claim

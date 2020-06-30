@@ -66,8 +66,8 @@ $colors: map-merge(
   $colors
 );
 
-
-//Path for icons
+// Path for icons (the webpack.config.js is the root folder)
+// needed for base64 encoded icons in css
 $expression-icon-path: "./assets/icons/expression/" !default;
 $interaction-icon-path: "./assets/icons/interaction/" !default;
 $navigation-icon-path: "./assets/icons/navigation/" !default;
@@ -1400,10 +1400,17 @@ $teaser-subhead-margin-bottom:                calculateRem(2px) !default;
 
 // Popover
 
-$popover-border-radius:                       $border-radius !default;
-$popover-box-shadow:                          $box-shadow !default;
 $popover-font-size:                           $font-size-sm !default;
 $popover-padding:                             $spacer * 2 !default;
+$popover-box-shadow:                          $box-shadow !default;
+$popover-font-weight:                         $font-weight-normal !default;
+$popover-bg-color:                            cake-color("gray", "background") !default;
+$popover-color:                               color-yiq($popover-bg-color, $body-color, $white) !default;
+$popover-border-color:                        cake-color("gray", "lighter") !default;
+$popover-border-radius:                       $border-radius !default;
+$popover-arrow-color:                         $popover-bg-color !default;
+$popover-svg-arrow-color:                     $popover-arrow-color !default;
+$popover-backdrop-bg-color:                   $popover-bg-color !default;
 
 
 // Banner
@@ -1446,19 +1453,15 @@ $tab-icon-path-next:                  $navigation-icon-path + "arrow-right.svg" 
 
 // Cookie Alert
 
-$cookie-alert-color:                                cake-color("primary") !default;
-$cookie-alert-bg-color:                             cake-color("primary", "background") !default;
-$cookie-alert-font-size:                            calculateRem(12px) !default;
-
-$cookie-alert-extended-overlay-background:          rgba($black, .72) !default;
-$cookie-alert-extended-modal-background:            $white !default;
-$cookie-alert-extended-modal-padding:               calculateRem(16px) !default;
-$cookie-alert-extended-modal-max-width:             calculateRem(624px) !default;
-$cookie-alert-extended-modal-color:                 cake-color("gray", "darker") !default;
-$cookie-alert-extended-modal-font-size:             calculateRem(12px) !default;
-$cookie-alert-extended-modal-seperator:             1px solid cake-color("gray", "lighter") !default;
-$cookie-alert-extended-modal-checkbox-discrepancy:  calculateRem(3px) !default;
-$cookie-alert-extended-modal-detail-link-icon-size: calculateRem(16px) !default;
+$cookie-alert-overlay-background:                   rgba($black, .72) !default;
+$cookie-alert-modal-background:                     $white !default;
+$cookie-alert-modal-padding:                        calculateRem(16px) !default;
+$cookie-alert-modal-max-width:                      calculateRem(624px) !default;
+$cookie-alert-modal-color:                          cake-color("gray", "darker") !default;
+$cookie-alert-modal-font-size:                      calculateRem(12px) !default;
+$cookie-alert-modal-seperator:                      1px solid cake-color("gray", "lighter") !default;
+$cookie-alert-modal-checkbox-discrepancy:           calculateRem(3px) !default;
+$cookie-alert-modal-detail-link-icon-size:          calculateRem(16px) !default;
 
 
 // Flap

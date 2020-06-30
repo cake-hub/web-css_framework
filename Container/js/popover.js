@@ -1,16 +1,25 @@
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import "./cakeDOM";
-import tippy from "tippy.js";
+import tippy from "tippy.js/dist/tippy.cjs";
 
 const _init_popover = (elements = '*[data-tippy-content]', globalConfiguration = {
-    animation: 'fade',
-    arrow: true,
-    content: "popover",
-    theme: "gray",
-    flip: true,
+    theme: "cake",
+    placement: 'top',
+    popperOptions: {
+        positionFixed: true,
+        modifiers: [
+            {
+                name: 'flip',
+                enabled: true,
+                options: {
+                    fallbackPlacements: ['bottom'],
+                },
+            },
+        ],
+    },
     interactive: true,
     delay: 200,
-    touch: true,
-    allowHTML: false,
     appendTo: 'parent',
     onMount({ reference }) {
         reference.setAttribute('aria-expanded', 'true')

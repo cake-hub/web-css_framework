@@ -12,6 +12,7 @@ const PopoverDefault = {
             <br />
             <br />
             <br />
+            <br />
             Default popover
             <abbr { ...Popover ({
                 content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
@@ -27,6 +28,8 @@ const PopoverDefault = {
 const PopoverPlacement = {
     template: () => (
         <center>
+            <br />
+            <br />
             Popover &lt;Bottom&gt;
             <abbr className="mb-2" { ...Popover ({
                 placement: "bottom",
@@ -55,6 +58,8 @@ const PopoverPlacement = {
             }) }>
                 <Icon title="Default popover" name="questionmark-circle" className="icon-24 text-primary" />
             </abbr>
+            <br />
+            <br />
         </center>
     ),
     name: "PopoverPlacement",
@@ -95,14 +100,14 @@ const PopoverPlacementExtended = {
             }) }>
                 <Icon title="Default popover" name="questionmark-circle" className="icon-24 text-primary" />
             </abbr><br />
-            Popover &lt;top&gt;
+            > > > > > > > Popover &lt;top&gt;
             <abbr className="mb-2" { ...Popover ({
                 placement: "top",
                 content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
             }) }>
                 <Icon title="Default popover" name="questionmark-circle" className="icon-24 text-primary" />
             </abbr><br />
-            Popover &lt;top-end&gt;
+            > > > > > > > > > > > > > > > > > > > > Popover &lt;top-end&gt;
             <abbr { ...Popover ({
                 placement: "top-end",
                 content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
@@ -153,6 +158,9 @@ const PopoverCustomContent = {
             <br />
             <br />
             <br />
+            <br />
+            <br />
+            <br />
         </React.Fragment>
     ),
     name: "PopoverCustomContent",
@@ -168,8 +176,11 @@ const PopoverCustomElement = {
             }) }
             className="btn btn-secondary">
                 Some button
-            </button><br /><br />
-
+            </button>
+            <br />
+            <br />
+            <br />
+            <br />
             <input type="text" placeholder="Some inputfield with popover" className="form-control" { ...Popover ({
                 placement: "top",
                 content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."

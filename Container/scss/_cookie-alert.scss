@@ -1,41 +1,160 @@
 .cookie-alert {
   position: fixed;
-  right: 0;
-  bottom: 0;
+  top: 0;
   left: 0;
-  display: block;
-  width: 100%;
-  color: $cookie-alert-color;
-  background-color: $cookie-alert-bg-color;
+  z-index: $zindex-cookie-alert;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  background-color: $cookie-alert-overlay-background;
+  border: none;
 
-  @include media-breakpoint-up(md) {
-    position: static;
-    width: auto;
+  &.opened {
+    display: block;
   }
 
-  & > .container-responsive {
-    display: flex;
-    align-items: center;
+  .cookie-alert-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - #{$cookie-alert-modal-padding});
+    max-height: calc(100% - #{$cookie-alert-modal-padding});
+    padding-top: $cookie-alert-modal-padding;
+    padding-right: $cookie-alert-modal-padding;
+    padding-left: $cookie-alert-modal-padding;
+    overflow-x: hidden;
+    overflow-y: visible;
+    color: $cookie-alert-modal-color;
+    background-color: $cookie-alert-modal-background;
+    transform: translate(-50%, -50%);
+
+    @include box-shadow ($box-shadow);
+    @include border-radius();
+
+    @include media-breakpoint-up (md) {
+      max-width: $cookie-alert-modal-max-width;
+    }
+
+    .cookie-alert-title {
+      @extend .h5;
+    }
+
+    .cookie-alert-description {
+      margin-bottom: $cookie-alert-modal-padding;
+    }
+
+    .cookie-alert-controls {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cookie-alert-button,
+    .cookie-alert-button-secondary {
+      background-image: none;
+      @extend .btn;
+    }
+
+    .cookie-alert-button {
+      @extend .btn-primary;
+    }
+    .cookie-alert-button-secondary {
+      @extend .btn-secondary;
+      @extend .float-right;
+    }
+
+    .cookie-alert-configuration-control {
+      @extend .custom-control;
+      @extend .custom-checkbox;
+    }
+
+    .cookie-alert-configuration-input {
+      @extend .custom-control-input;
+    }
+
+    .cookie-alert-description,
+    .cookie-alert-detail-link,
+    .cookie-alert-checkbox-label {
+      @include cake-font-size($cookie-alert-modal-font-size);
+    }
+
+    .cookie-alert-checkbox-label {
+      @extend .custom-control-label;
+      padding-top: $cookie-alert-modal-checkbox-discrepancy;
+      @extend .hyphens;
+    }
+
+    .cookie-alert-configuration {
+      display: none;
+      padding-top: $cookie-alert-modal-padding;
+      margin-top: $cookie-alert-modal-padding;
+      border-top: $cookie-alert-modal-seperator;
+
+      &.expanded {
+        display: block;
+      }
+
+      // bugfix - oldBrowser - IE 11 padding-bottom is ignored, when the details-div is displayed
+      // stylelint-disable-next-line selector-no-vendor-prefix, selector-type-no-unknown
+      _:-ms-fullscreen,
+      :root & {
+        &::after {
+          display: block;
+          width: 100%;
+          height: 1rem;
+          content: "";
+        }
+      }
+
+      @include clearfix();
+    }
+
+    .cookie-alert-configuration-settings {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-bottom: $cookie-alert-modal-padding - .5rem;
+
+      .custom-control {
+        flex: 0 0 50%;
+        padding-right: .5rem;
+        margin-right: 0;
+      }
+
+      @include media-breakpoint-up(sm) {
+        flex-direction: row;
+      }
+    }
+
+    // bugfix - oldBrowser - Firefox (any version) padding-bottom is not rendered on firefox (gecko)
+    .cookie-alert-controls,
+    .cookie-alert-configuration {
+      margin-bottom: $cookie-alert-modal-padding;
+    }
   }
-}
 
-.cookie-alert-content {
-  flex-shrink: 1;
-  flex-grow: 1;
-  @include cake-font-size($cookie-alert-font-size);
-}
+  .cookie-alert-detail-link {
+    padding-left: $cookie-alert-modal-detail-link-icon-size + $spacer;
+    &::before {
+      position: absolute;
+      display: block;
+      width: $cookie-alert-modal-detail-link-icon-size;
+      height: $cookie-alert-modal-detail-link-icon-size;
+      margin-left: -($cookie-alert-modal-detail-link-icon-size + $spacer);
+      content: "";
+      background-color: initial;
+      background-image: svg-load($navigation-icon-path + "arrow-down.svg", fill=$link-color);
+      background-repeat: no-repeat;
+      background-size: $cookie-alert-modal-detail-link-icon-size $cookie-alert-modal-detail-link-icon-size;
+    }
 
-.cookie-alert-button-wrapper {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  margin-left: 1rem;
-}
-
-.cookie-alert-hide {
-  display: none;
-}
-
-dialog:not([open]) {
-  display: none;
+    &.expanded {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
 }

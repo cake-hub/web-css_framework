@@ -48,14 +48,14 @@
     }
 
     @each $size in (1,2,4,8,16) {
-      .m#{$infix}-n#{$size} { margin: -map-get($spacers, $size) !important; }
+      .m#{$infix}-n#{$size} { margin: -(map-get($spacers, $size)) !important; }
       .mt#{$infix}-n#{$size},
       .my#{$infix}-n#{$size} {
-        margin-top: -map-get($spacers, $size) !important;
+        margin-top: -(map-get($spacers, $size)) !important;
       }
       .mb#{$infix}-n#{$size},
       .my#{$infix}-n#{$size} {
-        margin-bottom: -map-get($spacers, $size) !important;
+        margin-bottom: -(map-get($spacers, $size)) !important;
       }
     }
 

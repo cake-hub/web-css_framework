@@ -17,7 +17,7 @@ Modifier classes represent the difference to Card component. If a modifier is us
         "<html>":{
             "src": "examples/ProductTileDefault.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -38,7 +38,7 @@ You can use the default [Grid system](../Layout/Grid/Grid.md) classes like in th
         "<html>":{
             "src": "examples/ProductGridDefault.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />

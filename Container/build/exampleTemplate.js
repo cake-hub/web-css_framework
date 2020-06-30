@@ -25,12 +25,12 @@ export const htmlTemplateExample = ( reactDom, helmetData, filePath ) => `
             <meta name="viewport" content="width=device-width, initial-scale=1">
             ${ helmetData.title.toString () }
             ${ helmetData.meta.toString () }
-            <link rel="stylesheet" type="text/css" href="assets/css/cake.css">
+            <link rel="stylesheet" type="text/css" href="css/cake.css">
         </head>
 
         <body>
             <div id="app">${ reactDom }</div>
-            <script src="assets/js/cake.js"></script>
+            <script src="js/cake.js"></script>
             <script src="../../example.js"></script>
         </body>
         </html>

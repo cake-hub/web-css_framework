@@ -51,7 +51,7 @@ In the checked states, we use **base64 embedded SVG icons**. This provides us th
         "<html>":{
             "src": "examples/RadioDefault.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -69,7 +69,7 @@ In the checked states, we use **base64 embedded SVG icons**. This provides us th
         "<html>":{
             "src": "examples/RadioDisabledChecked.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -87,7 +87,7 @@ In the checked states, we use **base64 embedded SVG icons**. This provides us th
         "<html>":{
             "src": "examples/RadioError.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -105,7 +105,7 @@ In the checked states, we use **base64 embedded SVG icons**. This provides us th
         "<html>":{
             "src": "examples/RadioRequiredValidated.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -125,7 +125,7 @@ In the checked states, we use **base64 embedded SVG icons**. This provides us th
         "<html>":{
             "src": "examples/CheckboxDefault.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -143,7 +143,7 @@ In the checked states, we use **base64 embedded SVG icons**. This provides us th
         "<html>":{
             "src": "examples/CheckboxDisabledChecked.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -161,7 +161,7 @@ In the checked states, we use **base64 embedded SVG icons**. This provides us th
         "<html>":{
             "src": "examples/CheckboxError.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -179,7 +179,7 @@ In the checked states, we use **base64 embedded SVG icons**. This provides us th
         "<html>":{
             "src": "examples/CheckoutRequiredValidated.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -305,7 +305,7 @@ We recommend using client-side validation, but in case you require server-side v
         "<html>":{
             "src": "examples/InputText.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -323,14 +323,14 @@ We recommend using client-side validation, but in case you require server-side v
         "<html>":{
             "src": "examples/InputLabelSubed.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
 
 ![InputLabelSubed](examples/InputLabelSubed.html)
 
-### Disabled with icon
+### Disabled
 
 <ContentRack
     fields='
@@ -341,7 +341,7 @@ We recommend using client-side validation, but in case you require server-side v
         "<html>":{
             "src": "examples/InputDisabled.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -359,7 +359,7 @@ We recommend using client-side validation, but in case you require server-side v
         "<html>":{
             "src": "examples/InputInvalid.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -377,7 +377,7 @@ We recommend using client-side validation, but in case you require server-side v
         "<html>":{
             "src": "examples/InputValid.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -415,7 +415,7 @@ This can be used to, for example wrap icons inside an input field.
         "<html>":{
             "src": "examples/InputIcon.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -433,7 +433,7 @@ This can be used to, for example wrap icons inside an input field.
         "<html>":{
             "src": "examples/InputDisabledWithIcon.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -489,7 +489,7 @@ Javascript is required (`js/form.js`) to be able to use the toggle functionality
         "<html>":{
             "src": "examples/InputPasswordToggle.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -509,7 +509,7 @@ Javascript is required (`js/form.js`) to be able to use the toggle functionality
         "<html>":{
             "src": "examples/SelectDefault.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -527,7 +527,7 @@ Javascript is required (`js/form.js`) to be able to use the toggle functionality
         "<html>":{
             "src": "examples/SelectSr.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -545,7 +545,7 @@ Javascript is required (`js/form.js`) to be able to use the toggle functionality
         "<html>":{
             "src": "examples/SelectHiddenOption.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -563,7 +563,7 @@ Javascript is required (`js/form.js`) to be able to use the toggle functionality
         "<html>":{
             "src": "examples/SelectDisablesOption.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -581,7 +581,7 @@ Javascript is required (`js/form.js`) to be able to use the toggle functionality
         "<html>":{
             "src": "examples/SelectPreselected.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -599,7 +599,7 @@ Javascript is required (`js/form.js`) to be able to use the toggle functionality
         "<html>":{
             "src": "examples/SelectLabelSubed.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -617,7 +617,7 @@ Javascript is required (`js/form.js`) to be able to use the toggle functionality
         "<html>":{
             "src": "examples/SelectDisabled.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -635,7 +635,7 @@ Javascript is required (`js/form.js`) to be able to use the toggle functionality
         "<html>":{
             "src": "examples/SelectError.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -653,7 +653,7 @@ Javascript is required (`js/form.js`) to be able to use the toggle functionality
         "<html>":{
             "src": "examples/SelectSuccess.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />

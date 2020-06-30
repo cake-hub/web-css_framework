@@ -74,7 +74,7 @@ The to top button could overlay content at the very end of the page. To avoid th
     '
  />
 
-<Iframe src="examples/ToTopPosition.html" scrolling="yes" style="min-height: 23rem" title="Position" alt="ToTopPosition" />
+![ToTopPosition](examples/ToTopPosition.html)
 
 ## Javascript
 

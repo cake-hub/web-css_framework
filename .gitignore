@@ -12,8 +12,8 @@ pids
 # Dependency directories
 node_modules/
 
-# Optional npm cache directory
-.npm
+# Optional npm cache directory and logs
+Container/.npm
 
 # Optional npm config file
 #Container/.npmrc

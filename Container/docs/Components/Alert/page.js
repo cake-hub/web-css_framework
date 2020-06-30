@@ -3,7 +3,7 @@ import { Alert, AlertIconAside } from "@Develop/Components/Alert/alert.html";
 import Icon from "@Develop/Components/Icon/icon.html";
 
 const AlertDefault = () => (
-    <React.Fragment>
+    <div className="cake-example-cutted-shadow-fix" id="showbox">
         <Alert className="alert-primary">
             A simple Primary alert—check it out!
         </Alert>
@@ -22,11 +22,11 @@ const AlertDefault = () => (
         <Alert className="alert-gray">
             A simple Gray alert—check it out!
         </Alert>
-    </React.Fragment>
+    </div>
 );
 
 const AlertLink = () => (
-    <React.Fragment>
+    <div className="cake-example-cutted-shadow-fix" id="showbox">
         <Alert className="alert-primary">
             A simple Primary alert with <a href="#" className="alert-link">an example link</a>. Give it a click if you like.
         </Alert>
@@ -45,11 +45,11 @@ const AlertLink = () => (
         <Alert className="alert-gray">
             A simple Gray alert with <a href="#" className="alert-link">an example link</a>. Give it a click if you like.
         </Alert>
-    </React.Fragment>
+    </div>
 );
 
 const AlertIconsAside = () => (
-    <React.Fragment>
+    <div className="cake-example-cutted-shadow-fix" id="showbox">
         <AlertIconAside className="alert-info" iconName="information-circle" iconTitle="Info" alertHeadline="Information!">
             Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
         </AlertIconAside>
@@ -65,40 +65,46 @@ const AlertIconsAside = () => (
         <AlertIconAside className="alert-gray" iconName="placeholder" iconTitle="Placeholder" alertHeadline="Insignificant information!">
             Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
         </AlertIconAside>
-    </React.Fragment>
+    </div>
 );
 
 const AlertAddidtionalContent = () => (
-    <Alert className="alert-success">
-        <h4 className="alert-heading">Well done!</h4>
-        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-        <hr />
-        <p className="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-    </Alert>
+    <div className="cake-example-cutted-shadow-fix" id="showbox">
+        <Alert className="alert-success">
+            <h4 className="alert-heading">Well done!</h4>
+            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+            <hr />
+            <p className="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+        </Alert>
+    </div>
 );
 
 const AlertDismissing = () => (
-    <Alert className="alert-warning alert-dismissible fade show">
-        <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-            <Icon aria-hidden="true" name="cross" title="Close" className="icon-close" />
-        </button>
-        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-    </Alert>
-);
-
-const AlertDismissingIconAside = () => (
-    <Alert className="alert-success d-flex alert-dismissible fade show">
-        <div className="alert-icon">
-            <Icon name="hook-circle" title="Success" className="icon-32" />
-        </div>
-        <div className="alert-content-with-icon">
+    <div className="cake-example-cutted-shadow-fix" id="showbox">
+        <Alert className="alert-warning alert-dismissible fade show">
             <button type="button" className="close" data-dismiss="alert" aria-label="Close">
                 <Icon aria-hidden="true" name="cross" title="Close" className="icon-close" />
             </button>
-            <h4 className="alert-heading">Well done!</h4>
-            <p className="mb-0">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-        </div>
-    </Alert>
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        </Alert>
+    </div>
+);
+
+const AlertDismissingIconAside = () => (
+    <div className="cake-example-cutted-shadow-fix" id="showbox">
+        <Alert className="alert-success d-flex alert-dismissible fade show">
+            <div className="alert-icon">
+                <Icon name="hook-circle" title="Success" className="icon-32" />
+            </div>
+            <div className="alert-content-with-icon">
+                <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+                    <Icon aria-hidden="true" name="cross" title="Close" className="icon-close" />
+                </button>
+                <h4 className="alert-heading">Well done!</h4>
+                <p className="mb-0">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+            </div>
+        </Alert>
+    </div>
 );
 
 export default {

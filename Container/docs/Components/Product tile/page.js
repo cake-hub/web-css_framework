@@ -2,11 +2,13 @@ import React from "react";
 import ProductTile from "@Develop/Components/Product tile/productTile.html";
 
 const ProductTileDefault = () => (
-    <ProductTile style={{maxWidth: "304px"}} />
+    <div className="cake-example-cutted-shadow-fix" id="showbox">
+        <ProductTile style={{maxWidth: "304px"}} />
+    </div>
 );
 
 const ProductGridDefault = () => (
-    <React.Fragment>
+    <div className="cake-example-cutted-shadow-fix" id="showbox">
         <div className="row">
             <div className="col-6 col-md-3 mb-2 mb-md-0">
                 <ProductTile />
@@ -21,7 +23,7 @@ const ProductGridDefault = () => (
                 <ProductTile />
             </div>
         </div>
-    </React.Fragment>
+    </div>
 );
 
 export default {

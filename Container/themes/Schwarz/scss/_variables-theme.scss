@@ -6,6 +6,14 @@
 
 $primary:                       #791f82;
 
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "primary":    $primary,
+  )
+);
+
 // stylelint-disable indentation
 $fonts-to-load:                 HelveticaNeueLT HelveticaNeueLT-Cond,
                                 HelveticaNeueLT HelveticaNeueLT-BoldCond 600,
@@ -16,8 +24,9 @@ $font-weight-bold:              600;
 
 $font-family-sans-serif:        HelveticaNeueLT, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-//Adjust the icon-paths
-$expression-icon-path:          "assets/icons/expression/";
-$interaction-icon-path:         "assets/icons/interaction/";
-$navigation-icon-path:          "assets/icons/navigation/";
-$scss-icon-path:                "assets/icons/_scssOnly/";
+// Adjust the icon-paths (the webpack.config.js is the root folder)
+// needed for base64 encoded icons in css
+$expression-icon-path:          "./themes/Schwarz/assets/icons/expression/";
+$interaction-icon-path:         "./themes/Schwarz/assets/icons/interaction/";
+$navigation-icon-path:          "./themes/Schwarz/assets/icons/navigation/";
+$smiley-icon-path:              "./themes/Schwarz/assets/icons/smiley/";

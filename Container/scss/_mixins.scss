@@ -25,7 +25,7 @@
 @import "mixins/triangle";
 @import "mixins/visibility";
 
-// // Components
+// Components
 @import "mixins/alert";
 @import "mixins/buttons";
 @import "mixins/caret";
@@ -35,15 +35,16 @@
 @import "mixins/nav-divider";
 @import "mixins/form";
 @import "mixins/table-row";
+@import "mixins/tippyjs-theme";
 
-// // Skins
+// Skins
 @import "mixins/background-variant";
 @import "mixins/border-radius";
 @import "mixins/box-shadow";
 @import "mixins/gradients";
 @import "mixins/transition";
 
-// // Layout
+// Layout
 @import "mixins/clearfix";
 @import "mixins/grid-framework";
 @import "mixins/grid";

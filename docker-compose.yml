@@ -12,4 +12,5 @@ services:
     expose: ['2021']
     volumes:
         - ./Container:/var/www/html
+        - ./Container/.npm/_logs/:/root/.npm/_logs/
     tty: true

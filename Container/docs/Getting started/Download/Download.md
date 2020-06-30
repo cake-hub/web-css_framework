@@ -11,39 +11,46 @@ Pull in CAKE's **source files** into nearly any project with some of the most po
 Install CAKE in your Node.js powered apps with [the npm package]({{ variables.npmPackageUrl }}):
 
 ```console
-npm install --registry {{ variables.npmRegistryUrl }} --save @cake/web
+npm install --save {{ variables.npmPackageName }}
 ```
 
-`require('@cake/web/js/cake')` or `import cake from "@cake/web/js/cake"` will load all of CAKE's plugins. The `@cake/web` module itself does not export anything.
+Or if you have specified some other registries in your project use:
 
-> _At the moment this package is only available with a special access-token. If you need access to our registry, please contact us via mail: {{ variables.contactMailAddress }}_
+```console
+npm install --registry {{ variables.npmRegistryUrl }} --save {{ variables.npmPackageName }}
+```
+
+`require('{{ variables.npmPackageName }}/js/cake')` or `import cake from "{{ variables.npmPackageName }}/js/cake"` will load all of CAKE's plugins. The `{{ variables.npmPackageName }}` module itself does not export anything.
 
 CAKE's `package.json` contains some additional metadata under the following keys:
 
 - `sass` - path to CAKE's main [Sass](https://sass-lang.com/) source file
 - `style` - path to CAKE's non-minified CSS that's been precompiled using the default settings (no customization)
 
-#### authentification
+#### registry settings and proxies
 
-To be able to access our registry, you need to authenticate yourself. To do so, you can configure your npm with a `.npmrc` file with the following content.
-You need to replace the `${AUTH_TOKEN}` with your individual token and the `${AUTH_MAIL}` with the mail we've provided to you. Additionally you could provide your `${PROXY_URL}`, if you are behind a proxy.
-Instead of replacing the variables, you could also set the appropriate values as environment variables (eg. a `.env` file) to fill these values dynamically.
+To be able to access our registry, if you are behind a proxy just configure the proxy settings of your project. To do so, you can configure your npm with a `.npmrc` file with the following content.
 
 ```toml
-#set registry url
-registry={{ variables.npmPackageUrl }}
-always-auth=true
+#proxy-settings
+proxy=http://your-proxy.url:8080
+https-proxy=http://your-proxy.url:8080
+```
 
-#auth-token to access private repository
-//pkgs.dev.azure.com/schwarzit/_packaging/cake/npm/registry/:username=ANYTHING-BUT-EMPTY
-//pkgs.dev.azure.com/schwarzit/_packaging/cake/npm/registry/:_password=${AUTH_TOKEN}
-//pkgs.dev.azure.com/schwarzit/_packaging/cake/npm/registry/:email=${AUTH_MAIL}
-//pkgs.dev.azure.com/schwarzit/_packaging/cake/npm/registry/:always-auth=true
+You can also use environment variables to put in dynamic values according your environment:
 
+```toml
 #proxy-settings
 proxy=${PROXY_URL}
 https-proxy=${PROXY_URL}
 ```
+
+If you use already any special npm-registry in your project, you can also change the registry only for our CAKE package:
+
+```toml
+@cake-hub:registry= {{ variables.npmRegistryUrl }}
+```
+
 
 ## Compiled CSS and JS
 
@@ -52,10 +59,10 @@ Download ready-to-use compiled code for CAKE CSS-Framework to easily drop into y
 - Compiled and minified **CSS** bundles (`Container/dist/css`)
 - Compiled and minified **JavaScript plugins** (`Container/dist/js`)
 - Compiled and minified **assets/images** (`Container/dist/images`)
-- Compiled **documentation** (`Container/docs`)
+- **documentation** (`Container/docs`)
 - and all the source files including a docker image
 
-<a href="{{ variables.bundleDownloadUrl }}{{ version }}&format=zip" className="btn btn-primary">Download CSS-Framework v{{ version }} as ZIP file</a>
+<a href="{{ variables.bundleDownloadUrl }}#v{{ version }}&format=zip" className="btn btn-primary">Download CSS-Framework v{{ version }} as ZIP file</a>
 
 ## Source files
 
@@ -66,4 +73,4 @@ Compile CAKE with your own asset pipeline by downloading our source Sass, JavaSc
 - [Babel](https://babeljs.io/) for compiling ES6 JavaScript into browser-compliant JavaScript
 - [postcss-inline-svg](https://github.com/TrySound/postcss-inline-svg) to load svg-icons inline to the css
 
-<a href="{{ variables.sourceDownloadUrl }}{{ version }}&format=zip" className="btn btn-primary">Download source</a>
+<a href="{{ variables.sourceDownloadUrl }}#v{{ version }}&format=zip" className="btn btn-primary">Download source</a>

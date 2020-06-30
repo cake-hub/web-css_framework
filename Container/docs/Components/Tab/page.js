@@ -2,14 +2,16 @@ import React from "react";
 import Tab from "@Develop/Components/Tab/tab.html";
 
 const TabDefault = () => (
-    <Tab>
-        <button role="tab" type="button" data-controller="tab/button" className="btn tab-btn previous" aria-selected="false">First Tab</button>
-        <button role="tab" type="button" data-controller="tab/button" className="btn tab-btn active" aria-selected="true">Second Tab</button>
-        <button role="tab" type="button" data-controller="tab/button" className="btn tab-btn next" aria-selected="false">Third Tab</button>
-        <button role="tab" type="button" data-controller="tab/button" className="btn tab-btn" aria-selected="false">Fourth Tab</button>
-        <button role="tab" type="button" data-controller="tab/button" className="btn tab-btn" aria-selected="false">Fifth Tab</button>
-        <button role="tab" type="button" data-controller="tab/button" className="btn tab-btn" aria-selected="false">Sixth Tab</button>
-    </Tab>
+    <div className="cake-example-cutted-shadow-fix" id="showbox">
+        <Tab>
+            <button role="tab" type="button" data-controller="tab/button" className="btn tab-btn previous" aria-selected="false">First Tab</button>
+            <button role="tab" type="button" data-controller="tab/button" className="btn tab-btn active" aria-selected="true">Second Tab</button>
+            <button role="tab" type="button" data-controller="tab/button" className="btn tab-btn next" aria-selected="false">Third Tab</button>
+            <button role="tab" type="button" data-controller="tab/button" className="btn tab-btn" aria-selected="false">Fourth Tab</button>
+            <button role="tab" type="button" data-controller="tab/button" className="btn tab-btn" aria-selected="false">Fifth Tab</button>
+            <button role="tab" type="button" data-controller="tab/button" className="btn tab-btn" aria-selected="false">Sixth Tab</button>
+        </Tab>
+    </div>
 );
 
 const TabWithExampleJavascriptFunctionality = {

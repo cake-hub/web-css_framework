@@ -1,5 +1,12 @@
 # Change log
 
+## [4.0.0](https://github.com/cake-hub/web-css_framework/tree/v4.0.0) - 2020-06-25
+
+### Fixed
+
+* `CSS`: "Form" | Set font color for focused select field in Firefox instead of inheritance. The ESR 68 Version has a different behavior as newer once.
+
+
 ## [3.10.0](https://www.secrz.de/bitbucket/projects/CAKE/repos/phoenix/browse?at=refs%2Ftags%2Fv3.10.0) - 2020-02-27
 
 ### Deprecated

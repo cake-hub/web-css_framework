@@ -8,7 +8,22 @@ Documentation and examples for adding CAKE popovers to any element on your site.
 
 ## Overview
 
-CAKEs popovers rely on the 3rd party library [**Tippy.js**](https://github.com/atomiks/tippyjs) in version **4.0.1**. You have to include `popover.js` which already contains `tippy.js` in order for popover to work!
+CAKEs popovers rely on the 3rd party library [**Tippy.js**](https://github.com/atomiks/tippyjs) in version [**6.2.3**](https://atomiks.github.io/tippyjs/v6/getting-started/).
+
+### JavaScript
+
+You have to include `popover.js` which already contains `tippy.js` in order for popover to work!
+
+### Styling
+
+And you have to include the CSS from `~tippy.js/dist/tippy` for basic styling. We also use a outline for the popovers. Import the `~tippy.js/dist/border` for a outlined styling. And we provide a customizable theme for it. Include also the `popover.scss` SCSS file and you can configure the styling in `variables.scss`.
+
+```scss
+@import "~tippy.js/dist/tippy";
+@import "~tippy.js/dist/border";
+
+@import "~@cake/web/scss/popover";
+```
 
 The popover will show up by focusing/hovering above a certain element. If the element loses focus/mouseover the popover will fade out with a slight delay of `200ms`. Because of the missing hover effect on handhelt devices, the popover will be shown on a click on the element.
 To define the content of the popover set the `data-tippy-content` property on this element.
@@ -119,11 +134,11 @@ As already mentioned above, you can add a popover to any valid html element. The
 
 ## Colors
 
-The popover will show up in gray theme as a default. The grey colour fits perfectly for the purpose of popovers.
+The popover will show up in white "cake" theme as a default. The white color fits perfectly for the purpose of popovers.
 
 > ### Avoid usage of themes
 >
-> Since these should enable the display of further information inconspicuously, the grey theme is ideally suited by the neutral representation and you should aviod using other themes wherever it is possible.
+> Since these should enable the display of further information inconspicuously, the cake theme is ideally suited by the neutral representation and you should aviod using other themes wherever it is possible.
 
 Nevertheless you can use any `$theme-color` as theme for the popover. To get the stylings below, simply add the `data-tippy-theme` attribute with the color name as value.
 <ContentRack
@@ -147,7 +162,9 @@ Nevertheless you can use any `$theme-color` as theme for the popover. To get the
 In the examples above the popovers are always initialized by setting data-attributes to the despite elements. This is one method to create popovers.
 In order to make this work on, you have to initialize these popovers by including the script `popover.js` at the very end of your html page and calling the method:
 
-    popover ();
+```js
+popover ();
+```
 
 When calling the method above like this, the default settings will be used and therefore all elements with the data-attribute `data-tippy-content` will be initialized with their attatched `data-tippy-*` attributes. The popover method takes two optional arguments to customize the popovers according your needs.
 
@@ -156,42 +173,45 @@ When calling the method above like this, the default settings will be used and t
 
 The first argument **elements** can be a `String` corresponding to any valid CSS selector, a single `Element`, an Array of `Elements[]` or a `NodeList`.
 All elements matching the **elements** property will automatically be extended by a popover. The second argument **globalConfiguration** takes an `Object{}` with much more customization options than described above. Below you will find more details about the popover configuration.
-The method `popover(…)` will return one **tippy** instance or multiple inside an `Array[]` if there are more than one element selected. More about the [Tippy Instance](https://atomiks.github.io/tippyjs/tippy-instance/) can be found in the Tippy.js documentation.
+The method `popover(…)` will return one **tippy** instance or multiple inside an `Array[]` if there are more than one element selected. More about the [Tippy Instance](https://atomiks.github.io/tippyjs/v6/tippy-instance/) can be found in the Tippy.js documentation.
 
 
 ### All Options
 
-The **globalConfiguration** argument can be configured with any option from the [Tippy.js Documentation](https://atomiks.github.io/tippyjs/). A full list of all the options provided by Tippy.js can be found [here](https://atomiks.github.io/tippyjs/all-options/). The default configuration set by CAKE is listed below:
+The **globalConfiguration** argument can be configured with any option from the [Tippy.js Documentation](https://atomiks.github.io/tippyjs/). A full list of all the options provided by Tippy.js can be found [here](https://atomiks.github.io/tippyjs/v6/all-props/). The default configuration set by CAKE is listed below:
 
-    {
-        allowHTML: false,
-        animation: 'fade',
-        appendTo: 'parent',
-        arrow: true,
-        content: "popover",
-        delay: 200,
-        flip: true,
-        interactive: true,
-        theme: "gray",
-        touch: true,
-        onMount({ reference }) {
-            reference.setAttribute('aria-expanded', 'true')
-        },
-        onHide({ reference }) {
-            reference.setAttribute('aria-expanded', 'false')
-        }
-    }
+```js
+{
+    theme: "cake",
+    placement: 'top',
+    popperOptions: {
+        positionFixed: true,
+        modifiers: [
+            {
+                name: 'flip',
+                enabled: true,
+                options: {
+                    fallbackPlacements: ['bottom'],
+                },
+            },
+        ],
+    },
+    interactive: true,
+    delay: 200,
+    appendTo: 'parent',
+    onMount({ reference }) {
+        reference.setAttribute('aria-expanded', 'true')
+    },
+    onHide({ reference }) {
+        reference.setAttribute('aria-expanded', 'false')
+    },
+}
+```
 
 ### Methods
 
-The popover instance provides mutliple methods, which can be used programmatically to provide you more control and possibilities. The complete list of methods can be found [here](https://atomiks.github.io/tippyjs/methods/).
+The popover instance provides mutliple methods, which can be used programmatically to provide you more control and possibilities. Here is the complete [list of methods](https://atomiks.github.io/tippyjs/v6/methods/).
 
 ## Accessibility
 
-The package Tippy.js provides basic functionalities to ensure basic accessibility standards. You should always enable all options which are important for the accessibility like `a11y: true` and `aria: 'describedby'`. Also the functionality on mobile devices should be guaranteed! As an example the option `touch: true` should always be activated, if the popover also has important information for the mobile visitors.
-It is also highly recommended to add the following two aria-attributes!
-
-* aria-haspopup="true"
-* aria-expanded="false"
-
-To dive deeper into that topic, you should definitely read the [Accessibility section on Tippy.js](https://atomiks.github.io/tippyjs/accessibility/)!
+The package Tippy.js provides basic functionalities to ensure basic accessibility standards. To dive deeper into that topic, you should definitely read the [Accessibility section on Tippy.js](https://atomiks.github.io/tippyjs/v6/accessibility/).

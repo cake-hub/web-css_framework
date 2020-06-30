@@ -5,6 +5,7 @@
 /.babelrc
 /.markdownlint.json
 /.markdownlintrc
+/.npm
 /.stylelintignore
 /.stylelintrc
-/themes
+assets/images/examples

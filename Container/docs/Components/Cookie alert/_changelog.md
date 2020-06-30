@@ -1,5 +1,17 @@
 # Change log
 
+## [4.0.0](https://github.com/cake-hub/web-css_framework/tree/v4.0.0) - 2020-06-25
+
+### Changed
+
+* `SCSS`, `JS`, `HTML`: "Cookie alert" | Renamed cookie-alert-extended to cookie-alert in all classes, javascript-methods, data-controllers and files.
+* `JS`: "Cookie alert" | Disable primary CTA button on expanded details
+
+### Removed
+
+* `SCSS`, `JS`, `HTML`: "Cookie alert" | Removed deprecated cookie-alert in all classes, javascript-methods, data-controllers and files.
+
+
 ## [3.9.0](https://www.secrz.de/bitbucket/projects/CAKE/repos/phoenix/browse?at=refs%2Ftags%2Fv3.9.0) - 2020-01-16
 
 ### Deprecated

@@ -1,0 +1,74 @@
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ *
+ * Modified by Lidl Digital International GmbH & Co. KG
+ * Handbaked with love by the CAKE-Team (https://cake.schwarz/)
+ * Source-code from https://www.secrz.de/bitbucket/projects/CAKE/repos/phoenix/
+ */
+
+@import "../../../scss/functions";
+@import "../../../scss/variables-root";
+@import "../../../scss/variables";
+@import "../../../scss/mixins";
+@import "../../../scss/root";
+@import "../../../scss/reboot";
+@import "../../../scss/typography-font-face";
+@import "../../../scss/typography";
+@import "../../../scss/image";
+@import "../../../scss/code";
+@import "../../../scss/grid";
+@import "../../../scss/table";
+@import "../../../scss/form";
+@import "../../../scss/button";
+@import "../../../scss/transition";
+@import "../../../scss/dropdown";
+@import "../../../scss/button-group";
+@import "../../../scss/input-group";
+@import "../../../scss/custom-form";
+@import "../../../scss/nav";
+@import "../../../scss/navbar";
+@import "../../../scss/card";
+@import "../../../scss/breadcrumb";
+@import "../../../scss/pagination";
+@import "../../../scss/badge";
+@import "../../../scss/jumbotron";
+@import "../../../scss/alert";
+@import "../../../scss/progress";
+@import "../../../scss/media";
+@import "../../../scss/list-group";
+@import "../../../scss/close";
+@import "../../../scss/toast";
+@import "../../../scss/modal";
+@import "../../../scss/tooltip";
+@import "../../../scss/carousel";
+@import "../../../scss/spinners";
+@import "../../../scss/utilities";
+
+// 3rd party for CAKE components
+@import "~tiny-slider/src/tiny-slider.scss";
+@import "~hamburgers/_sass/hamburgers/hamburgers";
+@import "~tippy.js/dist/tippy";
+@import "~tippy.js/dist/border";
+
+@import "../../../scss/icon";
+@import "../../../scss/accordion";
+@import "../../../scss/banner";
+@import "../../../scss/cookie-alert";
+@import "../../../scss/footer";
+@import "../../../scss/header";
+@import "../../../scss/popover"; // required: tippy.js
+@import "../../../scss/pricebox";
+@import "../../../scss/product-tile";
+@import "../../../scss/ribbon";
+@import "../../../scss/tab";
+@import "../../../scss/teaser";
+@import "../../../scss/theme-slider"; // required: tiny-slider
+@import "../../../scss/to-top";
+@import "../../../scss/trustbar";
+@import "../../../scss/section-head";
+@import "../../../scss/print";
+
+

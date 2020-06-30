@@ -25,7 +25,7 @@ Using the following syntax, you can use a collapse behavior to create the accord
         "<html>":{
             "src": "examples/AccordionMultiple.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -46,7 +46,7 @@ If you wantan accordion-item to be extended on page load, simply set the `input`
         "<html>":{
             "src": "examples/AccordionSingle.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />

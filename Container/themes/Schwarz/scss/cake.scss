@@ -12,12 +12,13 @@
 /* Importing only some styles of the CAKE-Framework (simply outcomment the parts you need) */
 
 @import "../../../scss/functions";
-@import "./variables";
-@import "../../../scss/variables-color";
+@import "../../../scss/variables-root";
+@import "./variables-theme";
 @import "../../../scss/variables";
 @import "../../../scss/mixins";
 @import "../../../scss/root";
 @import "../../../scss/reboot";
+@import "../../../scss/typography-font-face";
 @import "../../../scss/typography";
 @import "../../../scss/image";
 @import "../../../scss/code";
@@ -52,15 +53,16 @@
 // 3rd party for CAKE components
 @import "~tiny-slider/src/tiny-slider.scss";
 @import "~hamburgers/_sass/hamburgers/hamburgers";
+@import "~tippy.js/dist/tippy";
+@import "~tippy.js/dist/border";
 
 @import "../../../scss/icon";
 @import "../../../scss/accordion";
 @import "../../../scss/banner";
 @import "../../../scss/cookie-alert";
-@import "../../../scss/cookie-alert-extended";
 @import "../../../scss/footer";
 @import "../../../scss/header";
-@import "../../../scss/popover";
+@import "../../../scss/popover"; // required: tippy.js
 @import "../../../scss/pricebox";
 @import "../../../scss/product-tile";
 @import "../../../scss/ribbon";

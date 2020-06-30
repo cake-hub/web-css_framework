@@ -7,172 +7,218 @@ import Button from "@Develop/Components/Button/button.html";
 import Icon from "@Develop/Components/Icon/icon.html";
 
 const SelectDefault = () => (
-    <Select>
-        <option>Open this select menu</option>
-        <option defaultValue="1">One</option>
-        <option defaultValue="2">Two</option>
-        <option defaultValue="3">Three</option>
-    </Select>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Select>
+            <option>Open this select menu</option>
+            <option defaultValue="1">One</option>
+            <option defaultValue="2">Two</option>
+            <option defaultValue="3">Three</option>
+        </Select>
+    </div>
 );
 
 const SelectSr = () => (
-    <Select c_labelClassName="sr-only">
-        <option defaultValue="1">first option</option>
-        <option defaultValue="2">second option</option>
-        <option defaultValue="3">third option</option>
-    </Select>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Select c_labelClassName="sr-only">
+            <option defaultValue="1">first option</option>
+            <option defaultValue="2">second option</option>
+            <option defaultValue="3">third option</option>
+        </Select>
+    </div>
 );
 
 const SelectHiddenOption = () => (
-    <Select>
-        <option hidden>first and hidden option in list</option>
-        <option defaultValue="2">second option</option>
-        <option defaultValue="3">third option</option>
-    </Select>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Select>
+            <option hidden>first and hidden option in list</option>
+            <option defaultValue="2">second option</option>
+            <option defaultValue="3">third option</option>
+        </Select>
+    </div>
 );
 
 const SelectDisablesOption = () => (
-    <Select>
-        <option defaultValue="1">first option</option>
-        <option defaultValue="2" disabled>second and disabled option</option>
-        <option defaultValue="3">third option</option>
-    </Select>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Select>
+            <option defaultValue="1">first option</option>
+            <option defaultValue="2" disabled>second and disabled option</option>
+            <option defaultValue="3">third option</option>
+        </Select>
+    </div>
 );
 
 const SelectPreselected = () => (
-    <Select>
-        <option defaultValue="1">first option</option>
-        <option defaultValue="2" selected>second and selected option</option>
-        <option defaultValue="3">third option</option>
-    </Select>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Select>
+            <option defaultValue="1">first option</option>
+            <option defaultValue="2" selected>second and selected option</option>
+            <option defaultValue="3">third option</option>
+        </Select>
+    </div>
 );
 
 const SelectLabelSubed = () => (
-    <Select c_labelSub="(optional)">
-        <option defaultValue="1">first option</option>
-        <option defaultValue="2">second option</option>
-    </Select>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Select c_labelSub="(optional)">
+            <option defaultValue="1">first option</option>
+            <option defaultValue="2">second option</option>
+        </Select>
+    </div>
 );
 
 const SelectDisabled = () => (
-    <Select disabled>
-        <option defaultValue="1">first option</option>
-        <option defaultValue="2">second option</option>
-    </Select>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Select disabled>
+            <option defaultValue="1">first option</option>
+            <option defaultValue="2">second option</option>
+        </Select>
+    </div>
 );
 
 const SelectError = () => (
-    <Select className="is-invalid">
-        <option defaultValue="1">first option</option>
-        <option defaultValue="2">second option</option>
-    </Select>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Select className="is-invalid">
+            <option defaultValue="1">first option</option>
+            <option defaultValue="2">second option</option>
+        </Select>
+    </div>
 );
 
 const SelectSuccess = () => (
-    <Select className="is-valid">
-        <option defaultValue="1">first option</option>
-        <option defaultValue="2">second option</option>
-    </Select>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Select className="is-valid">
+            <option defaultValue="1">first option</option>
+            <option defaultValue="2">second option</option>
+        </Select>
+    </div>
 );
 
 const InputText = () => (
-    <Input placeholder="Default Input" />
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Input placeholder="Default Input" />
+    </div>
 );
 
 const InputLabelSubed = () => (
-    <Input c_labelSub="(optional)" />
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Input c_labelSub="(optional)" />
+    </div>
 );
 
 const InputIcon = () => (
-    <Input className="input-group-input-icon">
-        <span className="input-group-inside inputfield-icon">
-            <Icon name="placeholder" title="Placeholder" />
-        </span>
-    </Input>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Input className="input-group-input-icon">
+            <span className="input-group-inside inputfield-icon">
+                <Icon name="placeholder" title="Placeholder" />
+            </span>
+        </Input>
+    </div>
 );
 
 const InputDisabled = () => (
-    <Input disabled defaultValue="I'm disabled" />
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Input disabled defaultValue="I'm disabled" />
+    </div>
 );
 
 const InputDisabledWithIcon = () => (
-    <Input disabled defaultValue="I'm disabled" className="input-group-input-icon">
-        <span className="input-group-inside inputfield-icon">
-            <Icon name="placeholder" title="Placeholder" />
-        </span>
-    </Input>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Input disabled defaultValue="I'm disabled" className="input-group-input-icon">
+            <span className="input-group-inside inputfield-icon">
+                <Icon name="placeholder" title="Placeholder" />
+            </span>
+        </Input>
+    </div>
 );
 
 const InputInvalid = () => (
-    <Input defaultValue="Error state" className="is-invalid" />
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Input defaultValue="Error state" className="is-invalid" />
+    </div>
 );
 
 const InputValid = () => (
-    <Input defaultValue="Success state" className="is-valid" />
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Input defaultValue="Success state" className="is-valid" />
+    </div>
 );
 
 const InputPasswordToggle = () => (
-    <Input type="password" data-controller="inputfield/password" className="input-group-input-icon">
-        <Button className="btn btn-link p-0 inputfield-icon input-group-inside d-none" data-controller="inputfield/password/toggle" aria-pressed="false">
-            <Icon name="eye-close" title="Show password" className="inputfield-icon-password-invisible" />
-            <Icon name="eye-open" title="Hide password" className="inputfield-icon-password-visible" />
-        </Button>
-    </Input>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Input type="password" data-controller="inputfield/password" className="input-group-input-icon">
+            <Button className="btn btn-link p-0 inputfield-icon input-group-inside d-none" data-controller="inputfield/password/toggle" aria-pressed="false">
+                <Icon name="eye-close" title="Show password" className="inputfield-icon-password-invisible" />
+                <Icon name="eye-open" title="Hide password" className="inputfield-icon-password-visible" />
+            </Button>
+        </Input>
+    </div>
 );
 
 const RadioDefault = () => (
-    <React.Fragment>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
         <Radio c_labelText="Check this custom radio" name="radio-default" />
         <Radio c_labelText="Check this custom radio" name="radio-default" />
         <Radio disabled c_labelText="Check this custom radio disabled" name="radio-default" />
-    </React.Fragment>
+    </div>
 );
 
 const RadioDisabledChecked = () => (
-    <Radio disabled defaultChecked c_labelText="Check this custom radio disabled checked" name="radio-disabled-checked"></Radio>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Radio disabled defaultChecked c_labelText="Check this custom radio disabled checked" name="radio-disabled-checked"></Radio>
+    </div>
 );
 
 const RadioError = () => (
-    <div className="form-group">
-        <Radio className="is-invalid" c_labelText="Check this custom radio error" name="radio-error">
-            <div className="invalid-feedback">Example invalid feedback text</div>
-        </Radio>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <div className="form-group">
+            <Radio className="is-invalid" c_labelText="Check this custom radio error" name="radio-error">
+                <div className="invalid-feedback">Example invalid feedback text</div>
+            </Radio>
+        </div>
     </div>
 );
 
 const RadioRequiredValidated = () => (
-    <div className="form-group was-validated">
-        <Radio c_labelText="Check this custom radio required validated" name="radio-required-validated" required>
-            <div className="invalid-feedback">Example invalid feedback text</div>
-        </Radio>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <div className="form-group was-validated">
+            <Radio c_labelText="Check this custom radio required validated" name="radio-required-validated" required>
+                <div className="invalid-feedback">Example invalid feedback text</div>
+            </Radio>
+        </div>
     </div>
 );
 
 const CheckboxDefault = () => (
-    <React.Fragment>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
         <Checkbox c_labelText="Check this custom checkbox" />
         <Checkbox c_labelText="Check this custom checkbox" />
         <Checkbox c_labelText="Check this custom checkbox disabled" disabled />
-    </React.Fragment>
+    </div>
 );
 
 const CheckboxDisabledChecked = () => (
-    <Checkbox c_labelText="Check this custom checkbox disabled checked" disabled defaultChecked />
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <Checkbox c_labelText="Check this custom checkbox disabled checked" disabled defaultChecked />
+    </div>
 );
 
 const CheckboxError = () => (
-    <div className="form-group">
-        <Checkbox className="is-invalid" c_labelText="Check this custom checkbox error">
-            <div className="invalid-feedback">Example invalid feedback text</div>
-        </Checkbox>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <div className="form-group">
+            <Checkbox className="is-invalid" c_labelText="Check this custom checkbox error">
+                <div className="invalid-feedback">Example invalid feedback text</div>
+            </Checkbox>
+        </div>
     </div>
 );
 
 const CheckoutRequiredValidated = () => (
-    <div className="form-group was-validated">
-        <Checkbox c_labelText="Check this custom checkbox required validated" required>
-            <div className="invalid-feedback">Example invalid feedback text</div>
-        </Checkbox>
+    <div className="cake-example-cutted-focus-and-border-fix" id="showbox">
+        <div className="form-group was-validated">
+            <Checkbox c_labelText="Check this custom checkbox required validated" required>
+                <div className="invalid-feedback">Example invalid feedback text</div>
+            </Checkbox>
+        </div>
     </div>
 );
 

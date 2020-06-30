@@ -34,7 +34,7 @@ Using the following syntax, you can create a theme slider with button controls a
         "<html>":{
             "src": "examples/ThemesliderDefault.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -85,7 +85,7 @@ Besides the normal slider version we also offer a version which works without Ja
         "<html>":{
             "src": "examples/ThemesliderWithoutJavaScript.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -105,7 +105,7 @@ To only use the no-js variant as a fallback, when there is no JavaScript availab
         "<html>":{
             "src": "examples/ThemesliderWithFallback.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />

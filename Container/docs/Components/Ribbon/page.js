@@ -43,31 +43,33 @@ const RibbonImage = {
 };
 
 const RibbonExample = () => (
-    <div className="row">
-        <div className="col col-12 col-sm-6 p-1">
-            <ProductTile style={{maxWidth: "18rem"}} c_addon={(
-                <Ribbon>
-                    <RibbonItem className="ribbon-item-primary">First #1</RibbonItem>
-                    <RibbonItem className="ribbon-item-primary">Second #2</RibbonItem>
-                    <RibbonItem className="ribbon-item-primary">Thrid #3</RibbonItem>
-                    <RibbonItem className="ribbon-item-danger">Fourth #4</RibbonItem>
-                </Ribbon>
-            )} />
-        </div>
-        <div className="col col-12 col-sm-6 p-1">
-            <Teaser
-                className="teaser-card-light"
-                c_title="Title"
-                c_subhead="Subhead"
-                c_addon={(
+    <div className="cake-example-cuttet-ribbon-fix" id="showbox">
+        <div className="row">
+            <div className="col col-12 col-sm-6 p-1">
+                <ProductTile style={{maxWidth: "18rem"}} c_addon={(
                     <Ribbon>
                         <RibbonItem className="ribbon-item-primary">First #1</RibbonItem>
                         <RibbonItem className="ribbon-item-primary">Second #2</RibbonItem>
                         <RibbonItem className="ribbon-item-primary">Thrid #3</RibbonItem>
                         <RibbonItem className="ribbon-item-danger">Fourth #4</RibbonItem>
                     </Ribbon>
-                )}
-            ></Teaser>
+                )} />
+            </div>
+            <div className="col col-12 col-sm-6 p-1">
+                <Teaser
+                    className="teaser-card-light"
+                    c_title="Title"
+                    c_subhead="Subhead"
+                    c_addon={(
+                        <Ribbon>
+                            <RibbonItem className="ribbon-item-primary">First #1</RibbonItem>
+                            <RibbonItem className="ribbon-item-primary">Second #2</RibbonItem>
+                            <RibbonItem className="ribbon-item-primary">Thrid #3</RibbonItem>
+                            <RibbonItem className="ribbon-item-danger">Fourth #4</RibbonItem>
+                        </Ribbon>
+                    )}
+                ></Teaser>
+            </div>
         </div>
     </div>
 );

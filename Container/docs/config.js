@@ -8,6 +8,14 @@ module.exports = class Configuration {
         return process.env.PORT || 2121;
     }
 
+    static get Themes () {
+        return [
+            "Cake",
+            "Lidl",
+            "Schwarz",
+        ];
+    }
+
     static get defaultTheme () {
         return "Cake";
     }
@@ -21,7 +29,7 @@ module.exports = class Configuration {
     }
 
     static get assetPath () {
-        return Configuration.basePath + Configuration.defaultThemePath + "assets";
+        return Configuration.basePath + Configuration.defaultThemePath;
     }
 
     static get basePath () {
@@ -48,7 +56,7 @@ module.exports = class Configuration {
     }
 
     static get exampleImagesPath () {
-        return path.resolve (__dirname, "_assets/themes/Cake/assets/images/examples");
+        return path.resolve (__dirname, "_assets/images/examples");
     }
 
     static get docsPath () {

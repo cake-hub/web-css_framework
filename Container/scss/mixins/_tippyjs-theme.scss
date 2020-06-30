@@ -1,0 +1,42 @@
+// theme, color, background-color, border-color, arrow color, svg-arrow color, backdrop background-color
+@mixin tippyjs-theme($theme-name: "cake", $color: $popover-color, $bg-color: $popover-bg-color, $border-color: $popover-border-color, $arrow-color: $popover-arrow-color, $svg-arrow-color: $popover-svg-arrow-color, $backdrop-bg-color: $popover-backdrop-bg-color) {
+  .tippy-box[data-theme~="#{$theme-name}"] {
+    @include border-radius($popover-border-radius);
+    @include cake-font-size($popover-font-size);
+    font-weight: $popover-font-weight;
+    color: $color;
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+    box-shadow: $popover-box-shadow;
+
+    .tippy-content {
+      padding: $popover-padding;
+    }
+
+    // arrow: true
+    &[data-placement^="top"] > .tippy-arrow::before {
+      border-top-color: $arrow-color;
+    }
+
+    &[data-placement^="bottom"] > .tippy-arrow::before {
+      border-bottom-color: $arrow-color;
+    }
+
+    &[data-placement^="left"] > .tippy-arrow::before {
+      border-left-color: $arrow-color;
+    }
+
+    &[data-placement^="right"] > .tippy-arrow::before {
+      border-right-color: $arrow-color;
+    }
+
+    > .tippy-svg-arrow {
+      fill: $svg-arrow-color;
+    }
+
+    // animateFill: true
+    > .tippy-backdrop {
+      background-color: $backdrop-bg-color;
+    }
+  }
+}

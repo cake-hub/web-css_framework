@@ -1,5 +1,23 @@
 # Change log
 
+## [4.0.0](https://github.com/cake-hub/web-css_framework/tree/v4.0.0) - 2020-06-25
+
+### Added
+
+* `JS`: All themes compile a JavaScript file for each component. Not only a large cellecting JS file. So you can include a ready to use JS file for only the comonents you use in your project.
+* `NPM`: Added Themed files to npm package
+* `SCSS`: The Lidl and Schwarz themes also contains `cake-grid.scss` and `cake-reboot.scss` file.
+
+### Changed
+
+* `Assets`: Moved CAKE logo from `/Container/assets/images/logo.svg` to theme folder `/Container/themes/Cake/assets/images/logo.svg`.
+* `JS`: Moved collecting JS file `cake.js` from `/Container/js/` folder to `/Container/themes/Cake/js`. This file contains all JavaScript components.
+* `SCSS`: Moved SCSS files `cake-cookiebot.scss`, `cake-grid.scss`, `cake-reboot.scss` and `cake.scss` from `/Container/scss/` folder to `/Container/themes/Cake/scss`. The general files with `_` prefix stays in `/Container/scss/`.
+* `SCSS`: Renamed class `.cake-html-default` to `.html-style`
+* `SCSS`: Renamed class `.cake-body-defautl` to `.body-style`
+* `SCSS`: Renamed file `_variables-color` to `_variables-root`
+
+
 ## [3.11.1](https://www.secrz.de/bitbucket/projects/CAKE/repos/phoenix/browse?at=refs%2Ftags%2Fv3.11.1) - 2020-05-07
 
 ### Fixed

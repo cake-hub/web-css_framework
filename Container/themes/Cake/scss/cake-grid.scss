@@ -20,15 +20,15 @@ html {
   box-sizing: inherit;
 }
 
-@import "functions";
-@import "variables-color";
-@import "variables";
+@import "../../../scss/functions";
+@import "../../../scss/variables-root";
+@import "../../../scss/variables";
 
-@import "mixins/breakpoints";
-@import "mixins/grid-framework";
-@import "mixins/grid";
+@import "../../../scss/mixins/breakpoints";
+@import "../../../scss/mixins/grid-framework";
+@import "../../../scss/mixins/grid";
 
-@import "grid";
-@import "utilities/display";
-@import "utilities/flex";
-@import "utilities/spacing";
+@import "../../../scss/grid";
+@import "../../../scss/utilities/display";
+@import "../../../scss/utilities/flex";
+@import "../../../scss/utilities/spacing";

@@ -77,10 +77,6 @@ a.card {
 }
 
 .card-link {
-  @include hover {
-    text-decoration: none;
-  }
-
   + .card-link {
     margin-left: $card-spacer-x;
   }

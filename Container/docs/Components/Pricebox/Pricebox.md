@@ -167,7 +167,7 @@ Such a pricebox fits perfectly into an product tile like in the following exampl
         "<html>":{
             "src": "examples/PriceboxProductRow.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />

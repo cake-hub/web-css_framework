@@ -75,7 +75,7 @@ const PriceboxNegative = () => (
 );
 
 const PriceboxProductRow = () => (
-    <React.Fragment>
+    <div className="cake-example-cutted-shadow-fix" id="showbox">
         <div className="row">
             <div className="col-6 col-md-3 mb-2 mb-md-0">
                 <ProductTile>
@@ -114,7 +114,7 @@ const PriceboxProductRow = () => (
                 </ProductTile>
             </div>
         </div>
-    </React.Fragment>
+    </div>
 );
 
 const PriceboxStandardMedium = () => (

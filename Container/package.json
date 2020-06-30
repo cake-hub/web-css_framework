@@ -1,20 +1,21 @@
 {
-  "name": "@cake/web",
+  "name": "@cake-hub/web-css_framework",
   "versions": {
     "Cake": "Apple Pie"
   },
-  "version": "3.11.1",
+  "version": "4.0.0",
   "description": "CSS Framework for the Schwarz Group",
   "repository": {
     "type": "git",
-    "url": "https://www.secrz.de/bitbucket/projects/CAKE/repos/phoenix/"
+    "url": "https://github.com/cake-hub/web-css_framework"
   },
+  "homepage": "https://cake.schwarz",
   "publishConfig": {
-    "registry": "https://pkgs.dev.azure.com/schwarzit/_packaging/cake/npm/registry/"
+    "registry": "https://registry.npmjs.org/"
   },
-  "style": "dist/css/cake.css",
-  "sass": "scss/cake.scss",
-  "main": "dist/js/cake.js",
+  "style": "dist/Cake/css/cake.css",
+  "sass": "themes/Cake/scss/cake.scss",
+  "main": "themes/Cake/js/cake.js",
   "_moduleAliases": {
     "@Cake": "./",
     "@Develop": "./docs",
@@ -28,19 +29,21 @@
     "release": "npm run build && npm run lint-all",
     "build-assets": "webpack --progress",
     "build-examples": "babel-node ./build/exampleIndex.js",
-    "delete-generated": "rm -Rf ./dist",
+    "delete-generated": "rm -Rf ./dist ./docs/_assets",
     "dev": "NODE_ENV=develop npm run build-assets && npm-run-all --parallel watch-assets watch-examples",
+    "dev-server": "npm-run-all --parallel dev server",
     "watch-assets": "webpack --watch",
     "watch-examples": "nodemon --watch \"docs/**/*.html.js\" --watch \"docs/**/page.js\" --exec npm run build-examples",
     "lint-all": "npm run lint-scss && npm run lint-md",
     "lint-scss": "stylelint ./scss",
-    "lint-md": "markdownlint ./docs/**/*md"
+    "lint-md": "markdownlint ./docs/**/*md",
+    "server": "http-server ./docs -p 2021"
   },
   "dependencies": {
     "hamburgers": "^1.1.3",
     "svg4everybody": "^2.1.9",
     "tiny-slider": "^2.9.1",
-    "tippy.js": "^4.0.1"
+    "tippy.js": "^6.2.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -51,14 +54,17 @@
     "@babel/register": "^7.0.0",
     "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.5",
+    "core-js": "^3.6.5",
     "css-loader": "^2.1.0",
     "express": "^4.16.4",
+    "fibers": "^5.0.0",
     "filemanager-webpack-plugin": "^2.0.5",
     "filter-css": "^0.1.2",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "fs-extra": "^8.0.1",
     "glob": "^7.1.3",
     "html-minifier": "^4.0.0",
+    "http-server": "^0.12.3",
     "iframe-resizer": "^4.1.1",
     "js-beautify": "^1.9.0",
     "js-yaml": "^3.13.1",
@@ -68,7 +74,6 @@
     "mini-css-extract-plugin": "^0.5.0",
     "module-alias": "^2.1.0",
     "node-html-parser": "^1.1.19",
-    "node-sass": "^4.11.0",
     "nodemon": "^1.18.9",
     "npm-run-all": "^4.1.5",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
@@ -78,7 +83,9 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
-    "sass-loader": "^7.1.0",
+    "regenerator-runtime": "^0.13.5",
+    "sass": "^1.26.8",
+    "sass-loader": "^7.2.0",
     "shortid": "^2.2.14",
     "strip-css-comments": "^4.1.0",
     "stylelint": "^9.10.1",
@@ -93,5 +100,5 @@
     "webpack-fix-style-only-entries": "^0.2.0"
   },
   "author": "CEA",
-  "license": "MIT"
+  "license": "Ms-RSL"
 }

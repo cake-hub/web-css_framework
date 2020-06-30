@@ -22,15 +22,12 @@
   box-sizing: border-box; // 1
 }
 
-.cake-html-default {
+html,
+.html-style {
   font-family: sans-serif; // 2
   line-height: 1.15; // 3
   -webkit-text-size-adjust: 100%; // 4
   -webkit-tap-highlight-color: rgba($black, 0); // 5
-}
-
-html {
-  @extend .cake-html-default;
 }
 
 // Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)
@@ -47,7 +44,8 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 // 3. Set an explicit initial text-align value so that we can later use
 //    the `inherit` value on things like `<th>` elements.
 
-.cake-body-default {
+body,
+.body-style {
   margin: 0; // 1
   font-family: $font-family-base;
   @include cake-font-size();
@@ -58,10 +56,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   color: $body-color;
   text-align: left; // 3
   background-color: $body-bg; // 2
-}
-
-body {
-  @extend .cake-body-default;
 }
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.

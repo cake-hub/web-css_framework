@@ -6,7 +6,7 @@ import React from "react";
 const Icon = ( { name="placeholder", title="", className="", ...props } ) => (
     <svg className={"icon" + (className ? " " + className : "")} { ...props } xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
         <title>{ title }</title>
-        <use xlinkHref={ "assets/images/icon__sprite.svg#" + name } />
+        <use xlinkHref={ "images/icon__sprite.svg#" + name } />
     </svg>
 );
 

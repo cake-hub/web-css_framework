@@ -1,5 +1,12 @@
 # Change log
 
+## [4.0.0](https://github.com/cake-hub/web-css_framework/tree/v4.0.0) - 2020-06-25
+
+### Changed
+
+* `SCSS`: "Card" | Change links on cards to do not hide underline on hover
+
+
 ## [3.10.0](https://www.secrz.de/bitbucket/projects/CAKE/repos/phoenix/browse?at=refs%2Ftags%2Fv3.10.0) - 2020-02-27
 
 ### Changed

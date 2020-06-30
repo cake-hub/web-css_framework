@@ -17,7 +17,7 @@ To create an tab you have to apply the classes `.btn-group` and `.tab` to any el
         "<html>":{
             "src": "examples/TabDefault.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />

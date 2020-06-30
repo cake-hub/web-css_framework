@@ -25,7 +25,7 @@ Here’s an example that changes the `background-color` and `color` for the `<bo
     $body-color: #111;
 
     // CAKE and its default variables
-    @import "../scss/cake";
+    @import "../themes/Cake/scss/cake";
 
 Repeat as necessary for any variable in CAKE, including the global options below.
 
@@ -58,6 +58,7 @@ To remove colors from `$theme-colors`, or any other map, use `map-remove`. Be aw
 
     // Required
     @import "scss/functions";
+    @import "scss/variables-root";
     @import "scss/variables";
     @import "scss/mixins";
 

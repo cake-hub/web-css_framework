@@ -8,6 +8,7 @@ import AccordionItem from "@Develop/Components/Accordion/accordionItem.html";
 // `c_mode` for each Item
 
 const AccordionMultiple = () => (
+    <div className="cake-example-cutted-border-fix" id="showBox">
         <Accordion c_accordionId="accordion1">
             <AccordionItem
                 c_accordionId="accordion1"
@@ -30,9 +31,11 @@ const AccordionMultiple = () => (
                 Lorem ipsum
             </AccordionItem>
         </Accordion>
+    </div>
 );
 
 const AccordionSingle = () => (
+    <div className="cake-example-cutted-border-fix" id="showBox">
         <Accordion c_accordionId="accordion2">
             <AccordionItem
                 c_accordionId="accordion2"
@@ -58,6 +61,7 @@ const AccordionSingle = () => (
                 Lorem ipsum
             </AccordionItem>
         </Accordion>
+    </div>
 );
 
 export default {

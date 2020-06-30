@@ -19,7 +19,7 @@ Alerts are available for any length of text, as well as an optional dismiss butt
         "<html>":{
             "src": "examples/AlertDefault.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -43,7 +43,7 @@ Use the `.alert-link` utility class to quickly provide matching colored links wi
         "<html>":{
             "src": "examples/AlertLink.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -63,7 +63,7 @@ A status icon on the page can highlight the intended use. We use `display: flex;
         "<html>":{
             "src": "examples/AlertIconsAside.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -83,7 +83,7 @@ Alerts can also contain additional HTML elements like headings, paragraphs and d
         "<html>":{
             "src": "examples/AlertAddidtionalContent.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -110,7 +110,7 @@ You can see this in action with a live demo:
         "<html>":{
             "src": "examples/AlertDismissing.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />
@@ -128,7 +128,7 @@ You can see this in action with a live demo:
         "<html>":{
             "src": "examples/AlertDismissingIconAside.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />

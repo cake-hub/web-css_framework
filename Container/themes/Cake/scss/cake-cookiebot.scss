@@ -1,0 +1,19 @@
+@import "../../../scss/functions";
+@import "../../../scss/variables-root";
+@import "../../../scss/variables";
+@import "../../../scss/mixins";
+@import "../../../scss/typography-font-face";
+
+.cookie-alert {
+  @import "../../../scss/reboot";
+
+  @extend .html-style;
+  @extend .body-style;
+
+  @import "../../../scss/typography";
+  @import "../../../scss/button";
+  @import "../../../scss/custom-form";
+  @import "../../../scss/utilities";
+}
+
+@import "../../../scss/cookie-alert";

@@ -30,14 +30,14 @@ document.addEventListener ("DOMContentLoaded", () => {
 });
 
 
-/* Initialize extended Cookie-Banner */
+/* Initialize extended cookie alert */
 
 document.addEventListener ("DOMContentLoaded", () => {
     if (!window.cake) {
         window.cake = {};
     }
-    if (window.cake.cookie && window.cake.cookie.showCookieBanner) {
-        window.cake.cookie.showCookieBanner ();
+    if (window.cake.cookie && window.cake.cookie.showCookieAlert) {
+        window.cake.cookie.showCookieAlert ();
     }
 });
 

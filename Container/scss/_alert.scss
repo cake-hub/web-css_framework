@@ -51,6 +51,11 @@
     padding: $alert-padding-y $alert-padding-x;
     margin: #{-$alert-padding-y} #{-$alert-padding-x} 0 0;
     color: inherit;
+
+    &:not(:disabled):not(.disabled):hover,
+    &:not(:disabled):not(.disabled):focus {
+      color: inherit;
+    }
   }
 
   .alert-content-with-icon {

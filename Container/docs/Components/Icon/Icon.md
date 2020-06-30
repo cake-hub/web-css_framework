@@ -175,7 +175,7 @@ The class `.icon-vertical-middle` can be used, if you want to position an icon n
         "<html>":{
             "src": "examples/IconVerticalMiddleExample.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showbox"
         }
     '
  />

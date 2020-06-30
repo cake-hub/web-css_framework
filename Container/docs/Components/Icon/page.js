@@ -35,9 +35,9 @@ const IconButtonExample = () => (
 );
 
 const IconVerticalMiddleExample = () => (
-    <React.Fragment>
+    <div className="cake-example-cutted-border-fix" id="showbox">
         <Icon className="icon-24 icon-vertical-middle" name="placeholder" title="Placeholder" />&emsp;Some text
-    </React.Fragment>
+    </div>
 );
 
 const IconColoringExample = () => (
