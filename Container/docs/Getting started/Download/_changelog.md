@@ -1,5 +1,12 @@
 # Change log
 
+## [4.0.1](https://github.com/cake-hub/web-css_framework/tree/v4.0.1) - 2020-06-30
+
+### Fixed
+
+* `Docs`: "Download" | Fixed wrong link to npm package.
+
+
 ## [4.0.0](https://github.com/cake-hub/web-css_framework/tree/v4.0.0) - 2020-06-25
 
 ### Changed

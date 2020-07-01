@@ -1,4 +1,4 @@
-version: 4.0.0
+version: 4.0.1
 product: Web
 productIcon: earth
 section: Develop
@@ -10,6 +10,6 @@ variables:
   repositoryUrl: https://github.com/cake-hub/web-css_framework
   bundleDownloadUrl: https://github.com/cake-hub/web-css_framework/archive/master.zip
   sourceDownloadUrl: https://github.com/cake-hub/web-css_framework/archive/master.zip
-  npmPackageUrl: https://www.npmjs.com/package/@cake-hub/cake-web-css_framework
+  npmPackageUrl: https://www.npmjs.com/package/@cake-hub/web-css_framework
   npmRegistryUrl: https://registry.npmjs.org/
 
