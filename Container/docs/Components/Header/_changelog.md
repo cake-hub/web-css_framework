@@ -11,8 +11,8 @@
 
 ### Added
 
-* `HTML`, `CSS`, `Docs`: "Header" | Added `<abbr>` tags and `aria-label` text to the language selection in header for better accessibility
-* `HTML`, `CSS`, `Docs`: "Header" | Added `sr-only` text to the user navigation badges in header for better accessibility
+* `HTML`, `CSS`, `Doc`: "Header" | Added `<abbr>` tags and `aria-label` text to the language selection in header for better accessibility
+* `HTML`, `CSS`, `Doc`: "Header" | Added `sr-only` text to the user navigation badges in header for better accessibility
 
 ### Changed
 

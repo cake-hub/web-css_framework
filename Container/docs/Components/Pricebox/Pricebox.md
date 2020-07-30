@@ -185,6 +185,7 @@ You can choose different colors by adding one of the following classes to the ro
 * action (`.pricebox-highlight-action`)
 * offer (`.pricebox-highlight-offer`)
 * info (`.pricebox-highlight-info`)
+* lidl-plus (`.pricebox-lidl-plus`)
 
 ### theme action
 
@@ -239,6 +240,24 @@ You can choose different colors by adding one of the following classes to the ro
  />
 
 ![PriceboxHightlightInfo](examples/PriceboxHightlightInfo.html)
+
+### theme lidl-plus
+
+<ContentRack
+    fields='
+        "preview": {
+            "src": "examples/PriceboxLidlPlus.html",
+            "type": "link"
+        },
+        "<html>":{
+            "src": "examples/PriceboxLidlPlus.html",
+            "type": "content",
+            "selector": "#app"
+        }
+    '
+ />
+
+![PriceboxLidlPlus](examples/PriceboxLidlPlus.html)
 
 ## Discount
 

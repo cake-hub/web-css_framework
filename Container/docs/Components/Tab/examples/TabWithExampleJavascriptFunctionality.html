@@ -1,0 +1,60 @@
+
+        <!DOCTYPE html>
+        <html lang="en-GB">
+        <head>
+            <base href="../../../_assets/themes/Cake/">
+            <script>
+                /* Create and adjust base-path to set correct theme-location */
+                if (typeof defaultTheme === "undefined") {
+                    var defaultTheme = "Cake";
+                }
+                var theme = localStorage.getItem ("theme") || defaultTheme;
+                var baseElement = document.getElementsByTagName ("base") [0];
+                var baseElementHref = baseElement.getAttribute ('href');
+                baseElement.href = baseElementHref.substr (0, baseElementHref.lastIndexOf('/', baseElementHref.lastIndexOf('/') - 1) + 1) + theme + "/";
+            </script>
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title data-react-helmet="true">TabWithExampleJavascriptFunctionality</title>
+            
+            <link rel="stylesheet" type="text/css" href="css/cake.css">
+        </head>
+
+        <body>
+            <div id="app"><div class="cake-example-tab-content" data-reactroot=""><div class="btn-group tab" aria-label="Tab component" data-controller="tab" role="tablist" id="tab-selector"><button role="tab" type="button" id="tab-button-1" data-controller="tab/button" class="btn tab-btn previous" aria-selected="false" aria-controls="tab-content-1">First Tab</button><button role="tab" type="button" id="tab-button-2" data-controller="tab/button" class="btn tab-btn active" aria-selected="true" aria-controls="tab-content-2">Second Tab</button><button role="tab" type="button" id="tab-button-3" data-controller="tab/button" class="btn tab-btn next" aria-selected="false" aria-controls="tab-content-3">Third Tab</button><button role="tab" type="button" id="tab-button-4" data-controller="tab/button" class="btn tab-btn" aria-selected="false" aria-controls="tab-content-4">Fourth Tab</button><button role="tab" type="button" id="tab-button-5" data-controller="tab/button" class="btn tab-btn" aria-selected="false" aria-controls="tab-content-5">Fifth Tab</button><button role="tab" type="button" id="tab-button-6" data-controller="tab/button" class="btn tab-btn" aria-selected="false" aria-controls="tab-content-6">Sixth Tab</button></div><div role="tabpanel" id="tab-content-1" aria-labelledby="tab-button-1" aria-hidden="true" class="tab-content hidden">Content for tab one.</div><div role="tabpanel" id="tab-content-2" aria-labelledby="tab-button-2" aria-hidden="false" class="tab-content">Content for tab two.</div><div role="tabpanel" id="tab-content-3" aria-labelledby="tab-button-3" aria-hidden="true" class="tab-content hidden">Content for tab three.</div><div role="tabpanel" id="tab-content-4" aria-labelledby="tab-button-4" aria-hidden="true" class="tab-content hidden">Content for tab four.</div><div role="tabpanel" id="tab-content-5" aria-labelledby="tab-button-5" aria-hidden="true" class="tab-content hidden">Content for tab five.</div><div role="tabpanel" id="tab-content-6" aria-labelledby="tab-button-6" aria-hidden="true" class="tab-content hidden">Content for tab six.</div><script>
+                var tab = document.getElementById ('tab-selector');
+
+                tab.addEventListener ('tabChanged', function (e) {
+                    //Get the content elements
+                    var oldContentElement = document.getElementById (e.detail.oldElement.getAttribute('aria-controls'));
+                    var activeContentElement = document.getElementById (e.detail.activeElement.getAttribute('aria-controls'));
+
+                    //Update aria-attributes of content elements
+                    oldContentElement.setAttribute ('aria-hidden', true);
+                    activeContentElement.setAttribute ('aria-hidden', false);
+
+                    //Adjust display of content elements
+                    oldContentElement.classList.add ("hidden");
+                    activeContentElement.classList.remove ("hidden");
+                });
+
+                var direction = "forward";
+                setInterval (function () {
+                    if (direction === "forward") {
+                        if (!tab.nextTab ()) {
+                            tab.previousTab ();
+                            direction = "backward";
+                        }
+                    } else {
+                        if (!tab.previousTab ()) {
+                            tab.nextTab ();
+                            direction = "forward";
+                        }
+                    }
+                }, 5000);
+            </script></div></div>
+            <script src="js/cake.js"></script>
+            <script src="../../example.js"></script>
+        </body>
+        </html>

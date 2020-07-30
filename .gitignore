@@ -22,13 +22,12 @@ Container/.npm
 .env
 
 # Dist folder
-Container/dist/
-Container/docs/About/Change log.md
-Container/docs/**/examples
-Container/docs/_assets
-Container/themes/**/dist
+#Container/dist/
+#Container/docs/About/Change log.md
+#Container/docs/**/examples
+#Container/docs/_assets
 
-#tmp files/folders
+# tmp files/folders
 Container/tmp/
 
 # OS, IDE

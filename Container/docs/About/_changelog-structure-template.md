@@ -1,6 +1,7 @@
 # Change log
 
-## [0.X.X](https://www.secrz.de/bitbucket/projects/CAKE/repos/phoenix/browse?at=refs%2Ftags%2Fx.x.x) - 2019-02-01
+## [|{RELEASE_VERSION}|](https://github.com/cake-hub/web-css_framework/tree/v|{RELEASE_VERSION}|) - |{RELEASE_DATE}|
+
 
 ### Highlights
 

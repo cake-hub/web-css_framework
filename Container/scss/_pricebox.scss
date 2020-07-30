@@ -163,7 +163,8 @@
 
 .pricebox-with-highlight-action,
 .pricebox-with-highlight-offer,
-.pricebox-with-highlight-info {
+.pricebox-with-highlight-info,
+.pricebox-lidl-plus {
   .pricebox-container,
   .pricebox-basic-quantity {
     margin-right: calculateRem(4px);
@@ -184,6 +185,16 @@
 
 .pricebox-with-highlight-info .pricebox-highlight {
   background-color: $info;
+}
+
+.pricebox-lidl-plus {
+  .pricebox-highlight {
+    background-color: $info;
+  }
+  .pricebox-container {
+    background-color: $mark;
+    border-color: $mark;
+  }
 }
 
 .pricebox-highlight {

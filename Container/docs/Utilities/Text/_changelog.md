@@ -4,4 +4,4 @@
 
 ### Fixed
 
-* `DOCS`: "Text" | Fixed table head of `.hyphens`
+* `Doc`: "Text" | Fixed table head of `.hyphens`

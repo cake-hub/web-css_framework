@@ -3,7 +3,7 @@
   "versions": {
     "Cake": "Apple Pie"
   },
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "CSS Framework for the Schwarz Group",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
     "release": "npm run build && npm run lint-all",
     "build-assets": "webpack --progress",
     "build-examples": "babel-node ./build/exampleIndex.js",
-    "delete-generated": "rm -Rf ./dist ./docs/_assets",
+    "delete-generated": "rm -Rf ./dist ./docs/_assets ./docs/**/examples",
     "dev": "NODE_ENV=develop npm run build-assets && npm-run-all --parallel watch-assets watch-examples",
     "dev-server": "npm-run-all --parallel dev server",
     "watch-assets": "webpack --watch",

@@ -1,0 +1,29 @@
+
+        <!DOCTYPE html>
+        <html lang="en-GB">
+        <head>
+            <base href="../../../_assets/themes/Cake/">
+            <script>
+                /* Create and adjust base-path to set correct theme-location */
+                if (typeof defaultTheme === "undefined") {
+                    var defaultTheme = "Cake";
+                }
+                var theme = localStorage.getItem ("theme") || defaultTheme;
+                var baseElement = document.getElementsByTagName ("base") [0];
+                var baseElementHref = baseElement.getAttribute ('href');
+                baseElement.href = baseElementHref.substr (0, baseElementHref.lastIndexOf('/', baseElementHref.lastIndexOf('/') - 1) + 1) + theme + "/";
+            </script>
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title data-react-helmet="true">AlertIconsAside</title>
+            
+            <link rel="stylesheet" type="text/css" href="css/cake.css">
+        </head>
+
+        <body>
+            <div id="app"><div class="cake-example-cutted-shadow-fix" id="showbox" data-reactroot=""><div class="alert d-flex alert-info" role="alert"><div class="alert-icon"><svg class="icon icon-32" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Info</title><use xlink:href="images/icon__sprite.svg#information-circle"></use></svg></div><div class="alert-content-with-icon"><h4 class="alert-heading">Information!</h4><p class="mb-0">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p></div></div><div class="alert d-flex alert-danger" role="alert"><div class="alert-icon"><svg class="icon icon-32" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Danger</title><use xlink:href="images/icon__sprite.svg#exclamation-triangle"></use></svg></div><div class="alert-content-with-icon"><h4 class="alert-heading">Important information!</h4><p class="mb-0">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p></div></div><div class="alert d-flex alert-success" role="alert"><div class="alert-icon"><svg class="icon icon-32" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Success</title><use xlink:href="images/icon__sprite.svg#hook-circle"></use></svg></div><div class="alert-content-with-icon"><h4 class="alert-heading">Well done!</h4><p class="mb-0">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p></div></div><div class="alert d-flex alert-warning" role="alert"><div class="alert-icon"><svg class="icon icon-32" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Warning</title><use xlink:href="images/icon__sprite.svg#exclamation-circle"></use></svg></div><div class="alert-content-with-icon"><h4 class="alert-heading">Warning!</h4><p class="mb-0">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p></div></div><div class="alert d-flex alert-gray" role="alert"><div class="alert-icon"><svg class="icon icon-32" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Placeholder</title><use xlink:href="images/icon__sprite.svg#placeholder"></use></svg></div><div class="alert-content-with-icon"><h4 class="alert-heading">Insignificant information!</h4><p class="mb-0">Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p></div></div></div></div>
+            <script src="js/cake.js"></script>
+            <script src="../../example.js"></script>
+        </body>
+        </html>

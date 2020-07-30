@@ -1,0 +1,29 @@
+
+        <!DOCTYPE html>
+        <html lang="en-GB">
+        <head>
+            <base href="../../../_assets/themes/Cake/">
+            <script>
+                /* Create and adjust base-path to set correct theme-location */
+                if (typeof defaultTheme === "undefined") {
+                    var defaultTheme = "Cake";
+                }
+                var theme = localStorage.getItem ("theme") || defaultTheme;
+                var baseElement = document.getElementsByTagName ("base") [0];
+                var baseElementHref = baseElement.getAttribute ('href');
+                baseElement.href = baseElementHref.substr (0, baseElementHref.lastIndexOf('/', baseElementHref.lastIndexOf('/') - 1) + 1) + theme + "/";
+            </script>
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title data-react-helmet="true">TypographyWordBreak</title>
+            
+            <link rel="stylesheet" type="text/css" href="css/cake.css">
+        </head>
+
+        <body>
+            <div id="app"><div class="table-responsive" data-reactroot=""><table class="table"><thead><tr><th></th><th>Normal</th><th>Hyphens (.hyphens)</th><th>Shy (&amp;shy;)</th></tr></thead><tbody><tr><th>wide</th><td><p class="border">Sesquipedalianism is a common problem on small elements. There is no need for Floccinaucinihilipilification on this subject. Take care of word separation over multiple lines to not generate Incomprehensibilities. This text is uncopyrightable, everything else were Unimaginatively.</p></td><td><p class="border hyphens" lang="en-GB">Sesquipedalianism is a common problem on small elements. There is no need for Floccinaucinihilipilification on this subject. Take care of word separation over multiple lines to not generate Incomprehensibilities. This text is uncopyrightable, everything else were Unimaginatively.</p></td><td><p class="border">Ses­qui­pe­da­lian­ism is a common prob­lem on small el­e­ments. There is no need for Floc­cin­aucini­hilipil­i­fi­ca­tion on this subject. Take care of word sep­a­ra­tion over multiple lines to not generate In­com­pre­hen­si­bili­ties. This text is un­copy­right­able, ev­ery­thing else were Un­imag­i­na­tive­ly.</p></td></tr><tr><th>narrow</th><td><p class="border" style="width:100px">Sesquipedalianism is a common problem on small elements. There is no need for Floccinaucinihilipilification on this subject. Take care of word separation over multiple lines to not generate Incomprehensibilities. This text is uncopyrightable, everything else were Unimaginatively.</p></td><td><p class="border hyphens" style="width:100px" lang="en-GB">Sesquipedalianism is a common problem on small elements. There is no need for Floccinaucinihilipilification on this subject. Take care of word separation over multiple lines to not generate Incomprehensibilities. This text is uncopyrightable, everything else were Unimaginatively.</p></td><td><p class="border" style="width:100px">Ses­qui­pe­da­lian­ism is a common prob­lem on small el­e­ments. There is no need for Floc­cin­aucini­hilipil­i­fi­ca­tion on this subject. Take care of word sep­a­ra­tion over multiple lines to not generate In­com­pre­hen­si­bili­ties. This text is un­copy­right­able, ev­ery­thing else were Un­imag­i­na­tive­ly.</p></td></tr></tbody></table></div></div>
+            <script src="js/cake.js"></script>
+            <script src="../../example.js"></script>
+        </body>
+        </html>

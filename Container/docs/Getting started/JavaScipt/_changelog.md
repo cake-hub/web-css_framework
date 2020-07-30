@@ -4,4 +4,4 @@
 
 ### Changed
 
-* `Docs`: "JavaScript" | Updated the example code lines to match the new structure with theme folder.
+* `Doc`: "JavaScript" | Updated the example code lines to match the new structure with theme folder.

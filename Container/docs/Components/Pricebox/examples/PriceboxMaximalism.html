@@ -1,0 +1,29 @@
+
+        <!DOCTYPE html>
+        <html lang="en-GB">
+        <head>
+            <base href="../../../_assets/themes/Cake/">
+            <script>
+                /* Create and adjust base-path to set correct theme-location */
+                if (typeof defaultTheme === "undefined") {
+                    var defaultTheme = "Cake";
+                }
+                var theme = localStorage.getItem ("theme") || defaultTheme;
+                var baseElement = document.getElementsByTagName ("base") [0];
+                var baseElementHref = baseElement.getAttribute ('href');
+                baseElement.href = baseElementHref.substr (0, baseElementHref.lastIndexOf('/', baseElementHref.lastIndexOf('/') - 1) + 1) + theme + "/";
+            </script>
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title data-react-helmet="true">PriceboxMaximalism</title>
+            
+            <link rel="stylesheet" type="text/css" href="css/cake.css">
+        </head>
+
+        <body>
+            <div id="app"><div class="pricebox pricebox-negative pricebox-medium pricebox-with-highlight-offer" data-reactroot=""><div class="pricebox-wrapper"><div class="pricebox-highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div><div class="pricebox-container"><div class="pricebox-discount-wrapper"><span class="pricebox-discount">UVP:</span> <span class="pricebox-recommended-retail-price"><span class="sr-only">original price</span>9.999,99</span></div><div class="pricebox-price-wrapper" aria-label="from 9.998,50 CHF *"><span class="pricebox-prefix">from</span><span class="pricebox-price">9.998,50</span><div class="pricebox-suffix"><span class="pricebox-asterisk">*</span><span class="pricebox-currency">CHF</span></div></div></div></div><div class="pricebox-basic-quantity">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div></div></div>
+            <script src="js/cake.js"></script>
+            <script src="../../example.js"></script>
+        </body>
+        </html>

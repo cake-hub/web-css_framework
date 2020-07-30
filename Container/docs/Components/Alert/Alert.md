@@ -8,7 +8,7 @@ Provide contextual feedback messages for typical user actions with the handful o
 
 ## Examples
 
-Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the six **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [cakes alert plugin](#dismissing).
+Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the six **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [cakes alert plugin](#examples-dismissing).
 
 <ContentRack
     fields='

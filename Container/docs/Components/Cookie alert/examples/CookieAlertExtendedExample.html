@@ -1,0 +1,26 @@
+
+        <!DOCTYPE html>
+        <html lang="en-GB">
+        <head>
+            <base href="../../../_assets/themes/Lidl/">
+            <script>
+                /* Create and adjust base-path to set correct theme-location */
+                var theme = localStorage.getItem ("theme") || defaultTheme;
+                var baseElement = document.getElementsByTagName ("base") [0];
+                var baseElementHref = baseElement.getAttribute ('href');
+                baseElement.href = baseElementHref.substr (0, baseElementHref.lastIndexOf('/', baseElementHref.lastIndexOf('/') - 1) + 1) + theme + "/";
+            </script>
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title data-react-helmet="true">CookieAlertExtendedExample</title>
+            
+            <link rel="stylesheet" type="text/css" href="assets/css/cake.css">
+        </head>
+
+        <body>
+            <div id="app"><dialog role="dialog" class="cookie-alert-extended" lang="en" dir="lr" data-controller="cookie-alert/extended" aria-labelledby="lL3RIKu1N" aria-describedby="_LFvORiKDw" data-reactroot=""><div class="cookie-alert-extended-modal" aria-modal="true"><h2 class="cookie-alert-extended-title" id="lL3RIKu1N">Title</h2><p class="cookie-alert-extended-description" id="_LFvORiKDw">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem <a href="#">ipsum dolor sit amet.</a></p><div class="cookie-alert-extended-controls"><button type="button" class="cookie-alert-extended-button" tabindex="1" data-controller="cookie-alert/extended/button/accept">Accept all</button><a href="#" class="cookie-alert-extended-detail-link" tabindex="2" data-controller="cookie-alert/extended/detail-link" aria-controls="V_brQJ_Keg" id="SYLJII83AI">More details</a></div><div class="cookie-alert-configuration" data-controller="cookie-alert/extended/configuration" aria-controls="V_brQJ_Keg" aria-labelledby="SYLJII83AI" aria-expanded="false" id="V_brQJ_Keg"><div class="cookie-alert-configuration-settings"><div class="cookie-alert-configuration-control"><input type="checkbox" class="cookie-alert-configuration-input" id="necessary" tabindex="2" checked="" disabled=""/><label for="necessary" class="cookie-alert-extended-checkbox-label">Necessary</label></div><div class="cookie-alert-configuration-control"><input type="checkbox" class="cookie-alert-configuration-input" id="preferences" tabindex="2"/><label for="preferences" class="cookie-alert-extended-checkbox-label">Preferences</label></div><div class="cookie-alert-configuration-control"><input type="checkbox" class="cookie-alert-configuration-input" id="statistics" tabindex="2"/><label for="statistics" class="cookie-alert-extended-checkbox-label">Statistics</label></div><div class="cookie-alert-configuration-control"><input type="checkbox" class="cookie-alert-configuration-input" id="marketing" tabindex="2"/><label for="marketing" class="cookie-alert-extended-checkbox-label">Marketing</label></div></div><button type="button" class="cookie-alert-extended-button-secondary" tabindex="2" data-controller="cookie-alert/extended/button/configuration">Accept configuration</button></div></div></dialog></div>
+            <script src="assets/js/cake.js"></script>
+            <script src="../../example.js"></script>
+        </body>
+        </html>

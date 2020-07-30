@@ -1,0 +1,29 @@
+
+        <!DOCTYPE html>
+        <html lang="en-GB">
+        <head>
+            <base href="../../../_assets/themes/Cake/">
+            <script>
+                /* Create and adjust base-path to set correct theme-location */
+                if (typeof defaultTheme === "undefined") {
+                    var defaultTheme = "Cake";
+                }
+                var theme = localStorage.getItem ("theme") || defaultTheme;
+                var baseElement = document.getElementsByTagName ("base") [0];
+                var baseElementHref = baseElement.getAttribute ('href');
+                baseElement.href = baseElementHref.substr (0, baseElementHref.lastIndexOf('/', baseElementHref.lastIndexOf('/') - 1) + 1) + theme + "/";
+            </script>
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title data-react-helmet="true">SizingHeight</title>
+            
+            <link rel="stylesheet" type="text/css" href="css/cake.css">
+        </head>
+
+        <body>
+            <div id="app"><div style="height:100px;background-color:rgba(255,0,0,0.1)" data-reactroot=""><div class="h-25 d-inline-block" style="width:120px;background-color:rgba(0,0,255,.1)">Height 25%</div><div class="h-50 d-inline-block" style="width:120px;background-color:rgba(0,0,255,.1)">Height 50%</div><div class="h-75 d-inline-block" style="width:120px;background-color:rgba(0,0,255,.1)">Height 75%</div><div class="h-100 d-inline-block" style="width:120px;background-color:rgba(0,0,255,.1)">Height 100%</div><div class="h-auto d-inline-block" style="width:120px;background-color:rgba(0,0,255,.1)">Height auto</div></div></div>
+            <script src="js/cake.js"></script>
+            <script src="../../example.js"></script>
+        </body>
+        </html>

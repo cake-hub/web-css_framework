@@ -1,0 +1,29 @@
+
+        <!DOCTYPE html>
+        <html lang="en-GB">
+        <head>
+            <base href="../../../_assets/themes/Cake/">
+            <script>
+                /* Create and adjust base-path to set correct theme-location */
+                if (typeof defaultTheme === "undefined") {
+                    var defaultTheme = "Cake";
+                }
+                var theme = localStorage.getItem ("theme") || defaultTheme;
+                var baseElement = document.getElementsByTagName ("base") [0];
+                var baseElementHref = baseElement.getAttribute ('href');
+                baseElement.href = baseElementHref.substr (0, baseElementHref.lastIndexOf('/', baseElementHref.lastIndexOf('/') - 1) + 1) + theme + "/";
+            </script>
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title data-react-helmet="true">PopoverColors</title>
+            
+            <link rel="stylesheet" type="text/css" href="css/cake.css">
+        </head>
+
+        <body>
+            <div id="app"><div class="cake-example-popover" data-reactroot="">Popover with theme &lt;primary&gt;<abbr class="mb-2" data-tippy-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris." data-tippy-placement="bottom" data-tippy-theme="primary" aria-haspopup="true" aria-expanded="false"><svg class="icon icon-24 text-primary" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Popover with theme &lt;primary&gt;</title><use xlink:href="images/icon__sprite.svg#questionmark-circle"></use></svg></abbr><br/>Popover with theme &lt;info&gt;<abbr class="mb-2" data-tippy-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris." data-tippy-placement="bottom" data-tippy-theme="info" aria-haspopup="true" aria-expanded="false"><svg class="icon icon-24 text-info" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Popover with theme &lt;info&gt;</title><use xlink:href="images/icon__sprite.svg#questionmark-circle"></use></svg></abbr><br/>Popover with theme &lt;danger&gt;<abbr class="mb-2" data-tippy-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris." data-tippy-theme="danger" aria-haspopup="true" aria-expanded="false"><svg class="icon icon-24 text-danger" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Popover with theme &lt;danger&gt;</title><use xlink:href="images/icon__sprite.svg#questionmark-circle"></use></svg></abbr><br/>Popover with theme &lt;success&gt;<abbr class="mb-2" data-tippy-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris." data-tippy-theme="success" aria-haspopup="true" aria-expanded="false"><svg class="icon icon-24 text-success" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Popover with theme &lt;success&gt;</title><use xlink:href="images/icon__sprite.svg#questionmark-circle"></use></svg></abbr><br/>Popover with theme &lt;warning&gt;<abbr class="mb-2" data-tippy-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris." data-tippy-theme="warning" aria-haspopup="true" aria-expanded="false"><svg class="icon icon-24 text-warning" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Popover with theme &lt;warning&gt;</title><use xlink:href="images/icon__sprite.svg#questionmark-circle"></use></svg></abbr><br/>Popover with theme &lt;gray&gt;<abbr data-tippy-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris." data-tippy-theme="gray" aria-haspopup="true" aria-expanded="false"><svg class="icon icon-24 text-gray" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Popover with theme &lt;gray&gt;</title><use xlink:href="images/icon__sprite.svg#questionmark-circle"></use></svg></abbr></div></div>
+            <script src="js/cake.js"></script>
+            <script src="../../example.js"></script>
+        </body>
+        </html>

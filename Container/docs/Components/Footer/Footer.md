@@ -98,7 +98,7 @@ With these modifiers applied to the footer, a mixumum of 6 main-navigation lists
 
 > ### Use modifiers over custom css
 >
-> When adjusting the footer to make it matching your project perfectly, be careful at creating **own style rules**. In most of the cases the **modifiers** (as listed above and many more) will fit your needs perfectly and you do not need to write one line of css/scss.
+> When adjusting the footer to make it matching your project perfectly, be careful at creating **own style rules**. In most of the cases the **modifiers** (as listed above and many more) will fit your needs perfectly and you do not need to write one line of css/scss. If you still decide to write your own CSS, note the **break behaviour** of short links in the footer at different breakpoints!
 
 ## Accessibility
 

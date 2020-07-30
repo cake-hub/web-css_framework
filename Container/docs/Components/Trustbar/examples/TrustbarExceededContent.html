@@ -1,0 +1,29 @@
+
+        <!DOCTYPE html>
+        <html lang="en-GB">
+        <head>
+            <base href="../../../_assets/themes/Cake/">
+            <script>
+                /* Create and adjust base-path to set correct theme-location */
+                if (typeof defaultTheme === "undefined") {
+                    var defaultTheme = "Cake";
+                }
+                var theme = localStorage.getItem ("theme") || defaultTheme;
+                var baseElement = document.getElementsByTagName ("base") [0];
+                var baseElementHref = baseElement.getAttribute ('href');
+                baseElement.href = baseElementHref.substr (0, baseElementHref.lastIndexOf('/', baseElementHref.lastIndexOf('/') - 1) + 1) + theme + "/";
+            </script>
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title data-react-helmet="true">TrustbarExceededContent</title>
+            
+            <link rel="stylesheet" type="text/css" href="css/cake.css">
+        </head>
+
+        <body>
+            <div id="app"><div class="trustbar " data-reactroot=""><div class="container-responsive"><ul class="trustbar-list"><li class="trustbar-item "><a href="#" class="trustbar-item-link"><svg class="icon icon icon-24 icon-vertical-middle trustbar-item-icon" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Placeholder</title><use xlink:href="images/icon__sprite.svg#placeholder"></use></svg>This is a very long Trustbar text. This text shows the behavior of text getting truncated.</a></li><li class="trustbar-item "><a href="#" class="trustbar-item-link"><svg class="icon icon icon-24 icon-vertical-middle trustbar-item-icon" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Placeholder</title><use xlink:href="images/icon__sprite.svg#placeholder"></use></svg>This is a very long Trustbar text. This text shows the behavior of text getting truncated.</a></li><li class="trustbar-item "><a href="#" class="trustbar-item-link"><svg class="icon icon icon-24 icon-vertical-middle trustbar-item-icon" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Placeholder</title><use xlink:href="images/icon__sprite.svg#placeholder"></use></svg>This is a very long Trustbar text. This text shows the behavior of text getting truncated.</a></li><li class="trustbar-item "><a href="#" class="trustbar-item-link"><svg class="icon icon icon-24 icon-vertical-middle trustbar-item-icon" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false"><title>Placeholder</title><use xlink:href="images/icon__sprite.svg#placeholder"></use></svg>This is a very long Trustbar text. This text shows the behavior of text getting truncated.</a></li></ul></div></div></div>
+            <script src="js/cake.js"></script>
+            <script src="../../example.js"></script>
+        </body>
+        </html>

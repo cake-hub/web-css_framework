@@ -19,6 +19,15 @@
   margin-bottom: 0;
 }
 
+// fix breaking of small links in vertical arrangement
+@each $breakpoint in map-keys($grid-breakpoints) {
+  .footer-list > li[class*="col-#{$breakpoint}-"]:not([class~="col-#{$breakpoint}-12"]) > .footer-list .footer-list-item {
+    @include media-breakpoint-up ($breakpoint) {
+      width: 100%;
+    }
+  }
+}
+
 .footer-list-item-link {
   @include reset-link;
   padding: .5rem;

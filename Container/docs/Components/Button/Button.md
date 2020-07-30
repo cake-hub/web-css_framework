@@ -62,7 +62,7 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 
 ## Icon
 
-CAKE provides SVG icons that can be placed inside buttons. Insert the [icon sprite](#linkToIconComponent) to your HTML document. Use the `.btn-icon` class for basic styling and the size class `.icon-24` to set width and height to `24px` (`1.5rem`).
+CAKE provides SVG icons that can be placed inside buttons. Insert the [icon sprite](../Icon/Icon.md) to your HTML document. Use the `.btn-icon` class for basic styling and the size class `.icon-24` to set width and height to `24px` (`1.5rem`).
 
 ### Positiv icon with text
 

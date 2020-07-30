@@ -1,5 +1,12 @@
 # Change log
 
+## [4.1.0](https://github.com/cake-hub/web-css_framework/tree/v4.1.0) - 2020-07-30
+
+### Changed
+
+* `SCSS`: Set `$list-group-border-color` to "gray lighter".
+
+
 ## [4.0.0](https://github.com/cake-hub/web-css_framework/tree/v4.0.0) - 2020-06-25
 
 ### Added
