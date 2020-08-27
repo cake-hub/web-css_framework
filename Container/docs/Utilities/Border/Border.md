@@ -17,7 +17,7 @@ Use border utilities to add or remove an element's borders. Choose from all bord
         "<html>":{
             "src": "examples/BorderAdditive.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -35,7 +35,7 @@ Use border utilities to add or remove an element's borders. Choose from all bord
         "<html>":{
             "src": "examples/BorderSubtractive.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -54,7 +54,7 @@ Change the border color using utilities built on our theme colors.
         "<html>":{
             "src": "examples/BorderColor.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -73,7 +73,7 @@ Add classes to an element to easily round its corners.
         "<html>":{
             "src": "examples/BorderRadius.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -93,7 +93,7 @@ Use `.rounded-lg` or `.rounded-sm` for larger or smaller border-radius.
         "<html>":{
             "src": "examples/BorderRadiusSize.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />

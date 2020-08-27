@@ -182,10 +182,9 @@ To highlight promotions or discounts, you can place a element with the class `.p
 
 You can choose different colors by adding one of the following classes to the root element `.pricebox`. To get the correct style, you need at least one of them:
 
-* action (`.pricebox-highlight-action`)
-* offer (`.pricebox-highlight-offer`)
-* info (`.pricebox-highlight-info`)
-* lidl-plus (`.pricebox-lidl-plus`)
+* action (`.pricebox-with-highlight-action`)
+* offer (`.pricebox-with-highlight-offer`)
+* info (`.pricebox-with-highlight-info`)
 
 ### theme action
 
@@ -240,24 +239,6 @@ You can choose different colors by adding one of the following classes to the ro
  />
 
 ![PriceboxHightlightInfo](examples/PriceboxHightlightInfo.html)
-
-### theme lidl-plus
-
-<ContentRack
-    fields='
-        "preview": {
-            "src": "examples/PriceboxLidlPlus.html",
-            "type": "link"
-        },
-        "<html>":{
-            "src": "examples/PriceboxLidlPlus.html",
-            "type": "content",
-            "selector": "#app"
-        }
-    '
- />
-
-![PriceboxLidlPlus](examples/PriceboxLidlPlus.html)
 
 ## Discount
 

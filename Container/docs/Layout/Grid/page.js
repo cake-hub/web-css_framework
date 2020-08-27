@@ -1,7 +1,7 @@
 import React from "react";
 
-const GridDefault = {
-    template: () => (
+const GridDefault = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col-sm">
@@ -15,13 +15,11 @@ const GridDefault = {
                 </div>
             </div>
         </div>
-    ),
-    name: "GridDefault",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridEqualWidth = {
-    template: () => (
+const GridEqualWidth = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col">
@@ -43,13 +41,11 @@ const GridEqualWidth = {
                 </div>
             </div>
         </div>
-    ),
-    name: "GridEqualWidth",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridEqualWidthWorkaround = {
-    template: () => (
+const GridEqualWidthWorkaround = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col">Column</div>
@@ -59,13 +55,11 @@ const GridEqualWidthWorkaround = {
                 <div className="col">Column</div>
             </div>
         </div>
-    ),
-    name: "GridEqualWidthWorkaround",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridOneColumnWidth = {
-    template: () => (
+const GridOneColumnWidth = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col">
@@ -90,13 +84,11 @@ const GridOneColumnWidth = {
                 </div>
             </div>
         </div>
-    ),
-    name: "GridOneColumnWidth",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridVariableWidthContent = {
-    template:() => (
+const GridVariableWidthContent = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row justify-content-md-center">
                 <div className="col col-lg-2">
@@ -121,13 +113,11 @@ const GridVariableWidthContent = {
                 </div>
             </div>
         </div>
-    ),
-    name: "GridVariableWidthContent",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridEqualWidthMultiRow = {
-    template: () => (
+const GridEqualWidthMultiRow = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col">col</div>
@@ -137,13 +127,11 @@ const GridEqualWidthMultiRow = {
                 <div className="col">col</div>
             </div>
         </div>
-    ),
-    name: "GridEqualWidthMultiRow",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridAllBreakpoints = {
-    template: () => (
+const GridAllBreakpoints = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col">col</div>
@@ -156,13 +144,11 @@ const GridAllBreakpoints = {
                 <div className="col-4">col-4</div>
             </div>
         </div>
-    ),
-    name: "GridAllBreakpoints",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridStackedToHorizontal = {
-    template: () => (
+const GridStackedToHorizontal = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col-sm-8">col-sm-8</div>
@@ -174,26 +160,22 @@ const GridStackedToHorizontal = {
                 <div className="col-sm">col-sm</div>
             </div>
         </div>
-    ),
-    name: "GridStackedToHorizontal",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridMixMatch1 = {
-    template: () => (
+const GridMixMatch1 = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col-12 col-md-8">.col-12 .col-md-8</div>
                 <div className="col-6 col-md-4">.col-6 .col-md-4</div>
             </div>
         </div>
-    ),
-    name: "GridMixMatch1",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridMixMatch2 = {
-    template: () => (
+const GridMixMatch2 = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col-6 col-md-4">.col-6 .col-md-4</div>
@@ -201,39 +183,33 @@ const GridMixMatch2 = {
                 <div className="col-6 col-md-4">.col-6 .col-md-4</div>
             </div>
         </div>
-    ),
-    name: "GridMixMatch2",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridMixMatch3 = {
-    template: () => (
+const GridMixMatch3 = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col-6">.col-6</div>
                 <div className="col-6">.col-6</div>
             </div>
         </div>
-    ),
-    name: "GridMixMatch3",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridGutter = {
-    template: () => (
+const GridGutter = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container px-lg-5">
             <div className="row mx-lg-n5">
                 <div className="col py-3 px-lg-5 border bg-light">Custom column padding</div>
                 <div className="col py-3 px-lg-5 border bg-light">Custom column padding</div>
             </div>
         </div>
-    ),
-    name: "GridGutter",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridVerticalAlignment1 = {
-    template: () => (
+const GridVerticalAlignment1 = () => (
+    <div className="cake-example-row cake-example-row-flex-cols" id="showBox">
         <div className="container-responsive">
             <div className="row align-items-start">
                 <div className="col">
@@ -269,13 +245,11 @@ const GridVerticalAlignment1 = {
                 </div>
             </div>
         </div>
-    ),
-    name: "GridVerticalAlignment1",
-    c_previewClassName: "cake-example-row cake-example-row-flex-cols",
-};
+    </div>
+);
 
-const GridVerticalAlignment2 = {
-    template: () => (
+const GridVerticalAlignment2 = () => (
+    <div className="cake-example-row cake-example-row-flex-cols" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col align-self-start">
@@ -289,13 +263,11 @@ const GridVerticalAlignment2 = {
                 </div>
             </div>
         </div>
-    ),
-    name: "GridVerticalAlignment2",
-    c_previewClassName: "cake-example-row cake-example-row-flex-cols",
-};
+    </div>
+);
 
-const GridHorizontalAlignment = {
-    template: () => (
+const GridHorizontalAlignment = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row justify-content-start">
                 <div className="col-4">
@@ -338,24 +310,20 @@ const GridHorizontalAlignment = {
                 </div>
             </div>
         </div>
-    ),
-    name: "GridHorizontalAlignment",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridNoGutter = {
-    template: () => (
+const GridNoGutter = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="row no-gutters">
             <div className="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
             <div className="col-6 col-md-4">.col-6 .col-md-4</div>
         </div>
-    ),
-    name: "GridNoGutter",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridColumnWrapping = {
-    template: () => (
+const GridColumnWrapping = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col-9">.col-9</div>
@@ -363,13 +331,11 @@ const GridColumnWrapping = {
                 <div className="col-6">.col-6<br />Subsequent columns continue along the new line.</div>
             </div>
         </div>
-    ),
-    name: "GridColumnWrapping",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridColumnBreaks1 = {
-    template: () => (
+const GridColumnBreaks1 = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col-6 col-sm-3">.col-6 .col-sm-3</div>
@@ -382,13 +348,11 @@ const GridColumnBreaks1 = {
                 <div className="col-6 col-sm-3">.col-6 .col-sm-3</div>
             </div>
         </div>
-    ),
-    name: "GridColumnBreaks1",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridColumnBreaks2 = {
-    template: () => (
+const GridColumnBreaks2 = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col-6 col-sm-4">.col-6 .col-sm-4</div>
@@ -401,13 +365,11 @@ const GridColumnBreaks2 = {
                 <div className="col-6 col-sm-4">.col-6 .col-sm-4</div>
             </div>
         </div>
-    ),
-    name: "GridColumnBreaks2",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridOrderClasses1 = {
-    template: () => (
+const GridOrderClasses1 = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col">
@@ -421,13 +383,11 @@ const GridOrderClasses1 = {
                 </div>
             </div>
         </div>
-    ),
-    name: "GridOrderClasses1",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridOrderClasses2 = {
-    template: () => (
+const GridOrderClasses2 = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col order-last">
@@ -441,13 +401,11 @@ const GridOrderClasses2 = {
                 </div>
             </div>
         </div>
-    ),
-    name: "GridOrderClasses2",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridOffsetClasses1 = {
-    template: () => (
+const GridOffsetClasses1 = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col-md-4">.col-md-4</div>
@@ -461,13 +419,11 @@ const GridOffsetClasses1 = {
                 <div className="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
             </div>
         </div>
-    ),
-    name: "GridOffsetClasses1",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridOffsetClasses2 = {
-    template: () => (
+const GridOffsetClasses2 = () => (
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
@@ -479,13 +435,11 @@ const GridOffsetClasses2 = {
                 <div className="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
             </div>
         </div>
-    ),
-    name: "GridOffsetClasses2",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridMarginUtilities = {
-    template: () => (
+const GridMarginUtilities = () => (
+    <div class="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col-md-4">.col-md-4</div>
@@ -500,13 +454,11 @@ const GridMarginUtilities = {
                 <div className="col-auto">.col-auto</div>
             </div>
         </div>
-    ),
-    name: "GridMarginUtilities",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridNesting = {
-    template: () => (
+const GridNesting = () => (
+    <div class="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col-sm-9">
@@ -522,23 +474,19 @@ const GridNesting = {
                 </div>
             </div>
         </div>
-    ),
-    name: "GridNesting",
-    c_previewClassName: "cake-example-row",
-};
+    </div>
+);
 
-const GridSassExampleUsage = {
-    template: () => (
+const GridSassExampleUsage = () => (
+    <div className="cake-example" id="showBox">
         <div className="example-container">
             <div className="example-row">
                 <div className="example-content-main">Main content</div>
                 <div className="example-content-secondary">Secondary content</div>
             </div>
         </div>
-    ),
-    name: "GridSassExampleUsage",
-    c_previewClassName: "cake-example",
-};
+    </div>
+);
 
 export default {
     GridDefault,

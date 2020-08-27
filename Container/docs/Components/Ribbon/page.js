@@ -5,45 +5,39 @@ import Ribbon from "@Develop/Components/Ribbon/ribbon.html";
 import RibbonItem from "@Develop/Components/Ribbon/ribbonItem.html";
 import CakeExampleImage from "@Cake/build/CakeExampleImage";
 
-const RibbonColors = {
-    template: () => (
+const RibbonColors = () => (
+    <div className="cake-example-ribbon" id="showBox">
         <Ribbon>
             <RibbonItem className="ribbon-item-primary">Primary</RibbonItem>
             <RibbonItem className="ribbon-item-info">Info</RibbonItem>
             <RibbonItem className="ribbon-item-danger">Highlight</RibbonItem>
             <RibbonItem className="ribbon-item-gray">Gray</RibbonItem>
         </Ribbon>
-    ),
-    name: "RibbonColors",
-    c_previewClassName: "cake-example-ribbon",
-};
+    </div>
+);
 
-const RibbonMultiple = {
-    template: () => (
+const RibbonMultiple = () => (
+    <div className="cake-example-ribbon" id="showBox">
         <Ribbon>
             <RibbonItem className="ribbon-item-primary">First #1</RibbonItem>
             <RibbonItem className="ribbon-item-primary">Second #2</RibbonItem>
             <RibbonItem className="ribbon-item-primary">Thrid #3</RibbonItem>
             <RibbonItem className="ribbon-item-danger">Fourth #4</RibbonItem>
         </Ribbon>
-    ),
-    name: "RibbonMultiple",
-    c_previewClassName: "cake-example-ribbon",
-};
+    </div>
+);
 
-const RibbonImage = {
-    template: () => (
+const RibbonImage = () => (
+    <div className="cake-example-ribbon" id="showBox">
         <Ribbon>
             <RibbonItem className="ribbon-item-primary"><CakeExampleImage callFilePath={__dirname} className="img-fluid" width="80px" height="60px" title="placeholder" /></RibbonItem>
             <RibbonItem className="ribbon-item-primary"><CakeExampleImage callFilePath={__dirname} className="img-fluid" title="placeholder" width="160px" height="120px" /></RibbonItem>
         </Ribbon>
-    ),
-    name: "RibbonImage",
-    c_previewClassName: "cake-example-ribbon",
-};
+    </div>
+);
 
 const RibbonExample = () => (
-    <div className="cake-example-cuttet-ribbon-fix" id="showbox">
+    <div className="cake-example-cuttet-ribbon-fix" id="showBox">
         <div className="row">
             <div className="col col-12 col-sm-6 p-1">
                 <ProductTile style={{maxWidth: "18rem"}} c_addon={(

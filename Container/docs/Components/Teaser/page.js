@@ -1,54 +1,44 @@
 import React from "react";
 import {Teaser, TeaserNotLinked} from "@Develop/Components/Teaser/teaser.html";
 
-const TeaserDefault = {
-    template: () => (
+const TeaserDefault = () => (
+    <div className="cake-example-container" id="showBox">
         <TeaserNotLinked />
-    ),
-    name: "TeaserDefault",
-    c_previewClassName: "cake-example-container",
-};
+    </div>
+);
 
-const TeaserLinked = {
-    template: () => (
+const TeaserLinked = () => (
+    <div class="cake-example-container" id="showBox">
         <Teaser />
-    ),
-    name: "TeaserLinked",
-    c_previewClassName: "cake-example-container",
-};
+    </div>
+);
 
-const TeaserTitle = {
-    template: () => (
+const TeaserTitle = () => (
+    <div className="cake-example-container" id="showBox">
         <Teaser
             c_title="Title"
         ></Teaser>
-    ),
-    name: "TeaserTitle",
-    c_previewClassName: "cake-example-container",
-};
+    </div>
+);
 
-const TeaserTitleSubheadline = {
-    template: () => (
+const TeaserTitleSubheadline = () => (
+    <div className="cake-example-container" id="showBox">
         <Teaser
             c_title="Title"
             c_subhead="Subhead"
         ></Teaser>
-    ),
-    name: "TeaserTitleSubheadline",
-    c_previewClassName: "cake-example-container",
-};
+    </div>
+);
 
-const TeaserLight = {
-    template: () => (
+const TeaserLight = () => (
+    <div className="cake-example-container" id="showBox">
         <Teaser
             className="teaser-card-light"
             c_title="Title"
             c_subhead="Subhead"
         ></Teaser>
-    ),
-    name: "TeaserLight",
-    c_previewClassName: "cake-example-container",
-};
+    </div>
+);
 
 const TeaserGrid3 = () => (
     <div className="container">

@@ -17,7 +17,7 @@ To create an tab you have to apply the classes `.btn-group` and `.tab` to any el
         "<html>":{
             "src": "examples/TabDefault.html",
             "type": "content",
-            "selector": "#showbox"
+            "selector": "#showBox"
         }
     '
  />
@@ -89,7 +89,7 @@ You can use this informations to build your functionality on top of the tab comp
         "<html>":{
             "src": "examples/TabWithExampleJavascriptFunctionality.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />

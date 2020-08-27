@@ -45,7 +45,7 @@ Place the `-negative` suffix to the button class to get the inverted style.
         "<html>":{
             "src": "examples/ButtonNegative.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -111,7 +111,7 @@ CAKE provides SVG icons that can be placed inside buttons. Insert the [icon spri
         "<html>":{
             "src": "examples/ButtonWithIconAndTextNegative.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -129,7 +129,7 @@ CAKE provides SVG icons that can be placed inside buttons. Insert the [icon spri
         "<html>":{
             "src": "examples/ButtonWithIconNegative.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />

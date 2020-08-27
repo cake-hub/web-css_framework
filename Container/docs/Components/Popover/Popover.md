@@ -36,7 +36,7 @@ To define the content of the popover set the `data-tippy-content` property on th
         "<html>":{
             "src": "examples/PopoverDefault.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -59,7 +59,7 @@ The popovers can be placed on any side of the dependent element. Therefore you s
         "<html>":{
             "src": "examples/PopoverPlacement.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -78,7 +78,7 @@ In addition to the `data-tippy-placement="{position}"` you can add a suffix to t
         "<html>":{
             "src": "examples/PopoverPlacementExtended.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -106,7 +106,7 @@ You can for example also add html-content to the popover. As default the popover
         "<html>":{
             "src": "examples/PopoverCustomContent.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -125,7 +125,7 @@ As already mentioned above, you can add a popover to any valid html element. The
         "<html>":{
             "src": "examples/PopoverCustomElement.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -150,7 +150,7 @@ Nevertheless you can use any `$theme-color` as theme for the popover. To get the
         "<html>":{
             "src": "examples/PopoverColors.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />

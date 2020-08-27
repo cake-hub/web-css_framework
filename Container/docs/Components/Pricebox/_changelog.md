@@ -1,5 +1,12 @@
 # Change log
 
+## [4.2.0](https://github.com/cake-hub/web-css_framework/tree/v4.2.0) - 2020-08-27
+
+### Changed
+
+* `Doc`: "Pricebox" | Moved Lidl Plus pricebox variant to "Lidl Plus" category
+
+
 ## [4.1.0](https://github.com/cake-hub/web-css_framework/tree/v4.1.0) - 2020-07-30
 
 ### Added

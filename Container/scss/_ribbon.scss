@@ -64,3 +64,17 @@
     background-color: cake-color($variant);
   }
 }
+
+.ribbon-item-lidl-plus {
+  background-color: $mark;
+
+  > img {
+    width: calculateRem(32px);
+    height: calculateRem(32px);
+
+    @include media-breakpoint-up(lg) {
+      width: calculateRem(48px);
+      height: calculateRem(48px);
+    }
+  }
+}

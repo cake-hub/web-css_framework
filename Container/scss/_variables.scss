@@ -1480,3 +1480,26 @@ $flap-line-height:                  100% !default;
 $flap-text-align:                   center !default;
 $flap-text-padding:                 .25rem .25rem .5rem !default;
 $flap-text-padding-lg:              .25rem .5rem .5rem !default;
+
+// Coupon
+
+$coupon-border-radius:          $border-radius !default;
+$coupon-bg:                     $primary !default;
+$coupon-cutout-width:           1rem !default;
+$coupon-cutout-width-sm:        2rem !default;
+$coupon-cutout-height:          ($coupon-cutout-width / 2) !default;
+$coupon-cutout-height-sm:       ($coupon-cutout-width-sm / 2) !default;
+$coupon-cutout-bg-size:         10rem !default;
+$coupon-content-padding:        ($coupon-cutout-height + calculateRem(2px)) calculateRem(4px) calculateRem(2px) !default;
+$coupon-content-padding-sm:     ($coupon-cutout-height-sm + calculateRem(2px)) calculateRem(4px) calculateRem(2px) !default;
+$coupon-content-font-size:      $pricebox-price-font-size !default;
+$coupon-content-font-size-sm:   ($pricebox-price-font-size + .5rem) !default;
+$coupon-content-font-size-lg:   ($pricebox-price-font-size + 1rem) !default;
+$coupon-content-font-weight:    $pricebox-price-font-weight !default;
+$coupon-content-line-height:    1 !default;
+$coupon-content-color:          $white !default;
+$coupon-text-padding:           0 calculateRem(4px) !default;
+$coupon-text-height:            calculateRem(24px) !default;
+$coupon-text-bg:                $mark !default;
+$coupon-text-font-size:         $font-size-sm !default;
+$coupon-text-color:             cake-color("gray", "darker") !default;

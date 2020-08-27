@@ -17,7 +17,7 @@ Ribbons can be used to add unique selling prepositions or other informations. Th
         "<html>":{
             "src": "examples/RibbonColors.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -39,7 +39,7 @@ Apart from the variants shown above, the ribbons are available in any theme colo
         "<html>":{
             "src": "examples/RibbonMultiple.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -60,7 +60,7 @@ Also the ribbon should not exceed the `50%` of the parents `width`. *Nevertheles
         "<html>":{
             "src": "examples/RibbonImage.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -80,7 +80,7 @@ As an alternative you can also use images inside a ribbon. When using images mak
         "<html>":{
             "src": "examples/RibbonExample.html",
             "type": "content",
-            "selector": "#showbox"
+            "selector": "#showBox"
         }
     '
  />

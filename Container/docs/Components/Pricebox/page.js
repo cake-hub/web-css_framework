@@ -62,12 +62,6 @@ const PriceboxHightlightInfo = () => (
     </Pricebox>
 );
 
-const PriceboxLidlPlus = () => (
-    <Pricebox className="pricebox-lidl-plus" c_currency="€" c_prefix="ab" c_basicQuantity="1kg = 1.10 €" c_highlight="lidl-plus">
-        9.999,99
-    </Pricebox>
-);
-
 const PriceboxDiscount = () => (
     <Pricebox c_asterisk="*" c_currency="CHF" c_prefix="from" c_discount="UVP:" c_recommendedRetailPrice="10.90" c_recommendedRetailPriceText="old price">
         9.999,99
@@ -146,7 +140,6 @@ export default {
     PriceboxHightlightAction,
     PriceboxHightlightOffer,
     PriceboxHightlightInfo,
-    PriceboxLidlPlus,
     PriceboxDiscount,
     PriceboxNegative,
     PriceboxCustom,

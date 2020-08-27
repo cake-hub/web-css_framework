@@ -1,17 +1,15 @@
 import React from "react";
-import Flap from "@Develop/Additional specalties/Lidl Plus/flap.html";
+import Flap from "@Develop/Lidl Plus/Flap/flap.html";
 import ProductTile from "@Develop/Components/Product tile/productTile.html";
 import {Teaser} from "@Develop/Components/Teaser/teaser.html";
 
-const FlapExample = {
-    template: () => (
+const FlapExample = () => (
+    <div className="cake-example-flap" id="showBox">
         <Flap>
             Lidl Plus Coupon
         </Flap>
-    ),
-    name: "FlapExample",
-    c_previewClassName: "cake-example-flap",
-};
+    </div>
+);
 
 const FlapInElements = () => (
     <div className="row">
@@ -39,5 +37,5 @@ const FlapInElements = () => (
 
 export default {
     FlapExample,
-    FlapInElements
+    FlapInElements,
 };

@@ -22,29 +22,25 @@ const ButtonPositive = () => (
     </React.Fragment>
 );
 
-const ButtonNegative = {
-    template: () => (
-        <React.Fragment>
-            <Button className="btn-primary-negative">
-                Primary
-            </Button>
-            &nbsp;
-            <Button className="btn-primary-negative" disabled>
-                Primary disabled
-            </Button>
-            &nbsp;
-            <Button className="btn-secondary-negative">
-                Secondary
-            </Button>
-            &nbsp;
-            <Button className="btn-secondary-negative" disabled>
-                Secondary disabled
-            </Button>
-        </React.Fragment>
-    ),
-    name: "ButtonNegative",
-    c_previewClassName: "cake-example-negative",
-};
+const ButtonNegative = () => (
+    <div className="cake-example-negative" id="showBox">
+        <Button className="btn-primary-negative">
+            Primary
+        </Button>
+        &nbsp;
+        <Button className="btn-primary-negative" disabled>
+            Primary disabled
+        </Button>
+        &nbsp;
+        <Button className="btn-secondary-negative">
+            Secondary
+        </Button>
+        &nbsp;
+        <Button className="btn-secondary-negative" disabled>
+            Secondary disabled
+        </Button>
+    </div>
+);
 
 const ButtonWithIcon = () => (
     <React.Fragment>
@@ -90,57 +86,49 @@ const ButtonWithIconPositive = () => (
     </React.Fragment>
 );
 
-const ButtonWithIconAndTextNegative = {
-    template: () => (
-        <React.Fragment>
-            <Button className="btn-primary-negative">
-                <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24 mr-1" />
-                Primary
-            </Button>
-            &nbsp;
-            <Button className="btn-primary-negative" disabled>
-                <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24 mr-1" />
-                Primary disabled
-            </Button>
-            &nbsp;
-            <Button className="btn-secondary-negative">
-                <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24 mr-1" />
-                Secondary
-            </Button>
-            &nbsp;
-            <Button className="btn-secondary-negative" disabled>
-                <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24 mr-1" />
-                Secondary disabled
-            </Button>
-        </React.Fragment>
-    ),
-    name: "ButtonWithIconAndTextNegative",
-    c_previewClassName: "cake-example-negative",
-};
+const ButtonWithIconAndTextNegative = () => (
+    <div className="cake-example-negative" id="showBox">
+        <Button className="btn-primary-negative">
+            <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24 mr-1" />
+            Primary
+        </Button>
+        &nbsp;
+        <Button className="btn-primary-negative" disabled>
+            <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24 mr-1" />
+            Primary disabled
+        </Button>
+        &nbsp;
+        <Button className="btn-secondary-negative">
+            <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24 mr-1" />
+            Secondary
+        </Button>
+        &nbsp;
+        <Button className="btn-secondary-negative" disabled>
+            <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24 mr-1" />
+            Secondary disabled
+        </Button>
+    </div>
+);
 
-const ButtonWithIconNegative = {
-    template: () => (
-        <React.Fragment>
-            <Button className="btn-primary-negative">
-                <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24" />
-            </Button>
-            &nbsp;
-            <Button className="btn-primary-negative" disabled>
-                <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24" />
-            </Button>
-            &nbsp;
-            <Button className="btn-secondary-negative">
-                <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24" />
-            </Button>
-            &nbsp;
-            <Button className="btn-secondary-negative" disabled>
-                <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24" />
-            </Button>
-        </React.Fragment>
-    ),
-    name: "ButtonWithIconNegative",
-    c_previewClassName: "cake-example-negative",
-};
+const ButtonWithIconNegative = () => (
+    <div className="cake-example-negative" id="showBox">
+        <Button className="btn-primary-negative">
+            <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24" />
+        </Button>
+        &nbsp;
+        <Button className="btn-primary-negative" disabled>
+            <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24" />
+        </Button>
+        &nbsp;
+        <Button className="btn-secondary-negative">
+            <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24" />
+        </Button>
+        &nbsp;
+        <Button className="btn-secondary-negative" disabled>
+            <Icon name="placeholder" placeholder="Placeholder" className="btn-icon icon-24" />
+        </Button>
+    </div>
+);
 
 export default {
     ButtonPositive,

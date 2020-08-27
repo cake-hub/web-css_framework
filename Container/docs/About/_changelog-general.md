@@ -1,5 +1,22 @@
 # Change log
 
+## [4.2.0](https://github.com/cake-hub/web-css_framework/tree/v4.2.0) - 2020-08-27
+
+### Highlights
+
+* `Added`: Added new section for all `Lidl Plus` relevant content (`Coupon`, `Flap`, `Pricebox` and `Ribbon`)
+
+### Added
+
+* `SCSS`, `DOC`: "Lidl Plus" | Added new Lidl Plus ribbon variant (`.ribbon-item-lidl-plus`) for usage in Lidl Plus projects
+* `Added`: "Lidl Plus Coupon" | Added new component for Lidl Plus only, the coupon
+* `Assets`: "Schwarz Theme" | Added alternative logo variant `logo-simple.svg`
+
+### Changed
+
+* `Assets`: "Schwarz Theme" | Replaced logo file `logo.svg`. Now the "Lidl" and "Kaufland" logo is included.
+
+
 ## [4.1.0](https://github.com/cake-hub/web-css_framework/tree/v4.1.0) - 2020-07-30
 
 ### Changed
@@ -75,11 +92,11 @@
 ### Highlights
 
 * `Added`: Added slider functionality to the header component
-* `Doc`: Added new [explanation page](../Getting%20started/JavaScript.md) for using our JavaScript
+* `Doc`: Added new [explanation page](../Getting%20started/JavaScript/JavaScript.md) for using our JavaScript
 
 ### Added
 
-* `Doc`: "JavaScript" | Added [new explanation](../Getting%20started/JavaScript.md) page for using our JavaScript
+* `Doc`: "JavaScript" | Added [new explanation](../Getting%20started/JavaScript/JavaScript.md) page for using our JavaScript
 
 
 ## [3.6.0](https://www.secrz.de/bitbucket/projects/CAKE/repos/phoenix/browse?at=refs%2Ftags%2Fv3.6.0) - 2019-08-15

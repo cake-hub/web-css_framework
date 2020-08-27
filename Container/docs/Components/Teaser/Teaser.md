@@ -24,7 +24,7 @@ Only the image is obligatory which means all the other parts of a teaser can opt
         "<html>":{
             "src": "examples/TeaserDefault.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -45,7 +45,7 @@ To link the teaser, you have to add a `<a>` tag with the class `.teaser-card-lin
         "<html>":{
             "src": "examples/TeaserLinked.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -68,7 +68,7 @@ The bar of the teaser can be created with any element like the `<header>` elemen
         "<html>":{
             "src": "examples/TeaserTitle.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -84,7 +84,7 @@ The bar of the teaser can be created with any element like the `<header>` elemen
         "<html>":{
             "src": "examples/TeaserTitleSubheadline.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />
@@ -105,7 +105,7 @@ The light bar teaser has inverted styling of the default variant. This means a w
         "<html>":{
             "src": "examples/TeaserLight.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />

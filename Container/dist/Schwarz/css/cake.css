@@ -12590,6 +12590,20 @@ a.product-tile-card:focus .product-tile-card-title, a.product-tile-card:hover .p
   background-color: #4e5761;
 }
 
+.ribbon-item-lidl-plus {
+  background-color: #fff000;
+}
+.ribbon-item-lidl-plus > img {
+  width: 2rem;
+  height: 2rem;
+}
+@media (min-width: 1280px) {
+  .ribbon-item-lidl-plus > img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
 .tab {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
 }

@@ -27,7 +27,7 @@ Modifier classes represent the difference to Card component. If a modifier is us
 
 ## Grid
 
-You can use the default [Grid system](../Layout/Grid/Grid.md) classes like in this example. Or you use the [Sass mixins](../Layout/Grid/Grid.md#sass-mixins) to build custom classes.
+You can use the default [Grid system](../../Layout/Grid/Grid.md) classes like in this example. Or you use the [Sass mixins](../../Layout/Grid/Grid.md#sass-mixins) to build custom classes.
 
 <ContentRack
     fields='

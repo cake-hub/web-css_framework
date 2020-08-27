@@ -1,0 +1,56 @@
+.coupon {
+  display: inline-block;
+}
+
+.coupon-content {
+  @include border-top-radius($coupon-border-radius);
+  position: relative;
+  z-index: 0;
+  padding: $coupon-content-padding;
+  overflow: hidden;
+  font-size: $coupon-content-font-size;
+  font-weight: $coupon-content-font-weight;
+  line-height: $coupon-content-line-height;
+  color: $coupon-content-color;
+  text-align: center;
+  background-color: transparent;
+
+  &::before {
+    @include border-radius(50%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    box-sizing: content-box;
+    width: $coupon-cutout-width;
+    height: ($coupon-cutout-height * 2);
+    content: "";
+    background-color: transparent;
+    border: solid $coupon-cutout-bg-size $coupon-bg;
+    transform: translate(-50%, -50%);
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding: $coupon-content-padding-sm;
+    font-size: $coupon-content-font-size-sm;
+
+    &::before {
+      width: $coupon-cutout-width-sm;
+      height: ($coupon-cutout-height-sm * 2);
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: $coupon-content-font-size-lg;
+  }
+}
+
+.coupon-text {
+  @include border-bottom-radius($coupon-border-radius);
+  @include cake-font-size($coupon-text-font-size);
+  height: $coupon-text-height;
+  padding: $coupon-text-padding;
+  line-height: $coupon-text-height;
+  color: $coupon-text-color;
+  text-align: center;
+  background-color: $coupon-text-bg;
+}

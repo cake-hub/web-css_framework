@@ -1,41 +1,35 @@
 import React from "react";
 
-const OverviewContainer = {
-    template: () => (
+const OverviewContainer = () => (
+    <div className="cake-example-container" id="showBox">
         <div className="container">
             <div className="cake-example-container-header"></div>
             <div className="cake-example-container-sidebar"></div>
             <div className="cake-example-container-body"></div>
         </div>
-    ),
-    name: "OverviewContainer",
-    c_previewClassName: "cake-example-container",
-};
+    </div>
+);
 
-const OverviewContainerFluid = {
-    template: () => (
+const OverviewContainerFluid = () => (
+    <div className="cake-example-container cake-example-container-fluid" id="showBox">
         <div className="container-fluid">
             <div className="cake-example-container-header"></div>
             <div className="cake-example-container-sidebar"></div>
             <div className="cake-example-container-body"></div>
         </div>
-    ),
-    name: "OverviewContainerFluid",
-    c_previewClassName: "cake-example-container cake-example-container-fluid",
-};
+    </div>
+);
 
 
-const OverviewContainerResponsive = {
-    template: () => (
+const OverviewContainerResponsive = () => (
+    <div className="cake-example-container cake-example-container-responsive" id="showBox">
         <div className="container-responsive">
             <div className="cake-example-container-header"></div>
             <div className="cake-example-container-sidebar"></div>
             <div className="cake-example-container-body"></div>
         </div>
-    ),
-    name: "OverviewContainerResponsive",
-    c_previewClassName: "cake-example-container cake-example-container-responsive",
-};
+    </div>
+);
 
 export default {
     OverviewContainer,

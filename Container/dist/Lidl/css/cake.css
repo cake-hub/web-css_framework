@@ -5740,6 +5740,71 @@ a.close.disabled {
   }
 }
 
+.coupon {
+  display: inline-block;
+}
+
+.coupon-content {
+  border-top-left-radius: 0.125rem;
+  border-top-right-radius: 0.125rem;
+  position: relative;
+  z-index: 0;
+  padding: 0.625rem 0.25rem 0.125rem;
+  overflow: hidden;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  background-color: transparent;
+}
+.coupon-content::before {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  box-sizing: content-box;
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  background-color: transparent;
+  border: solid 10rem #0050aa;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 600px) {
+  .coupon-content {
+    padding: 1.125rem 0.25rem 0.125rem;
+    font-size: 1.75rem;
+  }
+  .coupon-content::before {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .coupon-content {
+    font-size: 2.25rem;
+  }
+}
+
+.coupon-text {
+  border-bottom-right-radius: 0.125rem;
+  border-bottom-left-radius: 0.125rem;
+  font-size: 0.75rem;
+  height: 1.5rem;
+  padding: 0 0.25rem;
+  line-height: 1.5rem;
+  color: #353b42;
+  text-align: center;
+  background-color: #fff000;
+}
+@media (min-width: 1280px) {
+  .coupon-text {
+    font-size: 0.875rem;
+  }
+}
+
 .align-baseline {
   vertical-align: baseline !important;
 }
@@ -12655,6 +12720,20 @@ a.product-tile-card:focus .product-tile-card-title, a.product-tile-card:hover .p
 .ribbon-item-gray {
   color: #fff;
   background-color: #4e5761;
+}
+
+.ribbon-item-lidl-plus {
+  background-color: #fff000;
+}
+.ribbon-item-lidl-plus > img {
+  width: 2rem;
+  height: 2rem;
+}
+@media (min-width: 1280px) {
+  .ribbon-item-lidl-plus > img {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 .tab {
