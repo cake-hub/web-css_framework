@@ -7,9 +7,8 @@
  *
  * Modified by Lidl Digital International GmbH & Co. KG
  * Handbaked with love by the CAKE-Team (https://cake.schwarz/)
- * Source-code from https://www.secrz.de/bitbucket/projects/CAKE/repos/phoenix/
+ * Source-code from https://github.com/cake-hub/web-css_framework
  */
-/* Importing only some styles of the CAKE-Framework (simply outcomment the parts you need) */
 @font-face {
   font-family: HelveticaNeueLT;
   font-style: normal;
@@ -491,6 +490,11 @@
   outline: 0;
   box-shadow: 0 0 0 0.1875rem rgba(121, 31, 130, 0.5);
 }
+.cookie-alert .btn.disabled, .cookie-alert .cookie-alert-modal .disabled.cookie-alert-button,
+.cookie-alert .cookie-alert-modal .disabled.cookie-alert-button-secondary, .cookie-alert .btn:disabled, .cookie-alert .cookie-alert-modal .cookie-alert-button:disabled,
+.cookie-alert .cookie-alert-modal .cookie-alert-button-secondary:disabled {
+  cursor: not-allowed;
+}
 .cookie-alert .btn:not(.btn-link), .cookie-alert .cookie-alert-modal .cookie-alert-button:not(.btn-link),
 .cookie-alert .cookie-alert-modal .cookie-alert-button-secondary:not(.btn-link) {
   text-decoration: none;
@@ -765,6 +769,7 @@
 .cookie-alert .btn-link:disabled, .cookie-alert .btn-link.disabled {
   color: #424951;
   pointer-events: none;
+  cursor: not-allowed;
 }
 .cookie-alert .btn-lg {
   padding: 0.5625rem 1rem 0.4375rem 1rem;

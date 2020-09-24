@@ -14,6 +14,12 @@ const TypographyLinks = () => (
     <a href="#">This is a Link</a>
 );
 
+const TypographyLinksNegative = () => (
+    <div className="cake-example-negative" id="showBox">
+        <a class="link-negative" href="#">This is a negative Link</a>
+    </div>
+);
+
 const TypographyLists = () => (
     <ul>
         <li>Lorem ipsum dolor sit amet</li>
@@ -57,6 +63,7 @@ const TypographyListsUnstyled = () => (
 export default {
     TypographyHeadlines,
     TypographyLinks,
+    TypographyLinksNegative,
     TypographyLists,
     TypographyListsUnstyled
 };

@@ -21,7 +21,7 @@ These styles can be found within `_reboot.scss`, and the global variables are de
 
 The regular `font weight: 400` uses LidlFontCondPro-Regular. We use semi-bold font variant for bold styling. Please use `font-weight: 600` for bold style. To be able to use also `font-weight: bold`, we match the semi-bold font variant also to the `font-weight: 700` value. We prefere to use the `600` value instead of `bold`. If you use Sass you can use the `$font-weight-bold` variable which also has a value of `600`.
 
-The LidlFontCondPro-Bold is available in `font-weight: 800` extra-bold styling for the [Pricebox](../Pricebox/Pricebox).
+The LidlFontCondPro-Bold is available in `font-weight: 800` extra-bold styling for the [Pricebox](../../Components/Pricebox/Pricebox.md).
 
 ## Headings
 
@@ -46,6 +46,24 @@ All HTML headings, `<h1>` through `<h5>`, are available.
  />
 
 ![TypographyLinks](examples/TypographyLinks.html)
+
+To place links on darker backgrounds simply use the `.negative` variant of our links.
+
+<ContentRack
+    fields='
+        "preview": {
+            "src": "examples/TypographyLinksNegative.html",
+            "type": "link"
+        },
+        "<html>":{
+            "src": "examples/TypographyLinksNegative.html",
+            "type": "content",
+            "selector": "#showBox"
+        }
+    '
+ />
+
+![TypographyLinksNegative](examples/TypographyLinksNegative.html)
 
 ### Lists
 

@@ -6,8 +6,8 @@
 
 // Align icon inside button
 .btn-icon {
-  margin-top: calculateRem(-5px); //Fix wrong vertical alignment: https://www.secrz.de/jira/browse/CAKE-2274
-  margin-bottom: calculateRem(-1px); //Fix wrong vertical alignment: https://www.secrz.de/jira/browse/CAKE-2396
+  margin-top: calculateRem(-5px); //Fix wrong vertical alignment (CAKE-2274)
+  margin-bottom: calculateRem(-1px); //Fix wrong vertical alignment (CAKE-2396)
   vertical-align: middle;
 }
 

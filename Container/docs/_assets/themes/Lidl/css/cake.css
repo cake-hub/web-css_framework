@@ -7,9 +7,8 @@
  *
  * Modified by Lidl Digital International GmbH & Co. KG
  * Handbaked with love by the CAKE-Team (https://cake.schwarz/)
- * Source-code from https://www.secrz.de/bitbucket/projects/CAKE/repos/phoenix/
+ * Source-code from https://github.com/cake-hub/web-css_framework
  */
-/* Importing only some styles of the CAKE-Framework (simply outcomment the parts you need) */
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -542,6 +541,16 @@ mark,
 }
 .blockquote-footer::before {
   content: "— ";
+}
+
+.link-negative {
+  color: #fff;
+}
+.link-negative:hover {
+  color: #c6c9cc;
+}
+.link-negative:active {
+  color: #c6c9cc;
 }
 
 .img-fluid {
@@ -2207,6 +2216,11 @@ textarea.form-control {
   outline: 0;
   box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
+.btn.disabled, .cookie-alert .cookie-alert-modal .disabled.cookie-alert-button,
+.cookie-alert .cookie-alert-modal .disabled.cookie-alert-button-secondary, .btn:disabled, .cookie-alert .cookie-alert-modal .cookie-alert-button:disabled,
+.cookie-alert .cookie-alert-modal .cookie-alert-button-secondary:disabled {
+  cursor: not-allowed;
+}
 .btn:not(.btn-link), .cookie-alert .cookie-alert-modal .cookie-alert-button:not(.btn-link),
 .cookie-alert .cookie-alert-modal .cookie-alert-button-secondary:not(.btn-link) {
   text-decoration: none;
@@ -2493,6 +2507,7 @@ fieldset:disabled .cookie-alert .cookie-alert-modal a.cookie-alert-button-second
 .btn-link:disabled, .btn-link.disabled {
   color: #424951;
   pointer-events: none;
+  cursor: not-allowed;
 }
 
 .btn-lg, .btn-group-lg > .btn, .cookie-alert .cookie-alert-modal .btn-group-lg > .cookie-alert-button,
@@ -13207,6 +13222,17 @@ a.product-tile-card:focus .product-tile-card-title, a.product-tile-card:hover .p
 }
 .section-head-title::after {
   left: 100%;
+}
+
+.btn-fab {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-width: 0;
+  border-radius: 50%;
+  box-shadow: fab-btn-box-shadow;
+}
+.btn-fab .icon {
+  display: block;
 }
 
 @media print {

@@ -12,7 +12,7 @@ Given a version number _MAJOR_._MINOR_._PATCH_, we increment the:
 
 ## Nightly
 
-To get insights into the very latest featurs and fixes you can visit our [nightly build](https://www.secrz.de/webdev/cakephoenix/nightly/). As the name suggests, every night we publish the latest version of our framework. This version reflects the current state of our source code checked into the current **develop branch**.
+To get insights into the very latest featurs and fixes you can visit our [nightly build](https://nightly.cake.schwarz/). As the name suggests, every night we publish the latest version of our framework. This version reflects the current state of our source code checked into the current **develop branch**.
 
 > ### The nature of nightly builds
 >

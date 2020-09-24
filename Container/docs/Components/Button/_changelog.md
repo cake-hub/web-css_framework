@@ -1,5 +1,12 @@
 # Change log
 
+## [4.3.0](https://github.com/cake-hub/web-css_framework/tree/v4.3.0) - 2020-09-24
+
+### Changed
+
+* `SCSS`: "Button" | add cursor not-allowed to disabled buttons
+
+
 ## [4.2.0](https://github.com/cake-hub/web-css_framework/tree/v4.2.0) - 2020-08-27
 
 ### Fixed

@@ -39,7 +39,7 @@ Breaking it down, here's how it works:
 - Column classes indicate the number of columns you'd like to use out of the possible 12 per row. So, if you want three equal-width columns across, you can use `.col-4`.
 - Column `width`s are set in percentages, so they're always fluid and sized relative to their parent element.
 - Columns have horizontal `padding` to create the gutters between individual columns, however, you can remove the `margin` from rows and `padding` from columns with `.no-gutters` on the `.row`.
-- To make the grid responsive, there are four grid breakpoints, one for each [responsive breakpoint](Overview/Overview.md#responsive-breakpoints): all breakpoints (extra small), small, medium and large.
+- To make the grid responsive, there are four grid breakpoints, one for each [responsive breakpoint](../Overview/Overview.md#responsive-breakpoints): all breakpoints (extra small), small, medium and large.
 - Grid breakpoints are based on minimum width media queries, meaning **they apply to that one breakpoint and all those above it** (e.g., `.col-sm-4` applies to small, medium and large devices, but not the first `xs` breakpoint).
 - You can use predefined grid classes (like `.col-4`) or [Sass mixins](#sass-mixins) for more semantic markup.
 

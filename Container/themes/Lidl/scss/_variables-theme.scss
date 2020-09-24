@@ -31,3 +31,9 @@ $expression-icon-path:      "./themes/Lidl/assets/icons/expression/";
 $interaction-icon-path:     "./themes/Lidl/assets/icons/interaction/";
 $navigation-icon-path:      "./themes/Lidl/assets/icons/navigation/";
 $scss-icon-path:            "./themes/Lidl/assets/icons/_scssOnly/";
+
+// Adjust Link variables
+
+$link-negative-color:                              $white;
+$link-negative-hover-color:                        cake-color("gray", "light");
+$link-negative-active-color:                       cake-color("gray", "light");

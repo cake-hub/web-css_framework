@@ -6,10 +6,10 @@
  *
  * Modified by Lidl Digital International GmbH & Co. KG
  * Handbaked with love by the CAKE-Team (https://cake.schwarz/)
- * Source-code from https://www.secrz.de/bitbucket/projects/CAKE/repos/phoenix/
+ * Source-code from https://github.com/cake-hub/web-css_framework
  */
 
-/* Importing only some styles of the CAKE-Framework (simply outcomment the parts you need) */
+// Importing only some styles of the CAKE-Framework (simply outcomment the parts you need)
 
 @import "../../../scss/functions";
 @import "../../../scss/variables-root";
@@ -25,6 +25,7 @@
   @extend .body-style;
 
   @import "../../../scss/typography";
+  @import "./typography-theme";
   @import "../../../scss/button";
   @import "../../../scss/custom-form";
   @import "../../../scss/utilities";

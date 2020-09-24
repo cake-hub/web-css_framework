@@ -1,5 +1,16 @@
 # Change log
 
+## [4.3.0](https://github.com/cake-hub/web-css_framework/tree/v4.3.0) - 2020-09-24
+
+### Highlights
+
+* Added new Component "Floating action button"
+
+### Added
+
+* `SCSS`, `DOC`: "Floating action button" | Added new floating action button
+
+
 ## [4.2.0](https://github.com/cake-hub/web-css_framework/tree/v4.2.0) - 2020-08-27
 
 ### Highlights

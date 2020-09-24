@@ -37,6 +37,7 @@
   &.disabled,
   &:disabled {
     @include box-shadow(none);
+    cursor: not-allowed;
   }
 
   &:not(:disabled):not(.disabled):active,
@@ -132,6 +133,7 @@ fieldset:disabled a.btn {
   &.disabled {
     color: $btn-link-disabled-color;
     pointer-events: none;
+    cursor: not-allowed;
   }
 
   // No need for an active state here

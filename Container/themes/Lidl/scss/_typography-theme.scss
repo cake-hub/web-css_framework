@@ -1,0 +1,15 @@
+//
+// Negative Links
+//
+
+// stylelint-disable selector-no-qualifying-type
+.link-negative {
+  color: $link-negative-color;
+
+  @include hover {
+    color: $link-negative-hover-color;
+  }
+  &:active {
+    color: $link-negative-active-color;
+  }
+}

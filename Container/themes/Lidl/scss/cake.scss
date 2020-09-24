@@ -6,10 +6,10 @@
  *
  * Modified by Lidl Digital International GmbH & Co. KG
  * Handbaked with love by the CAKE-Team (https://cake.schwarz/)
- * Source-code from https://www.secrz.de/bitbucket/projects/CAKE/repos/phoenix/
+ * Source-code from https://github.com/cake-hub/web-css_framework
  */
 
-/* Importing only some styles of the CAKE-Framework (simply outcomment the parts you need) */
+// Importing only some styles of the CAKE-Framework (simply outcomment the parts you need)
 
 @import "../../../scss/functions";
 @import "../../../scss/variables-root";
@@ -20,6 +20,7 @@
 @import "../../../scss/reboot";
 @import "../../../scss/typography-font-face";
 @import "../../../scss/typography";
+@import "./typography-theme";
 @import "../../../scss/image";
 @import "../../../scss/code";
 @import "../../../scss/grid";
@@ -74,4 +75,5 @@
 @import "../../../scss/to-top";
 @import "../../../scss/trustbar";
 @import "../../../scss/section-head";
+@import "../../../scss/floating-action-button";
 @import "../../../scss/print";

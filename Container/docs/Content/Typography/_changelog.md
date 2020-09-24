@@ -1,5 +1,12 @@
 # Change log
 
+## [4.3.0](https://github.com/cake-hub/web-css_framework/tree/v4.3.0) - 2020-09-24
+
+### Added
+
+* `Doc, SCSS`: "Typography" | Added negative link styling
+
+
 ## [4.0.0](https://github.com/cake-hub/web-css_framework/tree/v4.0.0) - 2020-06-25
 
 ### Changed
