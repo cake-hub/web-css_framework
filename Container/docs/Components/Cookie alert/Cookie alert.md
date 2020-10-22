@@ -36,7 +36,7 @@ This dialog element is the transparent black background. Inside this `<dialog>` 
     * the labels of each checkbox `.cookie-alert-checkbox-label`
   * the *accept configuration* button
 
-The detailed structure of this component can be seen in the above example. Best practice is to the cookie alert component as the first element in the body of each page. Additionaly it is mandatory to place a link to your cookie-information page into the description text! **Be aware, that on the cookie-information page there shouldn't be any cookie-alert. Because otherwise the visitor is not able to read the information before accepting anything. Thus you should not save or use any cookies on this page because the visitor has not accepted anything.**
+The detailed structure of this component can be seen in the above example. Best practice is to place the cookie alert component as the first element in the body of each page. Additionaly it is mandatory to place a link to your cookie-information page into the description text! **Be aware, that on the cookie-information page there shouldn't be any cookie-alert. Because otherwise the visitor is not able to read the information before accepting anything. Thus you should not save or use any cookies on this page because the visitor has not accepted anything.**
 
 ## Accessibility
 
@@ -65,15 +65,19 @@ The JavaScript of this component exposes three methods that can be used:
 
 `window.cake.cookie.acceptCookies: function (optinPreferences, optinStatistics, optinMarketing) {…}`. This method simply saves the configuration set by the user. If the user for example clicks the *accept all* button, all three parameters are set to `true`:
 
-    acceptAllButton.addEventListener ("click", function () {
-        window.cake.cookie.acceptCookies (true, true, true);
-    });
+```javascript
+acceptAllButton.addEventListener ("click", function () {
+    window.cake.cookie.acceptCookies (true, true, true);
+});
+```
 
 ### Show cookie alert
 
 `window.cake.cookie.showCookieAlert: function () {…}`. With this method you can show the cookie alert and initialize all the event listeners needed by this component.
 
-    window.cake.cookie.showCookieAlert (forcedFocus = true);
+```javascript
+window.cake.cookie.showCookieAlert (forcedFocus = true);
+```
 
 This method has also an optional property `forcedFocus`, which can force the customers browser to keep focus on the relevant elements of our cookie alert. This property is set to `true` as default but if `forcedFocus` is set to `false`, it will not change anything in the default focus handling of the browser.
 
@@ -81,8 +85,9 @@ This method has also an optional property `forcedFocus`, which can force the cus
 
 `window.cake.cookie.hideCookieAlert: function () {…}` This method simply hides the cookie alert and removes all events added in the function above. **But please be sure to save the cookie configuration before with the first method mentioned!**
 
-    window.cake.cookie.hideCookieAlert ();
-
+```javascript
+window.cake.cookie.hideCookieAlert ();
+```
 
 ## CookieBot integration
 

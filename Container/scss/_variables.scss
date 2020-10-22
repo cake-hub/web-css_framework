@@ -1029,14 +1029,15 @@ $modal-transition:                  transform .3s ease-out !default;
 //
 // Define alert colors, border radius, and padding.
 
-$alert-padding-y:                   1rem !default;
-$alert-padding-x:                   1rem !default;
-$alert-margin-bottom:               1rem !default;
-$alert-border-radius:               $border-radius !default;
-$alert-link-font-weight:            $font-weight-normal !default;
-$alert-border-width:                $border-width !default;
-$alert-icon-margin-right:           1rem !default;
+$alert-padding-y:                    1rem !default;
+$alert-padding-x:                    1rem !default;
+$alert-margin-bottom:                1rem !default;
+$alert-border-radius:                $border-radius !default;
+$alert-link-font-weight:             $font-weight-normal !default;
+$alert-border-width:                 $border-width !default;
+$alert-icon-margin-right:            1rem !default;
 $alert-margin-top-content-with-icon: calculateRem(4px) !default;
+$alert-close-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 
 
 // Progress bars

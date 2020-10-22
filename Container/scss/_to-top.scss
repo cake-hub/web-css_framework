@@ -8,7 +8,7 @@
 
   &:focus,
   &.focus {
-    box-shadow: $box-shadow, 0 0 0 $btn-focus-width rgba($white, .5);
+    box-shadow: $box-shadow, $input-btn-focus-box-shadow;
   }
 }
 

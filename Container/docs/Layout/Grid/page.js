@@ -439,7 +439,7 @@ const GridOffsetClasses2 = () => (
 );
 
 const GridMarginUtilities = () => (
-    <div class="cake-example-row" id="showBox">
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col-md-4">.col-md-4</div>
@@ -458,7 +458,7 @@ const GridMarginUtilities = () => (
 );
 
 const GridNesting = () => (
-    <div class="cake-example-row" id="showBox">
+    <div className="cake-example-row" id="showBox">
         <div className="container-responsive">
             <div className="row">
                 <div className="col-sm-9">

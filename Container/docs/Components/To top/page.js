@@ -7,7 +7,9 @@ const ToTopDefault = () => (
 );
 
 const ToTopNegative = () => (
-    <ToTop />
+    <div className="cake-example-negative" id="showBox">
+        <ToTop />
+    </div>
 );
 
 const ToTopPosition = () => (

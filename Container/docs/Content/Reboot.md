@@ -26,21 +26,23 @@ The `<html>` and `<body>` elements are updated to provide better page-wide defau
 
 We use the Lidl house typeface LidlFontCondPro as primary font family. “Native font stack” is defined as fallback.
 
-    $font-family-sans-serif:
-      // Lidl house typeface
-      LidlFontCondPro,
-      // Safari for macOS and iOS (San Francisco)
-      -apple-system,
-      // Chrome < 56 for macOS (San Francisco)
-      BlinkMacSystemFont,
-      // Windows
-      "Segoe UI",
-      // Android
-      "Roboto",
-      // Basic web fallback
-      "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-      // Emoji fonts
-      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+```scss
+$font-family-sans-serif:
+    // Lidl house typeface
+    LidlFontCondPro,
+    // Safari for macOS and iOS (San Francisco)
+    -apple-system,
+    // Chrome < 56 for macOS (San Francisco)
+    BlinkMacSystemFont,
+    // Windows
+    "Segoe UI",
+    // Android
+    "Roboto",
+    // Basic web fallback
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    // Emoji fonts
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+```
 
 This `font-family` is applied to the `<body>` and automatically inherited globally throughout CAKE. To switch the global `font-family`, update `$font-family-base` and recompile CAKE.
 

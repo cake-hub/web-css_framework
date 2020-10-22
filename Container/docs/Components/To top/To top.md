@@ -33,7 +33,7 @@ When clicking the button the page jumps to it's top.
         "<html>":{
             "src": "examples/ToTopNegative.html",
             "type": "content",
-            "selector": "#app"
+            "selector": "#showBox"
         }
     '
  />

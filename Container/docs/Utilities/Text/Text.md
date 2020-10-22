@@ -6,17 +6,21 @@ Documentation and examples for common text utilities to control alignment, wrapp
 
 Easily realign text to components with text alignment classes.
 
-    <p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+```html
+<p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+```
 
 For left, right, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
 
-    <p class="text-left">Left aligned text on all viewport sizes.</p>
-    <p class="text-center">Center aligned text on all viewport sizes.</p>
-    <p class="text-right">Right aligned text on all viewport sizes.</p>
+```html
+<p class="text-left">Left aligned text on all viewport sizes.</p>
+<p class="text-center">Center aligned text on all viewport sizes.</p>
+<p class="text-right">Right aligned text on all viewport sizes.</p>
 
-    <p class="text-sm-left">Left aligned text on viewports sized SM (small) or wider.</p>
-    <p class="text-md-left">Left aligned text on viewports sized MD (medium) or wider.</p>
-    <p class="text-lg-left">Left aligned text on viewports sized LG (large) or wider.</p>
+<p class="text-sm-left">Left aligned text on viewports sized SM (small) or wider.</p>
+<p class="text-md-left">Left aligned text on viewports sized MD (medium) or wider.</p>
+<p class="text-lg-left">Left aligned text on viewports sized LG (large) or wider.</p>
+```
 
 ## Text wrapping and overflow
 
@@ -40,23 +44,27 @@ Wrap text with a `.text-wrap` class.
 
 Prevent text from wrapping with a `.text-nowrap` class.
 
-    <div class="text-nowrap bd-highlight" style="width: 8rem;">
-        This text should overflow the parent.
-    </div>
+```html
+<div class="text-nowrap bd-highlight" style="width: 8rem;">
+    This text should overflow the parent.
+</div>
+```
 
 For longer content, you can add a `.text-truncate` class to truncate the text with an ellipsis. **Requires `display: inline-block` or `display: block`.**
 
-    <!-- Block level -->
-    <div class="row">
-        <div class="col-2 text-truncate">
-            Praeterea iter est quasdam res quas ex communi.
-        </div>
-    </div>
-
-    <!-- Inline level -->
-    <span class="d-inline-block text-truncate" style="max-width: 150px;">
+```html
+<!-- Block level -->
+<div class="row">
+    <div class="col-2 text-truncate">
         Praeterea iter est quasdam res quas ex communi.
-    </span>
+    </div>
+</div>
+
+<!-- Inline level -->
+<span class="d-inline-block text-truncate" style="max-width: 150px;">
+    Praeterea iter est quasdam res quas ex communi.
+</span>
+```
 
 ## Word break
 
@@ -88,9 +96,11 @@ If the browser don't support `hyphens: auto;` the property `overflow-wrap: break
 
 The three boxes have the same text. The first one is only the raw text, the second is with the class `.hyphens` and the last one is with `&shy;`, seen here:
 
-    Ses&shy;qui&shy;pe&shy;da&shy;lian&shy;ism is a common prob&shy;lem on small el&shy;e&shy;ments. There is no need for Floc&shy;cin&shy;aucini&shy;hilipil&shy;i&shy;fi&shy;ca&shy;tion on this subject.
-    Take care of word sep&shy;a&shy;ra&shy;tion over multiple lines to not generate In&shy;com&shy;pre&shy;hen&shy;si&shy;bili&shy;ties.
-    This text is un&shy;copy&shy;right&shy;able, ev&shy;ery&shy;thing else were Un&shy;imag&shy;i&shy;na&shy;tive&shy;ly.
+```html
+Ses&shy;qui&shy;pe&shy;da&shy;lian&shy;ism is a common prob&shy;lem on small el&shy;e&shy;ments. There is no need for Floc&shy;cin&shy;aucini&shy;hilipil&shy;i&shy;fi&shy;ca&shy;tion on this subject.
+Take care of word sep&shy;a&shy;ra&shy;tion over multiple lines to not generate In&shy;com&shy;pre&shy;hen&shy;si&shy;bili&shy;ties.
+This text is un&shy;copy&shy;right&shy;able, ev&shy;ery&shy;thing else were Un&shy;imag&shy;i&shy;na&shy;tive&shy;ly.
+```
 
 <ContentRack
     fields='
@@ -112,9 +122,11 @@ The three boxes have the same text. The first one is only the raw text, the seco
 
 Transform text in components with text capitalization classes.
 
-    <p class="text-lowercase">Lowercased text.</p>
-    <p class="text-uppercase">Uppercased text.</p>
-    <p class="text-capitalize">CapiTaliZed text.</p>
+```html
+<p class="text-lowercase">Lowercased text.</p>
+<p class="text-uppercase">Uppercased text.</p>
+<p class="text-capitalize">CapiTaliZed text.</p>
+```
 
 Note how `.text-capitalize` only changes the first letter of each word, leaving the case of any other letters unaffected.
 
@@ -122,19 +134,22 @@ Note how `.text-capitalize` only changes the first letter of each word, leaving 
 
 Quickly change the weight (boldness) of text or italicize text.
 
-    <p class="font-weight-bold">Bold text.</p>
-    <p class="font-weight-bolder">Bolder weight text (relative to the parent element).</p>
-    <p class="font-weight-normal">Normal weight text.</p>
-    <p class="font-weight-light">Light weight text.</p>
-    <p class="font-weight-lighter">Lighter weight text (relative to the parent element).</p>
-    <p class="font-italic">Italic text.</p>
+```html
+<p class="font-weight-bold">Bold text.</p>
+<p class="font-weight-bolder">Bolder weight text (relative to the parent element).</p>
+<p class="font-weight-normal">Normal weight text.</p>
+<p class="font-weight-light">Light weight text.</p>
+<p class="font-weight-lighter">Lighter weight text (relative to the parent element).</p>
+<p class="font-italic">Italic text.</p>
+```
 
 ## Monospace
 
 Change a selection to our monospace font stack with `.text-monospace`.
 
-    <p class="text-monospace">This is in monospace</p>
-
+```html
+<p class="text-monospace">This is in monospace</p>
+```
 
 ## Reset color
 
@@ -182,5 +197,7 @@ Use a specific font size. In most cases it will be used in content sections. Ins
 Default for `.text-sm` is `0.75rem` (12px) for mobile screens and `0.875rem` (14px) for lg breakpoint.
 Default for `.text-lg` is `1.25rem` (20px) for mobile screens and `1.375rem` (22px) for lg breakpoint.
 
-    <p class="text-sm">Small text.</p>
-    <p class="text-lg">Large text.</p>
+```html
+<p class="text-sm">Small text.</p>
+<p class="text-lg">Large text.</p>
+```

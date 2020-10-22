@@ -1,4 +1,10 @@
 @include tippyjs-theme;
+
+.tippy-box {
+  //stylelint-disable-next-line property-blacklist
+  border-radius: 0;
+}
+
 // Primary, Highlight, Dark, Light
 @each $variant, $color in $theme-colors {
   // theme, color, background-color, border-color, arrow color, svg-arrow color, backdrop background-color

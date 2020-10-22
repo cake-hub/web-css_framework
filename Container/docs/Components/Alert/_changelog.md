@@ -1,5 +1,12 @@
 # Change log
 
+## [4.4.0](https://github.com/cake-hub/web-css_framework/tree/v4.4.0) - 2020-10-22
+
+### Added
+
+* `SCSS`: "Alert" | added focus style to alert-close button
+
+
 ## [4.0.0](https://github.com/cake-hub/web-css_framework/tree/v4.0.0) - 2020-06-25
 
 ### Changed

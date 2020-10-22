@@ -70,22 +70,24 @@ Where *size* for *sides* `t`, `b`, `y`, `m` is one of:
 
 Here are some representative examples of these classes:
 
-    .mt-0 {
-      margin-top: 0 !important;
-    }
+```scss
+.mt-0 {
+    margin-top: 0 !important;
+}
 
-    .ml-1 {
-      margin-left: ($spacer * 1) !important;
-    }
+.ml-1 {
+    margin-left: ($spacer * 1) !important;
+}
 
-    .px-2 {
-      padding-left: ($spacer * 2) !important;
-      padding-right: ($spacer * 2) !important;
-    }
+.px-2 {
+    padding-left: ($spacer * 2) !important;
+    padding-right: ($spacer * 2) !important;
+}
 
-    .p-4 {
-      padding: ($spacer * 4) !important;
-    }
+.p-4 {
+    padding: ($spacer * 4) !important;
+}
+```
 
 ### Horizontal centering
 
@@ -113,9 +115,11 @@ In CSS, `margin` properties can utilize negative values (`padding` cannot). We'v
 
 The syntax is nearly the same as the default, positive margin utilities, but with the addition of `n` before the requested size. Here's an example class that's the opposite of `.mt-1`:
 
-    .mt-n1 {
-      margin-top: -0.5rem !important;
-    }
+```css
+.mt-n1 {
+    margin-top: -0.5rem !important;
+}
+```
 
 Here's an example of customizing the CAKE grid at the medium (`md`) breakpoint and above. We've increased the `.col` padding with `.px-md-5` and then counteracted that with `.mx-md-n5` on the parent `.row`.
 

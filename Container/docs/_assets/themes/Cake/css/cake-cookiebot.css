@@ -495,7 +495,7 @@
   border-color: #003674;
 }
 .cookie-alert .btn-primary:focus, .cookie-alert .cookie-alert-modal .cookie-alert-button:focus, .cookie-alert .btn-primary.focus, .cookie-alert .cookie-alert-modal .focus.cookie-alert-button {
-  box-shadow: 0 0 0 0.1875rem rgba(38, 106, 183, 0.5);
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
 .cookie-alert .btn-primary.disabled, .cookie-alert .cookie-alert-modal .disabled.cookie-alert-button, .cookie-alert .btn-primary:disabled, .cookie-alert .cookie-alert-modal .cookie-alert-button:disabled {
   color: rgba(0, 80, 170, 0.16);
@@ -508,7 +508,7 @@
   border-color: #003674;
 }
 .cookie-alert .btn-primary:not(:disabled):not(.disabled):active:focus, .cookie-alert .cookie-alert-modal .cookie-alert-button:not(:disabled):not(.disabled):active:focus, .cookie-alert .btn-primary:not(:disabled):not(.disabled).active:focus, .cookie-alert .cookie-alert-modal .cookie-alert-button:not(:disabled):not(.disabled).active:focus, .show > .cookie-alert .btn-primary.dropdown-toggle:focus, .show > .cookie-alert .cookie-alert-modal .dropdown-toggle.cookie-alert-button:focus {
-  box-shadow: 0 0 0 0.1875rem rgba(38, 106, 183, 0.5);
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
 .cookie-alert .btn-success {
   color: #fff;
@@ -521,7 +521,7 @@
   border-color: #235a38;
 }
 .cookie-alert .btn-success:focus, .cookie-alert .btn-success.focus {
-  box-shadow: 0 0 0 0.1875rem rgba(82, 151, 109, 0.5);
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
 .cookie-alert .btn-success.disabled, .cookie-alert .btn-success:disabled {
   color: rgba(52, 133, 83, 0.16);
@@ -534,7 +534,7 @@
   border-color: #235a38;
 }
 .cookie-alert .btn-success:not(:disabled):not(.disabled):active:focus, .cookie-alert .btn-success:not(:disabled):not(.disabled).active:focus, .show > .cookie-alert .btn-success.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.1875rem rgba(82, 151, 109, 0.5);
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
 .cookie-alert .btn-info {
   color: #fff;
@@ -547,7 +547,7 @@
   border-color: #003674;
 }
 .cookie-alert .btn-info:focus, .cookie-alert .btn-info.focus {
-  box-shadow: 0 0 0 0.1875rem rgba(38, 106, 183, 0.5);
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
 .cookie-alert .btn-info.disabled, .cookie-alert .btn-info:disabled {
   color: rgba(0, 80, 170, 0.16);
@@ -560,7 +560,7 @@
   border-color: #003674;
 }
 .cookie-alert .btn-info:not(:disabled):not(.disabled):active:focus, .cookie-alert .btn-info:not(:disabled):not(.disabled).active:focus, .show > .cookie-alert .btn-info.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.1875rem rgba(38, 106, 183, 0.5);
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
 .cookie-alert .btn-warning {
   color: #fff;
@@ -573,7 +573,7 @@
   border-color: #813d14;
 }
 .cookie-alert .btn-warning:focus, .cookie-alert .btn-warning.focus {
-  box-shadow: 0 0 0 0.1875rem rgba(200, 114, 63, 0.5);
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
 .cookie-alert .btn-warning.disabled, .cookie-alert .btn-warning:disabled {
   color: rgba(190, 89, 29, 0.16);
@@ -586,7 +586,7 @@
   border-color: #813d14;
 }
 .cookie-alert .btn-warning:not(:disabled):not(.disabled):active:focus, .cookie-alert .btn-warning:not(:disabled):not(.disabled).active:focus, .show > .cookie-alert .btn-warning.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.1875rem rgba(200, 114, 63, 0.5);
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
 .cookie-alert .btn-danger {
   color: #fff;
@@ -599,7 +599,7 @@
   border-color: #9c070e;
 }
 .cookie-alert .btn-danger:focus, .cookie-alert .btn-danger.focus {
-  box-shadow: 0 0 0 0.1875rem rgba(234, 47, 55, 0.5);
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
 .cookie-alert .btn-danger.disabled, .cookie-alert .btn-danger:disabled {
   color: rgba(230, 10, 20, 0.16);
@@ -612,7 +612,7 @@
   border-color: #9c070e;
 }
 .cookie-alert .btn-danger:not(:disabled):not(.disabled):active:focus, .cookie-alert .btn-danger:not(:disabled):not(.disabled).active:focus, .show > .cookie-alert .btn-danger.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.1875rem rgba(234, 47, 55, 0.5);
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
 .cookie-alert .btn-gray {
   color: #fff;
@@ -625,7 +625,7 @@
   border-color: #353b42;
 }
 .cookie-alert .btn-gray:focus, .cookie-alert .btn-gray.focus {
-  box-shadow: 0 0 0 0.1875rem rgba(105, 112, 121, 0.5);
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
 .cookie-alert .btn-gray.disabled, .cookie-alert .btn-gray:disabled {
   color: rgba(78, 87, 97, 0.16);
@@ -638,7 +638,7 @@
   border-color: #353b42;
 }
 .cookie-alert .btn-gray:not(:disabled):not(.disabled):active:focus, .cookie-alert .btn-gray:not(:disabled):not(.disabled).active:focus, .show > .cookie-alert .btn-gray.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.1875rem rgba(105, 112, 121, 0.5);
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
 .cookie-alert .btn-primary-negative {
   color: #0050aa;
@@ -651,7 +651,7 @@
   border-color: #c6c9cc;
 }
 .cookie-alert .btn-primary-negative:focus, .cookie-alert .btn-primary-negative.focus {
-  box-shadow: 0 0 0 0.1875rem rgba(217, 229, 242, 0.5);
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
 .cookie-alert .btn-primary-negative.disabled, .cookie-alert .btn-primary-negative:disabled {
   color: rgba(255, 255, 255, 0.16);
@@ -664,7 +664,7 @@
   border-color: #c6c9cc;
 }
 .cookie-alert .btn-primary-negative:not(:disabled):not(.disabled):active:focus, .cookie-alert .btn-primary-negative:not(:disabled):not(.disabled).active:focus, .show > .cookie-alert .btn-primary-negative.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.1875rem rgba(217, 229, 242, 0.5);
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
 .cookie-alert .btn-secondary, .cookie-alert .cookie-alert-modal .cookie-alert-button-secondary {
   color: #0050aa;
@@ -714,7 +714,7 @@
   border-color: #c6c9cc;
 }
 .cookie-alert .btn-secondary-negative:not(:disabled):not(.disabled):active:focus, .cookie-alert .btn-secondary-negative:not(:disabled):not(.disabled).active:focus, .show > .cookie-alert .btn-secondary-negative.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.1875rem rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 0.1875rem rgba(0, 80, 170, 0.5);
 }
 .cookie-alert .btn-slider {
   padding: 0 0.5rem;

@@ -16,7 +16,7 @@ const TypographyLinks = () => (
 
 const TypographyLinksNegative = () => (
     <div className="cake-example-negative" id="showBox">
-        <a class="link-negative" href="#">This is a negative Link</a>
+        <a className="link-negative" href="#">This is a negative Link</a>
     </div>
 );
 

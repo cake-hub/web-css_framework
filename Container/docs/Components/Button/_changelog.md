@@ -1,5 +1,12 @@
 # Change log
 
+## [4.4.0](https://github.com/cake-hub/web-css_framework/tree/v4.4.0) - 2020-10-22
+
+### Changed
+
+* `SCSS`: "Button" | set focus style to default CAKE focus on each button variant
+
+
 ## [4.3.0](https://github.com/cake-hub/web-css_framework/tree/v4.3.0) - 2020-09-24
 
 ### Changed

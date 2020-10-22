@@ -55,6 +55,8 @@
     &:not(:disabled):not(.disabled):hover,
     &:not(:disabled):not(.disabled):focus {
       color: inherit;
+      outline: none;
+      box-shadow: $alert-close-focus-box-shadow;
     }
   }
 

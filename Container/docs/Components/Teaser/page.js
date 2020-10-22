@@ -8,7 +8,7 @@ const TeaserDefault = () => (
 );
 
 const TeaserLinked = () => (
-    <div class="cake-example-container" id="showBox">
+    <div className="cake-example-container" id="showBox">
         <Teaser />
     </div>
 );

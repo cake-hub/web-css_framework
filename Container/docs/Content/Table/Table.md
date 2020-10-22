@@ -157,11 +157,13 @@ Responsive tables allow tables to be scrolled horizontally with ease. Make any t
 
 Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
 
-    <div class="table-responsive">
-        <table class="table">
-            ...
-        </table>
-    </div>
+```html
+<div class="table-responsive">
+    <table class="table">
+        ...
+    </table>
+</div>
+```
 
 ### Breakpoint specific
 
@@ -169,8 +171,10 @@ Use `.table-responsive{-sm|-md|-lg|-xl}` as needed to create responsive tables u
 
 **These tables may appear broken until their responsive styles apply at specific viewport widths.**
 
-    <div class="table-responsive-sm">
-        <table class="table">
-            ...
-        </table>
-    </div>
+```html
+<div class="table-responsive-sm">
+    <table class="table">
+        ...
+    </table>
+</div>
+```

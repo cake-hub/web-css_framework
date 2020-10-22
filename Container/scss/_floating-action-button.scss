@@ -3,7 +3,7 @@
   line-height: $fab-btn-line-height;
   border-width: 0;
   @include border-radius($fab-btn-border-radius);
-  box-shadow: fab-btn-box-shadow;
+  box-shadow: $fab-btn-box-shadow;
 
   .icon {
     display: block;
